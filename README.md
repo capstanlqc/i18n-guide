@@ -1,2 +1,2 @@
-# i18n_guide
-Internationalization guide
+# Internationalization guide
+Hello world.
