@@ -233,12 +233,12 @@ Also, this way the named entity rather than the actual character itself will be 
 Linguists need to see the character, not the code. While `&divide;` (÷) or `&pi;` (π) might be more or less transparent in the appropriate context, other entities such as `&le;` (≤) or `&zwnj;` (zero-width non-joiner) will be obscure and puzzling. The linguist could think that the named entity must be maintained and therefore necessarily be used in the translation, whereas it might be the case that the target language spelling rules call for another character in that context. For example, this would be an incorrect translation according to French punctuation rules:
 
 > <kbd>source</kbd> Punctuation works `&quot;`differently`&quot;` in French.\
-> <kbd>target</kbd> La ponctuation est `&quot;`différente`&quot;` en français.
+> <kbd>target</kbd> La ponctuation est `&quot;`différente`&quot;` en français. :x:
 
 Compare with the correct translation:
 
 > <kbd>source</kbd> Punctuation works `&quot;`differently`&quot;` in French.\
-> <kbd>target</kbd> La ponctuation est « différente » en français.
+> <kbd>target</kbd> La ponctuation est « différente » en français. :white_check_mark:
 
 Escapes can be a way of avoiding the use of a character for other reasons (e.g. if they conflict with other elements), in which case, you might want to escape some entities specifically. Escapes might also be useful to represent invisible or ambiguous characters, or characters that would otherwise be difficult to handle, such as whitespace or invisible Unicode control characters (e.g. using `&rlm;` in HTML source content --and `&#x200F;` in the prepared XLIFF file-- helps spot these characters).[11] However, in all other cases, it is preferable to avoid the escape.
 
