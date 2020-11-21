@@ -1,6 +1,6 @@
 # Best practices for preparing XLIFF files
 
-<-- https://gist.github.com/rxaviers/7360908 -->
+<!--- https://gist.github.com/rxaviers/7360908 -->
 
 [comment]: <> (Your organization knows that you must prepare your content for translation in the XLIFF format. As your organization's lead engineer, you meet the technical requirements and know how to deal with the XML metalanguage to produce well-formed and valid, therefore interoperable XLIFF files that the linguists' translation editor can open.)
 
