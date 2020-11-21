@@ -273,7 +273,7 @@ When preparing XLIFF files with Okapi Rainbow, both named entities and numeric e
 
 Some Unicode characters should be avoided in a markup context, and their numeric entity should be used instead [13]. Other than those, in a UTF-8 context (e.g. any content to be localized) there should be no reason why Unicode characters cannot be used.
 
-#### Frequent issues
+## Frequent issues
 
 Following the recommendations above is necessary but might not be enough for an optimized process. The source content might present a number of pitfalls that require special attention when creating the XLIFF files. Let us see some of those frequent issues that hamper the language tasks.
 
@@ -306,8 +306,6 @@ That code represents this display in the online questionnaire:
 
 ![](https://wiki.capstan.be/lib/exe/fetch.php?w=400&tok=f465dd&media=tecdoc:form.png)
 
-<img src="https://wiki.capstan.be/lib/exe/fetch.php?w=400&tok=f465dd&media=tecdoc:form.png"/>
-
 Here, the expected preparation is to represent the text input field markup as inline codes, as follows (and can be seen in `02_halal/markup_input.html.xlf`):
 
 ``` xml
@@ -337,7 +335,7 @@ Other similar examples:
 > <kbd>1</kbd> Feed 5 penguins for\
 > <kbd>2</kbd> zeds.
 
-> <kbd>1</kbd> zeds.] Drag\
+> <kbd>1</kbd> Drag\
 > <kbd>2</kbd> onto the graph.
 
 > <kbd>1</kbd> When your drawing is done, click\
@@ -350,9 +348,14 @@ Apart from the inconvenience that the full sentence will not be stored in the tr
 Maintaining the correspondence will produce the wrong order in the final content:
 
 > ❌`1` klïck\
-> ❌`2` Tó móvê
+> ❌`2` Tó móvê ón
 
-Breaking the natural correspondence will produce the right order in the final content but makes reuse of these materials problematic when translating subsequent cycle's content:
+Breaking the natural correspondence will produce the right order in the final content but makes reuse of these materials problematic when translating subsequent cycle's content using the TM containing these translations:
+
+> <kbd>1</kbd> <kbd>source</kbd>  Click\
+> <kbd>:x:</kbd> <kbd>target</kbd>  Tó móvê ón\
+> <kbd>2</kbd> <kbd>source</kbd>  to move on\
+> <kbd>:x:</kbd> <kbd>target</kbd>   klïk.
 
 > <kbd>1</kbd> Click
 >> Tó móvê ón klïk\
