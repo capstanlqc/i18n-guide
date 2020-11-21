@@ -353,9 +353,9 @@ Maintaining the correspondence will produce the wrong order in the final content
 Breaking the natural correspondence will produce the right order in the final content but makes reuse of these materials problematic when translating subsequent cycle's content using the TM containing these translations:
 
 > <kbd>1</kbd> <kbd>source</kbd>  Click\
-> <kbd>:x:</kbd> <kbd>target</kbd>  Tó móvê ón\
+>      <kbd>target</kbd>  Tó móvê ón :x:\
 > <kbd>2</kbd> <kbd>source</kbd>  to move on\
-> <kbd>:x:</kbd> <kbd>target</kbd>   klïk.
+>      <kbd>target</kbd>   klïk. :x:
 
 > <kbd>1</kbd> Click
 >> Tó móvê ón klïk\
