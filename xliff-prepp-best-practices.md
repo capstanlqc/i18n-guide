@@ -468,7 +468,7 @@ However, if the purpose of the line break tags is indeed to wrap the text at a c
 
 Therefore, our recommendation, in the first place, would be to avoid using line break tags in the source text. Secondly (assuming we are dealing with HTML content), the width of the text can be defined by means of CSS styles. That approach  achieves the same exact results without introducing any noise in the source text and without affecting the work of the translator. See https://jsfiddle.net/msoutopico/3p7x8ryr/1/ or the screenshot below:
 
-![](markup_fiddl_wrap.png  | width=300)
+![](markup_fiddl_wrap.png) <!-- .element width="500px" -->
 
 [comment]: <> (/** more issues. mixture of encodings **/)
 
