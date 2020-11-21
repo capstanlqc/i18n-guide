@@ -238,7 +238,7 @@ Linguists need to see the character, not the code. While `&divide;` (÷) or `&pi
 Compare with the correct translation:
 
 > <kbd>source</kbd> Punctuation works `&quot;`differently`&quot;` in French.\
-> <kbd>target</kbd> La ponctuation est « différente » en français. :white_check_mark:
+> <kbd>target</kbd> La ponctuation est « différente » en français. :heavy_check_mark:
 
 Escapes can be a way of avoiding the use of a character for other reasons (e.g. if they conflict with other elements), in which case, you might want to escape some entities specifically. Escapes might also be useful to represent invisible or ambiguous characters, or characters that would otherwise be difficult to handle, such as whitespace or invisible Unicode control characters (e.g. using `&rlm;` in HTML source content --and `&#x200F;` in the prepared XLIFF file-- helps spot these characters).[11] However, in all other cases, it is preferable to avoid the escape.
 
@@ -317,7 +317,7 @@ little-penguin" class="heigh-differnet" pattern="[0-9](0-9]+")+"
 
 which will appear as follows in the translation editor (see file ????)
 
-> <kbd>1</kbd> An emperor penguin is `<x0/>` cm taller than a little penguin. :white_check_mark:
+> <kbd>1</kbd> An emperor penguin is `<x0/>` cm taller than a little penguin. :heavy_check_mark:
 
 File `markup_inline.svg.xlf` shows a similar case of text broken down at the two embedding SVG tags `<tspan>` and `</tspan>`.
 
@@ -383,13 +383,13 @@ In the second example above, “she uses one” _something_ and the respondent i
 
 The expected result in the cases above would have been to use a tag or a placeholder to encode the inline code:
 
-> <kbd>1</kbd> See uses on %s to show 2 children in her pictograph :white_check_mark: \
-> <kbd>2</kbd> How many %s will they need to draw? :check_mark:
+> <kbd>1</kbd> See uses on %s to show 2 children in her pictograph :heavy_check_mark: \
+> <kbd>2</kbd> How many %s will they need to draw? :heavy_check_mark:
 
-> <kbd>1</kbd> Click `<BUTTON/>` to move on. :white_check_mark:
+> <kbd>1</kbd> Click `<BUTTON/>` to move on. :heavy_check_mark:
 
-> <kbd>1</kbd> Front wheel :white_check_mark: \
-> <kbd>2</kbd> Front headlamp :white_check_mark:
+> <kbd>1</kbd> Front wheel :heavy_check_mark: \
+> <kbd>2</kbd> Front headlamp :heavy_check_mark:
 
 In the examples above where the segment has been properly prepared with inline codes, it’s not a problem for the translator to transfer the codes to the place where they belongs in the translation, as any modern translation editor allows to do that easily with a keyboard shortcut.
 
@@ -416,7 +416,8 @@ Vehicl</strong><strong>es in 2000  ❌
 When this happens repeatedly, it results in segments that are (unnecessarily) very translation unfriendly. For example:
 
 ``` xml
-<strong>Star</strong><strong>t </strong><strong>T</strong><strong>i</strong><strong>me</strong>  ❌
+<strong>Star</strong><strong>t </strong><strong>T</strong><strong>i</strong><strong>me
+</strong>  ❌
 ```
 
 In that example, there are a lot of `<strong>` tags there to do the same job that could be achieved with simply one tag pair. This tag multiplicity might arise from adding superfluous formatting in a word processor or a wysiwyg editor to create the source, or from converting with OCR or from PDF.
@@ -431,7 +432,7 @@ The expected design of the source content in the case above would have been to e
 
 This tag pair is actually suprasentential markup, which could be excluded from the prepared segment, thus producing the following simple display in the translation editor:
 
-> <kbd>1</kbd> Start Time :white_check_mark:
+> <kbd>1</kbd> Start Time :heavy_check_mark:
 
 **Solution**:
 
@@ -453,7 +454,7 @@ For example:
 
 The expected segmentation is the following, where the line break HTML tags are interpreted and represented as inline codes:
 
-> `1` Since the 1970s, scientists have been `<br/>` worried about the amount of Dioxin, a toxin in fish caught in Baltic Sea. :white_check_mark:
+> `1` Since the 1970s, scientists have been `<br/>` worried about the amount of Dioxin, a toxin in fish caught in Baltic Sea. :heavy_check_mark:
 
 However, it should not be assumed that the translator will keep the line break tags in the translation or that their location will be equivalent to the source.
 
@@ -547,4 +548,4 @@ For example:
 [comment]: <> (0. <span id="0"></span>() [⏎](#a0))
 
 [comment]: <> ([<span id="a1">[[1]](#1)</span>])
-[comment]: <> (:information_source: :ballot_box_with_check: :x: :white_check_mark:  :exclamation:)
+[comment]: <> (:information_source: :ballot_box_with_check: :x: :heavy_check_mark:  :exclamation:)
