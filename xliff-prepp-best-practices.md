@@ -303,7 +303,6 @@ cm taller than a little penguin.</p>
 That code represents this display in the online questionnaire:
 
 ![](form.png)
-
 ![](https://wiki.capstan.be/lib/exe/fetch.php?w=400&tok=f465dd&media=tecdoc:form.png)
 
 Here, the expected preparation is to represent the text input field markup as inline codes, as follows (and can be seen in `02_halal/markup_input.html.xlf`):
@@ -345,10 +344,10 @@ In all these cases the original content includes some element (e.g. "Click `[X](
 
 Apart from the inconvenience that the full sentence will not be stored in the translation memory as one unit, this is a further problem if the target language expresses things in a different order than English, e.g. say, "Tó móvê ón klïck `[X]`)". In that case the linguist is forced to break the expected one-to-one segment correspondence, in order to maintain the correct order.
 
-Maintaining the correspondence will produce the wrong order in the final content:
+Maintaining the correspondence will produce the wrong order in the final content according to the syntax of the target language:
 
-> ❌`1` klïck\
-> ❌`2` Tó móvê ón
+> <kbd>1</kbd> klïck :x:\
+> <kbd>2</kbd> Tó móvê ón :x:
 
 Breaking the natural correspondence will produce the right order in the final content but makes reuse of these materials problematic when translating subsequent cycle's content using the TM containing these translations:
 
