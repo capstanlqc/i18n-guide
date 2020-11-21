@@ -356,14 +356,19 @@ Breaking the natural correspondence will produce the right order in the final co
 > <kbd>2</kbd> <kbd>source</kbd>  to move on\
 >      <kbd>target</kbd>   klïk. :x:
 
-> <kbd>1</kbd> Click
->> Tó móvê ón klïk\
->> Tó móvê
+or
 
-> <kbd>2</kbd> to move on.
->> Tó móvê ón klïk\
->> ón klïk
+> <kbd>1</kbd> <kbd>source</kbd>  Click\
+>      <kbd>target</kbd>  Tó móvê ón klïk :x:\
+> <kbd>2</kbd> <kbd>source</kbd>  to move on\
+>      <kbd>target</kbd>   
 
+or 
+
+> <kbd>1</kbd> <kbd>source</kbd>  Click\
+>      <kbd>target</kbd>  Tó móvê ón klïk :x:\
+> <kbd>2</kbd> <kbd>source</kbd>  to move on\
+>      <kbd>target</kbd>  Tó móvê ón klïk :x:\
 
 Auto-propagation can also become problematic, if the translation of a repeated segment (corresponding to part of the sentence) is different in different contexts, for example due to agreement with other parts of the sentence, e.g.
 
