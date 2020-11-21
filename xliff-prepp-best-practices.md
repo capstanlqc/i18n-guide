@@ -10,7 +10,7 @@
 
 This report includes recommendations for preparing content for translation in the XLIFF format with a view to producing XLIFF files that optimize the different language tasks and language asset management both in the short and the long run. It also focuses on issues that can be problematic for language experts and how those issues can be avoided.
 
-To illustrate the DO's and DON'T's, one OmegaT <span id="a1">[[1]](#1)</span> project is provided, containing:
+To illustrate the DO's and DON'T's, one OmegaT <span id="a1">[[1]](#1)</span> project is provided, containing:
 
   * the original files (XML, HTML, SVG, etc.), in folder `original`
   * the problematic prepared XLIFF files, in folder `source/01_haram`
@@ -49,7 +49,7 @@ To open the project in OmegaT:
 
 [comment]: <> (Download and install our custom version of OmegaT: http://cat.capstan.be/OmegaTcp_installer.exe)
 
-  - Install and customize OmegaT as per our [installation and customization guide](https://slides.com/capstan/omegat-installation-and-customization-guide/fullscreen) <span id="a1">[[2]](#2)</span>
+  - Install and customize OmegaT as per our [installation and customization guide](https://slides.com/capstan/omegat-installation-and-customization-guide/fullscreen) <span id="a1">[[2]](#2)</span>
   - Go to     **Project** >     **Download team project** and enter the following details:
     - url: `http://svn.capstan.be/testproject1/xliff_bestpractices_omtprj`
 	- credentials: `capstanview` (username) / `cApStAn2016` (password)
@@ -65,7 +65,7 @@ In this document, segments as the linguist sees them in the translation editor a
 
 ## Requirements
 
-The only strict requirement is to create well-formed and valid XLIFF files, according to the XLIFF specification <span id="a3">[[3]](#3)</span>. Created XLIFF files can be validated with the strict XML schema <span id="a4">[[4]](#4)</span> or using the XLIFF Checker <span id="a5">[[5]](#5)</span>.
+The only strict requirement is to create well-formed and valid XLIFF files, according to the XLIFF specification <span id="a3">[[3]](#3)</span>. Created XLIFF files can be validated with the strict XML schema <span id="a4">[[4]](#4)</span> or using the XLIFF Checker <span id="a5">[[5]](#5)</span>.
 
 However, it is possible to produce XLIFF files that are compliant with the XLIFF standard as required but that are not translation-friendly. The main purpose of this report is to promote certain best practices, upon which the following recommendations are based.
 
@@ -110,7 +110,7 @@ If the text is segmented, this long paragraph can be handled as independent sent
 > <kbd>5</kbd> Fusce ligula arcu, hendrerit eu dignissim eget, consequat quis sem!\
 > <kbd>6</kbd> Maecenas eget ligula dapibus, dictum purus vitae, sodales neque.
 
-To implement segmentation, you must use segmentation rules. Different tools might have slightly different implementations, but they all use regular expressions to match the patterns that correspond to sentence boundaries. SRX <span id="a6">[[6]](#1)</span> is an XML-based standard of the localization industry used to define segmentation rules, and it can be used by Okapi Framework <span id="a7">[[7]](#7)</span>. Segmentation rulesets can be easily created and customized in Okapi Ratel <span id="a8">[[8]](#8)</span>.
+To implement segmentation, you must use segmentation rules. Different tools might have slightly different implementations, but they all use regular expressions to match the patterns that correspond to sentence boundaries. SRX <span id="a6">[[6]](#1)</span> is an XML-based standard of the localization industry used to define segmentation rules, and it can be used by Okapi Framework <span id="a7">[[7]](#7)</span>. Segmentation rulesets can be easily created and customized in Okapi Ratel <span id="a8">[[8]](#8)</span>.
 
 Libraries or tools used to prepare files as XLIFF normally include a basic set of default rules but sometimes it is necessary to create more specific rules to meet the specific needs of the source content. The XLIFF code to segment the paragraph above looks like this:
 
@@ -146,7 +146,7 @@ The source content might include markup, e.g. any HTML tag used to apply a certa
 Codes can be of two kinds:
 
   * Suprasentential and intersentential codes (i.e. codes that embed a sentence, or stand outside of a sentence, or between sentences, or operate at a higher level than the sentence) should not be included in segments.
-  * Intrasentential codes (i.e. codes that stand inside a sentence) must be represented as inline elements (also called "content markup") according to the guidelines of the XLIFF specification <span id="a9">[[9]](#9)</span>.
+  * Intrasentential codes (i.e. codes that stand inside a sentence) must be represented as inline elements (also called "content markup") according to the guidelines of the XLIFF specification <span id="a9">[[9]](#9)</span>.
 
 A leading opening tag appearing before the beginning of a sentence and its corresponding closing tag appearing after the end of the sentence are an example of suprasentential codes:
 
