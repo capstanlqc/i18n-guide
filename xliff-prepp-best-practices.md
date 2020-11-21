@@ -363,12 +363,6 @@ or
 > <kbd>2</kbd> <kbd>source</kbd>  to move on\
 >      <kbd>target</kbd>   
 
-or 
-
-> <kbd>1</kbd> <kbd>source</kbd>  Click\
->      <kbd>target</kbd>  Tó móvê ón klïk :x:\
-> <kbd>2</kbd> <kbd>source</kbd>  to move on\
->      <kbd>target</kbd>  Tó móvê ón klïk :x:\
 
 Auto-propagation can also become problematic, if the translation of a repeated segment (corresponding to part of the sentence) is different in different contexts, for example due to agreement with other parts of the sentence, e.g.
 
@@ -385,21 +379,21 @@ In a nutshell, split sentences can be a nuisance to translate into certain langu
 
 In the second example above, “she uses one” _something_ and the respondent is being asked “how many” _of something_ the person will need… The object referred to is missing, so it seems that the entity referring to that object was taken as the end of that structural unit.
 
-✅ **Expected preparation**:
+**Expected preparation**:
 
 The expected result in the cases above would have been to use a tag or a placeholder to encode the inline code:
 
-> <kbd>1</kbd> See uses on %s to show 2 children in her pictograph\
-> <kbd>2</kbd> How many %s will they need to draw?
+> <kbd>1</kbd> See uses on %s to show 2 children in her pictograph :white_check_mark: \
+> <kbd>2</kbd> How many %s will they need to draw? :white_check_mark:
 
-> <kbd>1</kbd> Click `<BUTTON/>` to move on.
+> <kbd>1</kbd> Click `<BUTTON/>` to move on. :white_check_mark:
 
-> <kbd>1</kbd> Front wheel\
-> <kbd>2</kbd> Front headlamp
+> <kbd>1</kbd> Front wheel :white_check_mark: \
+> <kbd>2</kbd> Front headlamp :white_check_mark:
 
 In the examples above where the segment has been properly prepared with inline codes, it’s not a problem for the translator to transfer the codes to the place where they belongs in the translation, as any modern translation editor allows to do that easily with a keyboard shortcut.
 
-✅ **Solution**:
+**Solution**:
 
 To avoid this issue, then, ask a trained linguist to run a source review on your draft XLIFF files and adjust the extraction filter accordingly, so that it knows that that particular code must be treated as an inline code (extracted along with the surrounding text and protected) and not as the end of a paragraph.
 
@@ -410,36 +404,36 @@ Segments overloaded with markup make translation and all related subsequent lang
 Some inline codes are unavoidable, e.g. to provide style:
 
 ``` xml
-Put the lengths in order from <b>shortest</b> to <i>longest</i>.
+Put the lengths in order from <b>shortest</b> to <i>longest</i>. :white_check_mark:
 ```
 
 However, other tags are unnecessary and should be avoided. For example, closing and opening tags of the same kind in the middle of a sentence or even in the middle of a word:
 
 ``` xml
-Vehicl</strong><strong>es in 2000
+Vehicl</strong><strong>es in 2000 :x:
 ```
 
 When this happens repeatedly, it results in segments that are (unnecessarily) very translation unfriendly. For example:
 
 ``` xml
-<strong>Star</strong><strong>t </strong><strong>T</strong><strong>i</strong><strong>me</strong>
+<strong>Star</strong><strong>t </strong><strong>T</strong><strong>i</strong><strong>me</strong> :x.
 ```
 
 In that example, there are a lot of `<strong>` tags there to do the same job that could be achieved with simply one tag pair. This tag multiplicity might arise from adding superfluous formatting in a word processor or a wysiwyg editor to create the source, or from converting with OCR or from PDF.
 
-✅ **Expected preparation**:
+**Expected preparation**:
 
 The expected design of the source content in the case above would have been to embed the formatted text with one tag pair.
 
 ``` xml
-<strong>Start Time</strong>
+<strong>Start Time</strong> :white_check_mark:
 ```
 
 This tag pair is actually suprasentential markup, which could be excluded from the prepared segment, thus producing the following simple display in the translation editor:
 
-> <kbd>1</kbd> Start Time
+> <kbd>1</kbd> Start Time :white_check_mark:
 
-✅ **Solution**:
+**Solution**:
 
 Provide feedback and tips to item developers and run some tag clean-up before extracting the text that must be included in the XLIFF files (tools like TransTools Document Cleaner can be used for that) <span id="14">[[14]](#1)</span>.
 
@@ -452,18 +446,18 @@ In some cases, linebreaks are used to limit the length of each line in the text.
 
 For example:
 > <kbd>1</kbd> Since the 1970s, scientists have been\
-> <kbd>2</kbd> `<br/>` ❌\
+> <kbd>2</kbd> `<br/>` :x:\
 > <kbd>3</kbd> worried about the amount of Dioxin, a\
-> <kbd>4</kbd> `<br/>`❌\
+> <kbd>4</kbd> `<br/>`:x:\
 > <kbd>5</kbd> toxin in fish caught in Baltic Sea.
 
 The expected segmentation is the following, where the line break HTML tags are interpreted and represented as inline codes:
 
-> ✅ `1` Since the 1970s, scientists have been `<br/>` worried about the amount of Dioxin, a toxin in fish caught in Baltic Sea.
+> `1` Since the 1970s, scientists have been `<br/>` worried about the amount of Dioxin, a toxin in fish caught in Baltic Sea. :white_check_mark:
 
 However, it should not be assumed that the translator will keep the line break tags in the translation or that their location will be equivalent to the source.
 
-✅ **Solution**:
+**Solution**:
 
 To avoid this issue, ask a linguist to run a source review on your draft XLIFF files and adjust the extraction filter accordingly, so that it treats the linebreak element as markup (extracted along with the surrounding text and protected) and not as the end of the paragraph.
 
@@ -471,12 +465,9 @@ However, if the purpose of the line break tags is indeed to wrap the text at a c
 
 Therefore, our recommendation, in the first place, would be to avoid using line break tags in the source text. Secondly (assuming we are dealing with HTML content), the width of the text can be defined by means of CSS styles. That approach  achieves the same exact results without introducing any noise in the source text and without affecting the work of the translator. See https://jsfiddle.net/msoutopico/3p7x8ryr/1/ or the screenshot below:
 
-{{:tecdoc:markup_fiddl_wrap.png?nolink&400|}}
-
-https://wiki.capstan.be/lib/exe/fetch.php?w=400&tok=e5ab7d&media=tecdoc:markup_fiddl_wrap.png
+![](markup_fiddl_wrap.png)
 
 [comment]: <> (/** more issues. mixture of encodings **/)
-
 
 
 ## Annexes
