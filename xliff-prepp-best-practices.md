@@ -1,5 +1,7 @@
 # Best practices for preparing XLIFF files
 
+<-- https://gist.github.com/rxaviers/7360908 -->
+
 [comment]: <> (Your organization knows that you must prepare your content for translation in the XLIFF format. As your organization's lead engineer, you meet the technical requirements and know how to deal with the XML metalanguage to produce well-formed and valid, therefore interoperable XLIFF files that the linguists' translation editor can open.)
 
 [comment]: <> (However, you might be preparing your organization's content in a way that makes translation and review more difficult than they should be, or even a nightmare, because you might not be aware of some localization and internationalization sensitive issues and might be working things around to comply with the XLIFF standard without applying best practices that do take into account the translator’s perspective.)
@@ -510,42 +512,30 @@ For example:
 
 ## References
 
-1. OmegaT installation and customization guide: https://slides.com/capstan/omegat-installation-and-customization-guide/fullscreen
+1. <span id="1"></span> OmegaT is a free and open source computer-assisted translation tool (CAT-tool) that cApStAn uses to translate and review/edit XLIFF files in international large-scale translation projects. It offers more technical possibilities than OLT. [⏎](#a1)
 
-## Footnotes
+2. <span id="2"></span> OmegaT installation and customization guide: https://slides.com/capstan/omegat-installation-and-customization-guide/fullscreen [⏎](#a2)
 
-1. <span id="1"></span> OmegaT is a free and open source computer-assisted translation tool (CAT-tool) that cApStAn uses to translate and review/edit XLIFF files in international large-scale translation projects. It offers more technical possibilities than OLT. [⏎](#a1)
+3. <span id="3"></span> See [http://docs.oasis-open.org/xliff/xliff-core/xliff-core.html](http://docs.oasis-open.org/xliff/xliff-core/xliff-core.html) [⏎](#a3)
 
-2. <span id="2"></span> OmegaT installation and customization guide: https://slides.com/capstan/omegat-installation-and-customization-guide/fullscreen [⏎](#a2)
+4. <span id="4"></span> XML schema: [https://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd](https://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd) [⏎](#a4)
 
-3. <span id="3"></span> See [http://docs.oasis-open.org/xliff/xliff-core/xliff-core.html](http://docs.oasis-open.org/xliff/xliff-core/xliff-core.html) [⏎](#a3)
+5. <span id="5"></span> The XLIFF checker can be downloaded from https://www.maxprograms.com/products/xliffchecker.html [⏎](#a5)
 
-4. <span id="4"></span> XML schema: [https://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd](https://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd) [⏎](#a4)
+6. <span id="6"></span> See https://okapiframework.org/wiki/index.php?title=SRX. [⏎](#a6)
 
-5. <span id="5"></span> The XLIFF checker can be downloaded from https://www.maxprograms.com/products/xliffchecker.html [⏎](#a5)
+7. <span id="7"></span> Okapi Framework is a set of libraries that can be used to prepare files for translation, among other things. [⏎](#a7)
 
-6. <span id="6"></span> See https://okapiframework.org/wiki/index.php?title=SRX. [⏎](#a6)
+8. <span id="8"></span> See http://okapiframework.org/wiki/index.php?title=Ratel [⏎](#a8)
 
-7. <span id="7"></span> Okapi Framework is a set of libraries that can be used to prepare files for translation, among other things. [⏎](#a7)
+9. <span id="9"></span> See http://docs.oasis-open.org/xliff/v1.2/os/xliff-core.html#Struct_InLine and http://docs.oasis-open.org/xliff/v1.2/xliff-profile-html/xliff-profile-html-1.2-cd02.html. [⏎](#a9)
 
-8. <span id="8"></span> See http://okapiframework.org/wiki/index.php?title=Ratel [⏎](#a8)
+10. <span id="10"></span> See https://www.w3.org/International/questions/qa-escapes#not [⏎](#a10)
 
-9. <span id="9"></span> See http://docs.oasis-open.org/xliff/v1.2/os/xliff-core.html#Struct_InLine and http://docs.oasis-open.org/xliff/v1.2/xliff-profile-html/xliff-profile-html-1.2-cd02.html. [⏎](#a9)
+11. <span id="11"></span> See https://www.w3.org/International/questions/qa-escapes [⏎](#a11)
 
-10. <span id="10"></span> See https://www.w3.org/International/questions/qa-escapes#not [⏎](#a10)
+12. <span id="12"></span> See https://support.office.com/en-us/article/insert-ascii-or-unicode-latin-based-symbols-and-characters-d13f58d3-7bcb-44a7-a4d5-972ee12e50e0 and https://support.apple.com/en-us/HT201586 for Mac. [⏎](#a12)
 
-11. <span id="11"></span> See https://www.w3.org/International/questions/qa-escapes [⏎](#a11)
+13. <span id="13"></span> See https://www.w3.org/International/questions/qa-chars-vs-markup#not [⏎](#a13)
 
-12. <span id="12"></span> See https://support.office.com/en-us/article/insert-ascii-or-unicode-latin-based-symbols-and-characters-d13f58d3-7bcb-44a7-a4d5-972ee12e50e0 and https://support.apple.com/en-us/HT201586 for Mac. [⏎](#a12)
-
-13. <span id="13"></span> See https://www.w3.org/International/questions/qa-chars-vs-markup#not [⏎](#a13)
-
-14. <span id="14"></span> See http://kb.memoq.com/article/AA-00485/0/Cleaning-unnecessary-tags-with-TransTools-Document-Cleaner.html [⏎](#a14)
-
-0. <span id="0"></span>() [⏎](#a0)
-
-
-[comment]: <> (0. <span id="0"></span>() [⏎](#a0))
-
-[comment]: <> ([<span id="a1">[[1]](#1)</span>])
-[comment]: <> (:information_source: :ballot_box_with_check: :x: :heavy_check_mark:  :exclamation:)
+14. <span id="14"></span> See http://kb.memoq.com/article/AA-00485/0/Cleaning-unnecessary-tags-with-TransTools-Document-Cleaner.html [⏎](#a14)
