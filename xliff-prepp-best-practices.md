@@ -315,29 +315,29 @@ little-penguin" class="heigh-differnet" pattern="[0-9](0-9]+")+"
 </source>
 ```
 
-which will appear as follows in the translation editor (see file ????❌ :x::
+which will appear as follows in the translation editor (see file ????)
 
-> <kbd>1</kbd> An emperor penguin is `<x0/>` cm taller than a little penguin.
+> <kbd>1</kbd> An emperor penguin is `<x0/>` cm taller than a little penguin. :white_check_mark:
 
 File `markup_inline.svg.xlf` shows a similar case of text broken down at the two embedding SVG tags `<tspan>` and `</tspan>`.
 
 Other similar examples:
 
-> <kbd>1</kbd> Click\
+> <kbd>1</kbd> Click :x:\
 > <kbd>2</kbd> to move on.
 
-> <kbd>1</kbd> See uses on\
+> <kbd>1</kbd> See uses on :x:\
 > <kbd>2</kbd> to show 2 children in her pictograph\
-> <kbd>3</kbd> How many\
+> <kbd>3</kbd> How many :x:\
 > <kbd>4</kbd> will they need to draw?
 
-> <kbd>1</kbd> Feed 5 penguins for\
+> <kbd>1</kbd> Feed 5 penguins for :x:\
 > <kbd>2</kbd> zeds.
 
-> <kbd>1</kbd> Drag\
+> <kbd>1</kbd> Drag :x:\
 > <kbd>2</kbd> onto the graph.
 
-> <kbd>1</kbd> When your drawing is done, click\
+> <kbd>1</kbd> When your drawing is done, click :x:\
 > <kbd>2</kbd> to fill the garden with boxes of flowers.
 
 In all these cases the original content includes some element (e.g. "Click `[X](BUTTON)` to move on." or "Feed 5 penguins for `[QUANTITY]` zeds.") that has been interpreted as the end of a paragraph.
@@ -366,9 +366,9 @@ or
 
 Auto-propagation can also become problematic, if the translation of a repeated segment (corresponding to part of the sentence) is different in different contexts, for example due to agreement with other parts of the sentence, e.g.
 
-> <kbd>1</kbd> Front\
+> <kbd>1</kbd> Front :x:\
 > <kbd>2</kbd> wheel\
-> <kbd>3</kbd> Front\
+> <kbd>3</kbd> Front :x:\
 > <kbd>4</kbd> headlamp
 
 For example, in Spanish adjectives need to agree in gender and number with the nouns they modify, e.g. the translation of "front" is "delantera" (feminine) in seg1 to agree with the Spanish equivalent of "wheel" (i.e. "rueda"), which has feminine grammatical gender, whereas it is "delantero" (masculine) in seg3 to agree with the Spanish equivalent of "headlamp" (i.e. "faro"), which has masculine grammatical gender.
@@ -384,7 +384,7 @@ In the second example above, “she uses one” _something_ and the respondent i
 The expected result in the cases above would have been to use a tag or a placeholder to encode the inline code:
 
 > <kbd>1</kbd> See uses on %s to show 2 children in her pictograph :white_check_mark: \
-> <kbd>2</kbd> How many %s will they need to draw? :white_check_mark:
+> <kbd>2</kbd> How many %s will they need to draw? :check_mark:
 
 > <kbd>1</kbd> Click `<BUTTON/>` to move on. :white_check_mark:
 
@@ -404,19 +404,19 @@ Segments overloaded with markup make translation and all related subsequent lang
 Some inline codes are unavoidable, e.g. to provide style:
 
 ``` xml
-Put the lengths in order from <b>shortest</b> to <i>longest</i>. :white_check_mark:
+Put the lengths in order from <b>shortest</b> to <i>longest</i>. ✅
 ```
 
 However, other tags are unnecessary and should be avoided. For example, closing and opening tags of the same kind in the middle of a sentence or even in the middle of a word:
 
 ``` xml
-Vehicl</strong><strong>es in 2000 :x:
+Vehicl</strong><strong>es in 2000  ❌
 ```
 
 When this happens repeatedly, it results in segments that are (unnecessarily) very translation unfriendly. For example:
 
 ``` xml
-<strong>Star</strong><strong>t </strong><strong>T</strong><strong>i</strong><strong>me</strong> :x.
+<strong>Star</strong><strong>t </strong><strong>T</strong><strong>i</strong><strong>me</strong>  ❌
 ```
 
 In that example, there are a lot of `<strong>` tags there to do the same job that could be achieved with simply one tag pair. This tag multiplicity might arise from adding superfluous formatting in a word processor or a wysiwyg editor to create the source, or from converting with OCR or from PDF.
@@ -426,7 +426,7 @@ In that example, there are a lot of `<strong>` tags there to do the same job tha
 The expected design of the source content in the case above would have been to embed the formatted text with one tag pair.
 
 ``` xml
-<strong>Start Time</strong> :white_check_mark:
+<strong>Start Time</strong> ✅
 ```
 
 This tag pair is actually suprasentential markup, which could be excluded from the prepared segment, thus producing the following simple display in the translation editor:
