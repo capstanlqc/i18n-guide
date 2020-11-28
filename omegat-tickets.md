@@ -18,6 +18,8 @@ first wait and see, nothing happened -> then propose sponsorship
 writing: script to save
 reading: looking for developer
 
+### [Bug #1020](https://sourceforge.net/p/omegat/bugs/1020/) Project file filters are not preserved
+
 ### [Bug #558](https://sourceforge.net/p/omegat/bugs/558/) Incorrect display of RTL segments in the Fuzzy Matches pane 
 
 balbla
