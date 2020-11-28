@@ -15,6 +15,8 @@ This feature request aims at preventing the problem that users might inadvertedl
 
 ticket, + discussion + new discussion -> new ticket??? 
 first wait and see, nothing happened -> then propose sponsorship
+writing: script to save
+reading: looking for developer
 
 ### [Bug #558](https://sourceforge.net/p/omegat/bugs/558/) Incorrect display of RTL segments in the Fuzzy Matches pane 
 
