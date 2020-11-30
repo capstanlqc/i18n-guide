@@ -181,8 +181,6 @@ which will appear in the translation editor as:
 
 > <kbd>1</kbd> `<g0>`Code1: `<g0><g1>`3/2 or 11/2 or 1.5`</g1>`
 
-> :warning: **_WARNING:_**  Escaping the HTML or XML tags by replacing `<` and `>` with `&lt;` and `&gt;` respectively is not a good approach, because the translation editor will consider the escaped markup as editable text rather than as locked codes and therefore the tags can be mishandled, let alone the fact that translation memories will be polluted. Furthermore, that approach does not reduce the length of inline codes, which means that the text is less readable and that can hamper the translation and bring about quality issues.
-
 
 In OmegaT, if the translator needs to see what the inline code represents, hovering over the tag (e.g. `<g0>` below) displays the tag content as a tooltip, so the linguist knows what the markup means.
 
@@ -190,13 +188,7 @@ Representing the HTML tags as inline codes as specified in the XLIFF standard  a
 
 
 
----
-:warning: **Warning:**
-
-Escaping the HTML or XML tags by replacing `<` and `>` with `&lt;` and `&gt;` respectively is not a good approach, because the translation editor will consider the escaped markup as editable text rather than as locked codes and therefore the tags can be mishandled, let alone the fact that translation memories will be polluted. Furthermore, that approach does not reduce the length of inline codes, which means that the text is less readable and that can hamper the translation and bring about quality issues.
-
----
-
+> :warning: **_WARNING:_**  Escaping the HTML or XML tags by replacing `<` and `>` with `&lt;` and `&gt;` respectively is not a good approach, because the translation editor will consider the escaped markup as editable text rather than as locked codes and therefore the tags can be mishandled, let alone the fact that translation memories will be polluted. Furthermore, that approach does not reduce the length of inline codes, which means that the text is less readable and that can hamper the translation and bring about quality issues.
 
 
 For example, if handled in that way, the above segment would look like this in the XLIFF file:
