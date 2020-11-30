@@ -187,9 +187,13 @@ In OmegaT, if the translator needs to see what the inline code represents, hover
 Representing the HTML tags as inline codes as specified in the XLIFF standard  also reduces the length of each tag, thus better legibility is obtained and the segments are much easier to handle.
 
 
+---
 
-> :warning: **_WARNING:_**  Escaping the HTML or XML tags by replacing `<` and `>` with `&lt;` and `&gt;` respectively is not a good approach, because the translation editor will consider the escaped markup as editable text rather than as locked codes and therefore the tags can be mishandled, let alone the fact that translation memories will be polluted. Furthermore, that approach does not reduce the length of inline codes, which means that the text is less readable and that can hamper the translation and bring about quality issues.
+:warning: **_WARNING:_**  
 
+Escaping the HTML or XML tags by replacing `<` and `>` with `&lt;` and `&gt;` respectively is not a good approach, because the translation editor will consider the escaped markup as editable text rather than as locked codes and therefore the tags can be mishandled, let alone the fact that translation memories will be polluted. Furthermore, that approach does not reduce the length of inline codes, which means that the text is less readable and that can hamper the translation and bring about quality issues.
+
+---
 
 For example, if handled in that way, the above segment would look like this in the XLIFF file:
 
