@@ -1,4 +1,4 @@
-# OmegaT and Okapi tickets opened in 2020
+# OmegaT and Okapi tickets opened (or still open) in 2020
 
 | # | Created | Title | Severity | Status |
 |---|---------|-------|----------|--------|
@@ -6,6 +6,7 @@
 
 Embed Excel ??? 
 
+https://sourceforge.net/p/omegat/feature-requests/245/
 
 ### [RFF #1527](https://sourceforge.net/p/omegat/feature-requests/1527/) Do not export untranslated segments 
 
