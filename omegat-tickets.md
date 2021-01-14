@@ -1,9 +1,32 @@
 # OmegaT and Okapi tickets opened (or still open) in 2020
 
-| # | Created | Title 													| Type | Status |
-|---|---------|-------													|----------|--------|
-| a | aaa     | adsfa													 | asdfadsf | adsfad |
-| a | aaa     | [#1527 Do not export untranslated segments](#rff-1527-do-not-export-untranslated-segments)  | RFE | Created |
+| # 							 		| Created	| Title 					| Type		 | Status     	   |
+|---------------------------------------------------------------	|---------	|-------					|----------	|--------          |
+| a 							 		| aaa    	| adsfa			              		| asdfadsf 	| adsfad           |
+| [#1527](#rff-1527-do-not-export-untranslated-segments) 		| 2020-11-27	| Do not export untranslated segments 		| RFE 		| Created 	   |
+| N/A									| 2020-10-28	| Global TM - RD##?				| RFF	     	| Looking for dev  | 
+| [#1020](#bug-1020-project-file-filters-are-not-preserved) 			| 2020-10-28	| Project file filters are not preserved	| Bug 		| |
+| [#558](#bug-558-incorrect-display-of-rtl-segments-in-the-fuzzy-matches-pane) 	| 2013-01-23 | | | |
+| [#1520](#rff-1520-two-many-locations-for-user-added-plugins) | | | | |
+| [#1519](#rfe-1519-omegat-uses-wrongold-version-of-plugin-in-case-of-conflict) | | | | |
+| [#1015](#bug-1015-matches-ignored-if-the-two-locales-have-the-same-language-subtag) | | | | |
+| [#1003](#bug-1003-matches-containing-non-alphabetical-text-are-ignored-in-tm-leverage) | | | | |
+| [#1002](#bug-1002-choice-of-gui-language-during-re-installation-is-ignored) | | | | |
+| [#987](#bug-987--use-as-default-translation-does-not-work) | | | | |
+| [#988](#bug-988-rle-and-lre-control-characters-not-visible-in-editor) | | | | |
+| [#982](#bug-982-layout-issues-in-target-word-files-in-arabic) | | | | |
+| [#979](#bug-979-arabic-fuzzy-matches-not-wrapped-in-fm-pane) | | | | |
+| [#977](#bug-977-character-and-tag-are-glued-together-in-arabic) | | | | |
+| [#975](#bug-975-id-binding-context-damaged-with-olifant-edited-tmx-files) | | | | |
+| [#1471](#rfe-1471-rff-full-segment-option-in-search-dialog) | | | | |
+| [#1005](#bug-1005-xliff-filter-for-omegat-hides-files-with-doctype-including-url) | | | | |
+| [#993](#bug-993-okapi-xliff-filter-for-omegat-registersexpects-segment-ids-that-break-id-bound-matches) | | | | |
+| [#933](#bug-933-openxml-filter-formatting-issues-in-arabic-translation-rtl) | | | | |
+| [#969](#rfe-969-resname-from-xliff-appears-in-the-comment-field-in-omegat) | | | | |
+| [#947](#rfe-947-openxml-filter-improve-the-segmentation-quality-and-merge-with-complex-script-formatting) | | | | |
+| [#932](#bug-932-hook-for-omegat-translation-kit-not-working-anymore) | | | | |
+| [#931](#rfe-931-openxml-filter-remove-redundant-bidi-properties-clarification-for-docx-documents-with-rtl-target-langauge) | | | | |
+
 
 Embed Excel ??? 
 
