@@ -2,29 +2,29 @@
 
 | # 							 	| Created	| Title 					| Type		 | Status     	   | Tool |
 |-------------------------------------------------------------	|---------	|-------					|----------	|--------          |-- |
-| [#1527](#rff-1527-do-not-export-untranslated-segments) 		| 2020-11-27 | Do not export untranslated segments 		| RFE 		| Open 	   | OmegaT |
-| N/A									| 2020-10-28 | Global TM - RD##?				| RFF	     	| Looking for dev  | OmegaT |
-| [#1020](#bug-1020-project-file-filters-are-not-preserved) 			| 2020-10-28 | Project file filters are not preserved	| Bug 		| Open | OmegaT |
-| [#558](#bug-558-incorrect-display-of-rtl-segments-in-the-fuzzy-matches-pane) 	| 2020-11-13 | Incorrect display of RTL segments in the Fuzzy Matches pane | Bug | Open |OmegaT |
-| [#1520](#rff-1520-two-many-locations-for-user-added-plugins) | 2020-09-21 | Two many locations for user-added plugins | RFE | Rejected | OmegaT |
-| [#1519](#rfe-1519-omegat-uses-wrongold-version-of-plugin-in-case-of-conflict) | 2020-09-21 | OmegaT uses wrong/old version of plugin in case of conflict | RFE | Open | OmegaT |
-| [#1015](#bug-1015-matches-ignored-if-the-two-locales-have-the-same-language-subtag) | 2020-08-21 | Matches ignored if the two locales have the same language subtag | Bug | Open | OmegaT |
-| [#1003](#bug-1003-matches-containing-non-alphabetical-text-are-ignored-in-tm-leverage) | 2020-07-16 | Matches containing non-alphabetical text are ignored in TM leverage |  Bug | Open | OmegaT |
-| [#1002](#bug-1002-choice-of-gui-language-during-re-installation-is-ignored) | 2020-07-16 | Choice of GUI language during re-installation is ignored | Bug | Fixed | OmegaT |
-| [#987](#bug-987--use-as-default-translation-does-not-work) | 2020-04-08 | "Use as default translation" does not work | Bug | Open | OmegaT |
-| [#988](#bug-988-rle-and-lre-control-characters-not-visible-in-editor) | 2020-03-01 | RLE and LRE control characters not visible in editor | Bug | Fixed | OmegaT |
-| [#982](#bug-982-layout-issues-in-target-word-files-in-arabic) | 2020-02-24 | Layout issues in target Word files in Arabic | Bug | Open | OmegaT |
-| [#979](#bug-979-arabic-fuzzy-matches-not-wrapped-in-fm-pane) | 2020-01-27 | Arabic fuzzy matches not wrapped in FM pane | Bug | Open | OmegaT |
-| [#977](#bug-977-character-and-tag-are-glued-together-in-arabic) | 2020-01-27 | Character and tag are glued together in Arabic | Bug | Open | OmegaT |
-| [#975](#bug-975-id-binding-context-damaged-with-olifant-edited-tmx-files) | 2020-01-22 | ID-binding context damaged with Olifant-edited TMX files | Bug | Open | OmegaT |
-| [#1471](#rfe-1471-rff-full-segment-option-in-search-dialog) | 2020-07-04 | "Full segment" option in search dialog | RFE | Open | OmegaT |
-| [#1005](#bug-1005-xliff-filter-for-omegat-hides-files-with-doctype-including-url) | 2020-11-11 | XLIFF filter (for OmegaT) hides files with DOCTYPE including URL | Bug | Invalid | Okapi |
-| [#993](#bug-993-okapi-xliff-filter-for-omegat-registersexpects-segment-ids-that-break-id-bound-matches) | 2020-09-29 | Okapi XLIFF filter for OmegaT registers/expects segment IDs that break ID-bound matches | Bug | Open | Okapi |
-| [#933](#bug-933-openxml-filter-formatting-issues-in-arabic-translation-rtl) | 2020-04-27 | OpenXML filter: formatting issues in Arabic translation (RTL) | Bug | Fixed | Okapi |
-| [#969](#rfe-969-resname-from-xliff-appears-in-the-comment-field-in-omegat) | 2020-08-14 | Resname (from XLIFF) appears in the comment field in OmegaT | RFE | Open | Okapi |
-| [#947](#rfe-947-openxml-filter-improve-the-segmentation-quality-and-merge-with-complex-script-formatting) | 2020-06-13 | OpenXML Filter: improve the segmentation quality and merge with complex script formatting | RFE | Open | Okapi |
-| [#932](#bug-932-hook-for-omegat-translation-kit-not-working-anymore) | 2020-04-26 | Hook for OmegaT translation kit not working anymore | Bug | Open | Okapi |
-| [#931](#rfe-931-openxml-filter-remove-redundant-bidi-properties-clarification-for-docx-documents-with-rtl-target-langauge) | 2020-04-15 | OpenXML Filter: remove redundant BIDI properties clarification for DOCX documents with RTL target langauge | RFE | Open | Okapi |
+| [#1527](#rff-1527-do-not-export-untranslated-segments) 		| 2020.11.27 | Do not export untranslated segments 		| RFE 		| Open 	   | OmegaT |
+| N/A									| 2020.10.28 | Global TM - RD##?				| RFF	     	| Looking for dev  | OmegaT |
+| [#1020](#bug-1020-project-file-filters-are-not-preserved) 			| 2020.10.28 | Project file filters are not preserved	| Bug 		| Open | OmegaT |
+| [#558](#bug-558-incorrect-display-of-rtl-segments-in-the-fuzzy-matches-pane) 	| 2020.11.13 | Incorrect display of RTL segments in the Fuzzy Matches pane | Bug | Open |OmegaT |
+| [#1520](#rff-1520-two-many-locations-for-user-added-plugins) | 2020.09.21 | Two many locations for user-added plugins | RFE | Rejected | OmegaT |
+| [#1519](#rfe-1519-omegat-uses-wrongold-version-of-plugin-in-case-of-conflict) | 2020.09.21 | OmegaT uses wrong/old version of plugin in case of conflict | RFE | Open | OmegaT |
+| [#1015](#bug-1015-matches-ignored-if-the-two-locales-have-the-same-language-subtag) | 2020.08.21 | Matches ignored if the two locales have the same language subtag | Bug | Open | OmegaT |
+| [#1003](#bug-1003-matches-containing-non-alphabetical-text-are-ignored-in-tm-leverage) | 2020.07.16 | Matches containing non-alphabetical text are ignored in TM leverage |  Bug | Open | OmegaT |
+| [#1002](#bug-1002-choice-of-gui-language-during-re-installation-is-ignored) | 2020.07.16 | Choice of GUI language during re-installation is ignored | Bug | Fixed | OmegaT |
+| [#987](#bug-987--use-as-default-translation-does-not-work) | 2020.04.08 | "Use as default translation" does not work | Bug | Open | OmegaT |
+| [#988](#bug-988-rle-and-lre-control-characters-not-visible-in-editor) | 2020.03.01 | RLE and LRE control characters not visible in editor | Bug | Fixed | OmegaT |
+| [#982](#bug-982-layout-issues-in-target-word-files-in-arabic) | 2020.02.24 | Layout issues in target Word files in Arabic | Bug | Open | OmegaT |
+| [#979](#bug-979-arabic-fuzzy-matches-not-wrapped-in-fm-pane) | 2020.01.27 | Arabic fuzzy matches not wrapped in FM pane | Bug | Open | OmegaT |
+| [#977](#bug-977-character-and-tag-are-glued-together-in-arabic) | 2020.01.27 | Character and tag are glued together in Arabic | Bug | Open | OmegaT |
+| [#975](#bug-975-id-binding-context-damaged-with-olifant-edited-tmx-files) | 2020.01.22 | ID-binding context damaged with Olifant-edited TMX files | Bug | Open | OmegaT |
+| [#1471](#rfe-1471-rff-full-segment-option-in-search-dialog) | 2020.07.04 | "Full segment" option in search dialog | RFE | Open | OmegaT |
+| [#1005](#bug-1005-xliff-filter-for-omegat-hides-files-with-doctype-including-url) | 2020.11.11 | XLIFF filter (for OmegaT) hides files with DOCTYPE including URL | Bug | Invalid | Okapi |
+| [#993](#bug-993-okapi-xliff-filter-for-omegat-registersexpects-segment-ids-that-break-id-bound-matches) | 2020.09.29 | Okapi XLIFF filter for OmegaT registers/expects segment IDs that break ID-bound matches | Bug | Open | Okapi |
+| [#933](#bug-933-openxml-filter-formatting-issues-in-arabic-translation-rtl) | 2020.04.27 | OpenXML filter: formatting issues in Arabic translation (RTL) | Bug | Fixed | Okapi |
+| [#969](#rfe-969-resname-from-xliff-appears-in-the-comment-field-in-omegat) | 2020.08.14 | Resname (from XLIFF) appears in the comment field in OmegaT | RFE | Open | Okapi |
+| [#947](#rfe-947-openxml-filter-improve-the-segmentation-quality-and-merge-with-complex-script-formatting) | 2020.06.13 | OpenXML Filter: improve the segmentation quality and merge with complex script formatting | RFE | Open | Okapi |
+| [#932](#bug-932-hook-for-omegat-translation-kit-not-working-anymore) | 2020.04.26 | Hook for OmegaT translation kit not working anymore | Bug | Open | Okapi |
+| [#931](#rfe-931-openxml-filter-remove-redundant-bidi-properties-clarification-for-docx-documents-with-rtl-target-langauge) | 2020.04.15 | OpenXML Filter: remove redundant BIDI properties clarification for DOCX documents with RTL target langauge | RFE | Open | Okapi |
 
 
 Embed Excel ??? 
