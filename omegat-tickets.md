@@ -3,7 +3,7 @@
 | # | Created | Title 													| Type | Status |
 |---|---------|-------													|----------|--------|
 | a | aaa     | adsfa													 | asdfadsf | adsfad |
-| a | aaa     | [RFF #1527](https://sourceforge.net/p/omegat/feature-requests/1527/) Do not export untranslated segments  | RFE | Created |
+| a | aaa     | [#1527 Do not export untranslated segments](#rff-1527-do-not-export-untranslated-segments)  | RFE | Created |
 
 Embed Excel ??? 
 
