@@ -3,7 +3,7 @@
 | # 							 	| Created	| Title 					| Type		 | Status     	   | Tool |
 |-------------------------------------------------------------	|---------	|-------					|----------	|--------          |-- |
 | [#1527](#rff-1527-do-not-export-untranslated-segments) 		| 2020.11.27 | Do not export untranslated segments 		| RFE 		| Open 	   | OmegaT |
-| N/A									| 2020.10.28 | Global TM - RD##?				| RFF	     	| Looking for dev  | OmegaT |
+| N/A									| 2020.10.28 | Global TM - RD##?				| RFF	     	| N/A  | OmegaT |
 | [#1020](#bug-1020-project-file-filters-are-not-preserved) 			| 2020.10.28 | Project file filters are not preserved	| Bug 		| Open | OmegaT |
 | [#558](#bug-558-incorrect-display-of-rtl-segments-in-the-fuzzy-matches-pane) 	| 2020.11.13 | Incorrect display of RTL segments in the Fuzzy Matches pane | Bug | Open |OmegaT |
 | [#1520](#rff-1520-two-many-locations-for-user-added-plugins) | 2020.09.21 | Two many locations for user-added plugins | RFE | Rejected | OmegaT |
