@@ -1,8 +1,9 @@
 # OmegaT and Okapi tickets opened (or still open) in 2020
 
-| # | Created | Title | Severity | Status |
-|---|---------|-------|----------|--------|
-| a | aaa     | adsfa | asdfadsf | adsfad |
+| # | Created | Title 													| Type | Status |
+|---|---------|-------													|----------|--------|
+| a | aaa     | adsfa													 | asdfadsf | adsfad |
+| a | aaa     | [RFF #1527](https://sourceforge.net/p/omegat/feature-requests/1527/) Do not export untranslated segments  | RFE | Created |
 
 Embed Excel ??? 
 
