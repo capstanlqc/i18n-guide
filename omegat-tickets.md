@@ -1,7 +1,7 @@
 # OmegaT and Okapi tickets opened (or still open) in 2020
 
 | # 							 	| Created	| Title 					| Type		 | Status     	   | Tool |
-|-------------------------------------------------------------	|---------	|-------					|----------	|--------          |-- |
+|-------------------------------------------------------------:|---------	|-------					|----------	|--------          |-- |
 | [#1527](#rff-1527-do-not-export-untranslated-segments) 		| 2020.11.27 | Do not export untranslated segments 		| RFE 		| Open 	   | OmegaT |
 | [#558](#bug-558-incorrect-display-of-rtl-segments-in-the-fuzzy-matches-pane) 	| 2020.11.13 | Incorrect display of RTL segments in the Fuzzy Matches pane | Bug | Open |OmegaT |
 | N/A									| 2020.10.28 | Global TM ................. RD##?				| RFF	     	| N/A  | OmegaT |
