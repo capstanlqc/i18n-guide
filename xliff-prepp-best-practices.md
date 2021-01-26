@@ -14,6 +14,12 @@
 
 This report includes recommendations for preparing content for translation in the XLIFF format with a view to producing XLIFF files that optimize the different language tasks and language asset management both in the short and the long run. It also focuses on issues that can be problematic for language experts and how those issues can be avoided.
 
+In this document, segments as the linguist sees them in the translation editor are represented as follows (preceded by the segment number):
+
+> <kbd>31</kbd> This is a segment
+
+### Sample project
+
 To illustrate the DO's and DON'T's, an OmegaT <span id="a1">[[1]](#1)</span> project is provided, containing:
 
   * the original files (XML, HTML, SVG, etc.), in folder `original`
@@ -90,7 +96,7 @@ To open the project in OmegaT:
 [comment]: <> (Download and install our custom version of OmegaT: http://cat.capstan.be/OmegaTcp_installer.exe)
 
   - Install and customize OmegaT as per our [installation and customization guide](https://slides.com/capstan/omegat-installation-and-customization-guide/fullscreen) <span id="a2">[[2]](#2)</span>
-  - Go to     **Project** >     **Download team project** and enter the following details:
+  - In OmegaT, go to     **Project** >     **Download team project** and enter the following details:
     - url: `http://svn.capstan.be/testproject1/xliff_bestpractices_omtprj`
 	- credentials: `capstanview` (username) / `cApStAn2016` (password)
 	- your preferred path to your local copy of the project.
@@ -99,41 +105,45 @@ That will create a local version of the project for you and will open it. You ca
 
 The Okapi project, including the settings files, can also be downloaded from [`http://cat.capstan.be/xliff_bestpractices_okpprj.zip`](http://cat.capstan.be/xliff_bestpractices_okpprj.zip), although this is not necessary unless you want to recreate or customize the extraction process. To (re)create the XLIFF files, the `rnb` file must be open from Okapi Rainbow.
 
-In this document, segments as the linguist sees them in the translation editor are represented as follows (preceded by the segment number):
-
-> <kbd>31</kbd> This is a segment
 
 ## Requirements
 
-The only strict requirement is to create well-formed and valid XLIFF files, according to the XLIFF specification <span id="a3">[[3]](#3)</span>. Created XLIFF files can be validated with the strict XML schema <span id="a4">[[4]](#4)</span> or using the XLIFF Checker <span id="a5">[[5]](#5)</span>.
+When creating XLIFF files, the only strict technical requirement is to create _well-formed_ and _valid_ XLIFF files, according to the XML syntax and the XLIFF specification <span id="a3">[[3]](#3)</span>. Created XLIFF files can be validated with the strict XML schema <span id="a4">[[4]](#4)</span> or using the XLIFF Checker <span id="a5">[[5]](#5)</span>.
 
-However, it is possible to produce XLIFF files that are compliant with the XLIFF standard as required but that are not translation-friendly. The main purpose of this report is to promote certain best practices, upon which the following recommendations are based.
+Well-formedness and validity are the bare minimum, but of course it is perfectly possible to produce XLIFF files that are valid and compliant with the XLIFF standard but that are not translation-friendly. The main purpose of this report is to promote some best practices, upon which the following recommendations are based.
 
 ## Recommendations
 
-Based on the localization industry's best practices for preparing files for translation and on our experience in localization of questionnaires and cognitive assessments, we can define a number of important recommendations:
+Based on the localization industry's best practices for preparing files for translation and on cApStAn's experience in localization of international large-scale assessments and questionnaires, we can define a number of important recommendations or expectations.
 
-  * Text must be segmented by sentence. Each segment should contain one sentence, not a full paragraph.
-  * All translatable content must be extracted and all untranslatable content must be ignored during the extraction.
-  * Inline codes should not be taken as boundaries between text units/blocks, to avoid breaking down sentences into two or more fragments.
-  * Inline codes and markup should be represented as specified by the XLIFF standard that the translation editor can recognize, lock and display as placeable tags.
+First and foremost, one generic recommendation:
+
+* Use the existing technology. There's a rich array of tools and libraries in the localization industry, both commercial and open source, that embody a lot of know-how over a few decades. If you try to reinvent the wheel, it'll take you much longer and you'll achieve worse results. Use what exists, and improve it if you can.
+
+Let's now be a bit more specific, about segmentation and inline codes:
+
+  * Text must be segmented by sentence. Each segment should contain one single sentence, not a full paragraph or several sentences.
+  * All translatable content must be extracted and all untranslatable content must be excluded during the extraction.
+  * Inline codes should not be interpreted as end of paragraph or as boundaries between text units/blocks, to avoid breaking down sentences in fragments.
+  * Inline codes and markup should ideally be represented as specified by the XLIFF standard so that the translation editor can recognize, lock and display them as placeable tags.
+	* If markup is not represented as tags and is escaped instead, then each markup block should be as short as possible, and custom tags might need to be created to protect escaped markup.
   * The number of tags should be as low as possible.
-  * If markup is not represented as tags and is escaped instead, then each markup block should be as short as possible.
+  	* Some clean-up of the source files or some back and forth between localization engineers and source content authors is sometimes necessary).
 
 Failure to follow those recommendations hampers language tasks or/and could affect translation quality.
 
-There are other, less important recommendations with a lesser impact on their own. However, recurrent and concurrent failure to follow them can also contribute to making the translation process more difficult:
+There are other, recommendations about characters and whitespace might have a lesser impact on their own, but recurrent and concurrent failure to follow them may also contribute to making the translation process more difficult:
 
   * Unicode characters should be used instead escaped HTML entities.
   * Excessive whitespace and inline line breaks should be avoided.
-  * To avoid truncations and overflowing text, text should be wrapped in the presentation medium instead of using linebreak codes in the source text.
-  * Comments should be not extracted as translatable text.
+  * To avoid truncations and overflowing text, text should be wrapped dynamically in the publication medium instead of using linebreak codes in the source text.
+  * Comments should not be extracted as translatable text.
 
-### 1. Use segmentation
+### 1. Segmentation
 
 Translating or reviewing long paragraphs containing several sentences is inconvenient for several reasons.
 
-On the one hand, it requires a higher cognitive effort from the linguist, which reduces productivity and increases the chances of errors, and on the other hand, it reduces the likelihood of propagation and internal reuse of translations within the project, which leads to rework, reducing turnaround time savings, and to a higher number of inconsistencies, that are difficult to catch afterwards.
+On the one hand, it requires a higher cognitive effort from the linguist, which reduces productivity and increases the chances of errors, and on the other hand, it reduces the likelihood of propagation and internal reuse of translations within the project, which leads to rework (reducing turnaround time and savings) and to a higher number of inconsistencies, that are difficult to catch or fix afterwards.
 
 Sentence-based segmentation boosts the reuse of translations, through the propagation of the translation of a repeated segment to all its repetitions, or through the higher availability of matches to translate similar segments, thus increasing consistency, and reduces the need for the linguist to run concordance searches in search of the different parts that need to be assembled in the final translation. Segmentation contributes both to final quality and satisfaction of the team.
 
@@ -143,8 +153,10 @@ Segmentation should occur after each sentence, so that each sentence is included
 
 If the text is segmented, this long paragraph can be handled as independent sentences and therefore becomes much more manageable for the linguist. The expected result is:
 
-> <kbd>1</kbd> Lorem ipsum dolor sit amet, consectetur adipiscing elit…\
+> <kbd>1</kbd> Lorem ipsum dolor sit amet, consectetur adipiscing elit…
+>
 > <kbd>2</kbd> Aliquam ex nisi, mattis pulvinar nulla sed, commodo mattis ligula.\
+>
 > <kbd>3</kbd> Nulla sit amet leo lacinia, pellentesque mi non, aliquam augue?\
 > <kbd>4</kbd> Pellentesque tempor dictum dui in imperdiet.\
 > <kbd>5</kbd> Fusce ligula arcu, hendrerit eu dignissim eget, consequat quis sem!\
@@ -152,9 +164,11 @@ If the text is segmented, this long paragraph can be handled as independent sent
 
 To implement segmentation, you must use segmentation rules. Different tools might have slightly different implementations, but they all use regular expressions to match the patterns that correspond to sentence boundaries. SRX <span id="a6">[[6]](#1)</span> is an XML-based standard of the localization industry used to define segmentation rules, and it can be used by Okapi Framework <span id="a7">[[7]](#7)</span>. Segmentation rulesets can be easily created and customized in Okapi Ratel <span id="a8">[[8]](#8)</span>.
 
-Libraries or tools used to prepare files as XLIFF normally include a basic set of default rules but sometimes it is necessary to create more specific rules to meet the specific needs of the source content. The XLIFF code to segment the paragraph above looks like this:
+Existing libraries or tools used to prepare files as XLIFF normally include a basic set of default rules which often cover most of the needs, which can be varied. As you can see in the example above, segments do not only end in full stop, but might end in other punctuation marking the end of a sentence (i.e. in English: interrogation, ellipsis, etc.).
 
+<!-- The XLIFF code to segment the paragraph above looks like this:-->
 
+<!--
 ``` xml
 <seg-source><mrk mid="0" mtype="seg">Lorem ipsum dolor sit amet, consectetur adipiscing
 elit… </mrk> <mrk mid="1" mtype="seg">Aliquam ex nisi, mattis pulvinar nulla sed, commodo
@@ -164,15 +178,13 @@ imperdiet. </mrk> <mrk mid="4" mtype="seg">Fusce ligula arcu, hendrerit eu digni
 consequat quis sem!</mrk> <mrk mid="5" mtype="seg">Maecenas eget ligula dapibus, dictum
 purus vitae, sodales neque.</mrk></seg-source>
 ```
+-->
 
-As you can see in the example above, segments do not only end in full stop, but might end in other punctuation marking the end of a sentence (i.e. in English: interrogation, ellipsis, etc.).
-
-Also, there are cases where these punctuation symbols do not stand for the end of a sentence, such as in the case of abbreviations:
+Sometimes it is necessary or convenient to create more specific rules to meet the specific needs of the source content, which is relatively easy in SRX. For example, if it's necessary to split the text in some context that the default rules do not cover. Or there are cases where punctuation symbols do not stand for the end of a sentence, such as in the case of abbreviations:
 
 > <kbd>1</kbd>  NBC canceled Mr. Robinson, the freshman comedy series.
 
-To avoid segmenting after abbreviations and in other cases, the segmentation ruleset must include some exceptions (the SRX default rulesets already include the most frequent abbreviations in English, so no need to reinvent the wheel). Without the appropriate exceptions for abbreviations, we would obtain the following incorrect segmentation:
-rather than
+To avoid segmenting after abbreviations and in other similar cases, exceptions are necessary that prevent or masks the general rule, although there again, luckily, default rulesets used by available tools already include the most frequent abbreviations. Without the appropriate exceptions for abbreviations, we would obtain the following incorrect segmentation:
 
 > <kbd>1</kbd> NBC canceled Mr.\
 > <kbd>2</kbd> Robinson, the freshman comedy series.
