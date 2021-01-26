@@ -2,6 +2,8 @@
 
 <!--- https://gist.github.com/rxaviers/7360908 -->
 
+[References](#references)
+
 [comment]: <> (Your organization knows that you must prepare your content for translation in the XLIFF format. As your organization's lead engineer, you meet the technical requirements and know how to deal with the XML metalanguage to produce well-formed and valid, therefore interoperable XLIFF files that the linguists' translation editor can open.)
 
 [comment]: <> (However, you might be preparing your organization's content in a way that makes translation and review more difficult than they should be, or even a nightmare, because you might not be aware of some localization and internationalization sensitive issues and might be working things around to comply with the XLIFF standard without applying best practices that do take into account the translator’s perspective.)
