@@ -2,8 +2,6 @@
 
 <!--- https://gist.github.com/rxaviers/7360908 -->
 
-[References](#references)
-
 [comment]: <> (Your organization knows that you must prepare your content for translation in the XLIFF format. As your organization's lead engineer, you meet the technical requirements and know how to deal with the XML metalanguage to produce well-formed and valid, therefore interoperable XLIFF files that the linguists' translation editor can open.)
 
 [comment]: <> (However, you might be preparing your organization's content in a way that makes translation and review more difficult than they should be, or even a nightmare, because you might not be aware of some localization and internationalization sensitive issues and might be working things around to comply with the XLIFF standard without applying best practices that do take into account the translator’s perspective.)
@@ -118,7 +116,7 @@ Based on the localization industry's best practices for preparing files for tran
 
 First and foremost, one generic recommendation:
 
-* Use the existing technology. There's a rich array of tools and libraries in the localization industry, both commercial and open source, that embody a lot of know-how over a few decades. If you try to reinvent the wheel, it'll take you much longer and you'll achieve worse results. Use what exists, and improve it if you can.
+* Use the existing technology. There's a rich array of tools and libraries in the localization industry, both commercial and open source, that embody a lot of know-how accumulated over the last decades. If you try to reinvent the wheel, it'll take you much longer and you'll achieve worse results. Use what exists, and improve it if you can.
 
 Let's now be a bit more specific, about segmentation and inline codes:
 
@@ -155,11 +153,14 @@ If the text is segmented, this long paragraph can be handled as independent sent
 
 > <kbd>1</kbd> Lorem ipsum dolor sit amet, consectetur adipiscing elit…
 >
-> <kbd>2</kbd> Aliquam ex nisi, mattis pulvinar nulla sed, commodo mattis ligula.\
+> <kbd>2</kbd> Aliquam ex nisi, mattis pulvinar nulla sed, commodo mattis ligula.
 >
-> <kbd>3</kbd> Nulla sit amet leo lacinia, pellentesque mi non, aliquam augue?\
-> <kbd>4</kbd> Pellentesque tempor dictum dui in imperdiet.\
-> <kbd>5</kbd> Fusce ligula arcu, hendrerit eu dignissim eget, consequat quis sem!\
+> <kbd>3</kbd> Nulla sit amet leo lacinia, pellentesque mi non, aliquam augue?
+>
+> <kbd>4</kbd> Pellentesque tempor dictum dui in imperdiet.
+>
+> <kbd>5</kbd> Fusce ligula arcu, hendrerit eu dignissim eget, consequat quis sem!
+>
 > <kbd>6</kbd> Maecenas eget ligula dapibus, dictum purus vitae, sodales neque.
 
 To implement segmentation, you must use segmentation rules. Different tools might have slightly different implementations, but they all use regular expressions to match the patterns that correspond to sentence boundaries. SRX <span id="a6">[[6]](#1)</span> is an XML-based standard of the localization industry used to define segmentation rules, and it can be used by Okapi Framework <span id="a7">[[7]](#7)</span>. Segmentation rulesets can be easily created and customized in Okapi Ratel <span id="a8">[[8]](#8)</span>.
@@ -184,14 +185,22 @@ Sometimes it is necessary or convenient to create more specific rules to meet th
 
 > <kbd>1</kbd>  NBC canceled Mr. Robinson, the freshman comedy series.
 
-To avoid segmenting after abbreviations and in other similar cases, exceptions are necessary that prevent or masks the general rule, although there again, luckily, default rulesets used by available tools already include the most frequent abbreviations. Without the appropriate exceptions for abbreviations, we would obtain the following incorrect segmentation:
+To avoid segmenting after abbreviations and in other similar cases, exceptions are necessary to prevent or mask the general rule. Without the appropriate exceptions for abbreviations, we would obtain incorrect segmentations such as:
 
-> <kbd>1</kbd> NBC canceled Mr.\
+> <kbd>1</kbd> NBC canceled Mr.
+>
 > <kbd>2</kbd> Robinson, the freshman comedy series.
 
-In the OmegaT project provided, file `01_haram/segment_para.html.xlf` shows a text that has been prepared without segmentation, whereas file `02_halal/segment_para.html.xlf` has been prepared with sentence-based segmentation.
+Luckily, there again, default rulesets used by available tools already include the most frequent abbreviations.
 
-### Representing markup as inline codes
+<!--
+| **☞** In the OmegaT project provided: |
+| --- |
+-->
+
+**☞** In the OmegaT project provided, file `01_haram/segment_para.html.xlf` shows a text that has been prepared without segmentation, whereas file `02_halal/segment_para.html.xlf` has been prepared with sentence-based segmentation.
+
+### 2. Markup and inline codes
 
 The source content might include markup, e.g. any HTML tag used to apply a certain behavior or property to part of the text. Often source content is HTML or some sort of similar markup language, where therefore tags are used to define layout, formatting and/or structure. The preparation of the source files as XLIFF entails dealing with those codes as appropriate.
 
