@@ -14,14 +14,15 @@
 
 This report includes recommendations for preparing content for translation in the XLIFF format with a view to producing XLIFF files that optimize the different language tasks and language asset management both in the short and the long run. It also focuses on issues that can be problematic for language experts and how those issues can be avoided.
 
-To illustrate the DO's and DON'T's, one OmegaT <span id="a1">[[1]](#1)</span> project is provided, containing:
+To illustrate the DO's and DON'T's, an OmegaT <span id="a1">[[1]](#1)</span> project is provided, containing:
 
   * the original files (XML, HTML, SVG, etc.), in folder `original`
-  * the problematic prepared XLIFF files, in folder `source/01_haram`
-  * the optimal prepared XLIFF files, in folder `source/02_halal`
+  * the problematic XLIFF files, in folder `source/01_haram`
+  * the optimal XLIFF files, in folder `source/02_halal`
 
-This is the file structure in the project:
+The original files have been prepared as XLIFF in two different ways, to show the ideal preparation and its antithesis. <!-- The `original` folder contains the source content, the `source` folder contains the files prepared for translation: the `haram` folder contains the problma tic files, and the `halal` folder contains the files with the recommended preparation. --> This is the file structure in the project:
 
+<!--
     xliff_bestpractices_omtprj (project)
         + original (source content)
             + 02_halal
@@ -46,6 +47,41 @@ This is the file structure in the project:
                 - markup_input.html.xlf
                 - markup_span.html.xlf
                 - segment_para.html.xlf
+-->
+
+    xliff_bestpractices_omtprj (project)
+	.
+	├── dictionary
+	├── glossary
+	├── manifest.rkm
+	├── omegat
+	│   ├── ...
+	├── omegat.project
+	├── original
+	│   └── 02_halal
+	│       ├── entities.html
+	│       ├── markup_custom.xml
+	│       ├── markup_inline.svg
+	│       ├── markup_input.html
+	│       ├── markup_span.html
+	│       └── segmen_para.html
+	├── source
+	│   ├── 01_haram
+	│   │   ├── entities.html.xlf
+	│   │   ├── markup_custom.xml.xlf
+	│   │   ├── markup_inline.svg.xlf
+	│   │   ├── markup_input.html.xlf
+	│   │   ├── markup_span.html.xlf
+	│   │   └── segmen_para.html.xlf
+	│   └── 02_halal
+	│       ├── entities.html.xlf
+	│       ├── markup_custom.xml.xlf
+	│       ├── markup_inline.svg.xlf
+	│       ├── markup_input.html.xlf
+	│       ├── markup_span.html.xlf
+	│       └── segmen_para.html.xlf
+	├── target
+	└── tm
 
 You can open the XLIFF files and look at them in an XML editor, but probably the best way to see the impact of the different preparation is to open the project in OmegaT and compare each _haram_ file with its corresponding _halal_ files. The project can be downloaded twice with different names and two instances of OmegaT can be run simultaneously for a handier comparison.
 
@@ -53,7 +89,7 @@ To open the project in OmegaT:
 
 [comment]: <> (Download and install our custom version of OmegaT: http://cat.capstan.be/OmegaTcp_installer.exe)
 
-  - Install and customize OmegaT as per our [installation and customization guide](https://slides.com/capstan/omegat-installation-and-customization-guide/fullscreen) <span id="a1">[[2]](#2)</span>
+  - Install and customize OmegaT as per our [installation and customization guide](https://slides.com/capstan/omegat-installation-and-customization-guide/fullscreen) <span id="a2">[[2]](#2)</span>
   - Go to     **Project** >     **Download team project** and enter the following details:
     - url: `http://svn.capstan.be/testproject1/xliff_bestpractices_omtprj`
 	- credentials: `capstanview` (username) / `cApStAn2016` (password)
