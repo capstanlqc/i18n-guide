@@ -38,6 +38,7 @@
 [TOC]
 -->
 
+<!-- hand-made:
 0. [Introduction](#introduction)
 	* [Sample project](#sample-project)
 1. [Requirements](#1-requirements)
@@ -52,7 +53,7 @@
 4. [Annexes](#Annexes)
 	* [Guidelines for creating XLIFF 1.2 files for OmegaT](#guidelines-for-creating-xliff-12-files-for-omegat)
 5. [References](#references)
-
+-->
 
 ## Document history
 
