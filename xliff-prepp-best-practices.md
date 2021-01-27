@@ -24,7 +24,7 @@ In this document, segments as the linguist sees them in the translation editor a
 
 ### Sample project
 
-To illustrate the DO's and DON'T's, an OmegaT <span id="a1">[[1]](#1)</span> project is provided, containing:
+To illustrate the DO's and DON'T's, an OmegaT sample project is provided, containing:
 
   * the original files (XML, HTML, SVG, etc.), in folder `original`
   * the problematic XLIFF files, in folder `source/01_haram`
@@ -99,7 +99,7 @@ To open the project in OmegaT:
 
 [comment]: <> (Download and install our custom version of OmegaT: http://cat.capstan.be/OmegaTcp_installer.exe)
 
-  - Install and customize OmegaT as per our [installation and customization guide](https://slides.com/capstan/omegat-installation-and-customization-guide/fullscreen) <span id="a2">[[2]](#2)</span>
+  - Install and customize OmegaT as per our [installation and customization guide](https://slides.com/capstan/omegat-installation-and-customization-guide/fullscreen) <span id="a1">[[1]](#1)</span>
   - In OmegaT, go to     **Project** >     **Download team project** and enter the following details:
     - url: `http://svn.capstan.be/testproject1/xliff_bestpractices_omtprj`
 	- credentials: `capstanview` (username) / `cApStAn2016` (password)
@@ -107,7 +107,7 @@ To open the project in OmegaT:
 
 That will create a local version of the project for you and will open it. You can click on the different files in the project files window to display the different content in the translation editor.
 
-The Okapi project, including the settings files, can also be downloaded from [`http://cat.capstan.be/xliff_bestpractices_okpprj.zip`](http://cat.capstan.be/xliff_bestpractices_okpprj.zip), although this is not necessary unless you want to recreate or customize the extraction process. To (re)create the XLIFF files, the `rnb` file must be open from Okapi Rainbow.
+The Okapi project, including the settings files, can also be downloaded from [`http://cat.capstan.be/xliff_bestpractices_okpprj.zip`](http://cat.capstan.be/xliff_bestpractices_okpprj.zip), although this is not necessary unless you want to recreate or customize the extraction process. To (re)create the XLIFF files, the `rnb` file must be open from Okapi Rainbow.<span id="a2">[[2]](#2)</span>
 
 
 ## 1. Requirements
@@ -370,7 +370,7 @@ autofocus /> cm taller than a little penguin.</p>
 
 That code represents this display in the online questionnaire:
 
-![](form.png)
+![](images/form.png)
 ![](https://wiki.capstan.be/lib/exe/fetch.php?w=400&tok=f465dd&media=tecdoc:form.png)
 
 Here, the expected and recommended preparation is to represent the text input field as content markup, as follows (and file `02_halal/markup_input.html.xlf` exemplifies):
@@ -580,7 +580,7 @@ In any case it should not be assumed that the translator will keep the line brea
 Therefore, our recommendation, in the first place, would be to avoid using line break tags in the source text. Secondly (assuming we are dealing with HTML content), the width of the text can be defined by means of CSS styles. That approach  achieves the same exact results without introducing any noise in the source text and without affecting the work of the translator. See https://jsfiddle.net/msoutopico/3p7x8ryr/1/ or the screenshot below:
 
 <!--- ![](markup_fiddl_wrap.png) -->
-<img src="markup_fiddl_wrap.png" width="500px">
+<img src="images/markup_fiddl_wrap.png" width="500px">
 
 [comment]: <> (/** more issues. mixture of encodings **/)
 
@@ -588,7 +588,7 @@ Therefore, our recommendation, in the first place, would be to avoid using line 
 
 #### Tip
 
-To avoid this issue, ask a linguist to run a source review on your draft XLIFF files and then adjust the extraction filter accordingly, so that the line break element is treated as an inline code (extracted along with the surrounding text and protected) and not as the end of the paragraph.
+To avoid this kind of issue, then, ask a translation technologist or a trained linguist to run a source review on your draft XLIFF files and/or your original source content and then clean up your source content (prefereably) to avoid hard-coding text wrapping or (less preferably) adjust the extraction filter accordingly, so that the line break element is treated as an inline code (extracted along with the surrounding text and protected) and not as the end of the paragraph.
 
 
 ## Annexes
@@ -598,6 +598,22 @@ Preparing XLIFF files for translation in OmegaT entails some additional tweaks d
 ### Guidelines for creating XLIFF 1.2 files for OmegaT
 
 #### Check list for translation
+
+There are two possibilities for creating new XILFF files for translation tasks.
+
+A. Using the Okapi XLIFF filter:
+
+* The `target` element must be empty or missing, like so:
+
+```xml
+  <trans-unit id="1086880">
+    <source>This is the source text.</source>
+    <target/>
+  </trans-unit>
+```
+Also, the `trans-unit` must have property `xml:space="preserve"`.
+
+B. Using the default OmegaT XLIFF filter:
 
 * The `target` element must exist and be populated with the source text.
 
@@ -610,9 +626,9 @@ For example:
   </trans-unit>
 ```
 
-???? ADD TEMPLATE HERE
-
 #### Check list for bilingual review
+
+Make sure your bilingual/translated XLIFF files meet the following criteria:
 
 * The `trans-unit` must have attribute `xml:space` with value `preserve` if leading and trailing space included in the source text must be replicated in the translation.
 * The `trans-unit` must have attribute-value pair `approved="yes"`.
@@ -626,13 +642,13 @@ For example:
   </trans-unit>
 ```
 
-???? ADD TEMPLATE HERE
+In this case the OmegaT project must use the Okapi XLIFF filter.
 
 ## References
 
-1. <span id="1"></span> OmegaT is a free and open source computer-assisted translation tool (CAT-tool) that cApStAn uses to translate and review/edit XLIFF files in international large-scale translation projects. It offers more technical possibilities than OLT. [⏎](#a1)
+1. OmegaT is a free and open source computer-assisted translation tool (CAT-tool) that cApStAn uses to translate and review/edit XLIFF files in international large-scale translation projects. It offers many more technical possibilities than OLT. See our  OmegaT installation and customization guide: https://slides.com/capstan/omegat-installation-and-customization-guide/fullscreen [⏎](#a1)
 
-2. <span id="2"></span> OmegaT installation and customization guide: https://slides.com/capstan/omegat-installation-and-customization-guide/fullscreen [⏎](#a2)
+2. <span id="2"></span> See [https://okapiframework.org/wiki/index.php?title=Rainbow](https://okapiframework.org/wiki/index.php?title=Rainbow)  [⏎](#a2)
 
 3. <span id="3"></span> See [http://docs.oasis-open.org/xliff/xliff-core/xliff-core.html](http://docs.oasis-open.org/xliff/xliff-core/xliff-core.html) [⏎](#a3)
 
