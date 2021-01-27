@@ -17,6 +17,7 @@
 
   * [Document history](#document-history)
   * [Introduction](#introduction)
+    + [Notation](#notation)
     + [Sample project](#sample-project)
   * [1. Requirements](#1-requirements)
   * [2. Recommendations](#2-recommendations)
