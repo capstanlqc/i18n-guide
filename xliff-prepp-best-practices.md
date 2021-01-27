@@ -22,6 +22,8 @@ In this document, segments as the linguist sees them in the translation editor a
 
 > <kbd>31</kbd> This is a segment
 
+Also, the cross mark (❌) and check mark (✔️) emojis are used to indicate after each exale what is discouraged or problematic and expected or recommended, respectively. These icons are not part of the text!  <!-- ✔️ -->
+
 ### Sample project
 
 To illustrate the DO's and DON'T's, an OmegaT sample project is provided, containing:
@@ -221,7 +223,7 @@ A leading opening tag appearing before the beginning of a sentence and its corre
 
 Since they are expected to appear in exactly the same position in the target version of that segment, they don't need to appear in the translation editor and the translator does not need to see them:
 
-> <kbd>1</kbd> What is the total length of the sticks in the line? ✅
+> <kbd>1</kbd> What is the total length of the sticks in the line? ✔
 
 > <kbd>1</kbd> `<g0>`What is the total length of the sticks in the line?`</g0>` ❌
 
@@ -246,7 +248,7 @@ roman","serif"'></bpt>3/2 or 11/2 or 1.5<ept id="2">&lt;/span></ept></source>
 
 which the CAT tool will display as, e.g.:
 
-> <kbd>1</kbd> `<g0>`Code1: `<g0><g1>`3/2 or 11/2 or 1.5`</g1>` ✅
+> <kbd>1</kbd> `<g0>`Code1: `<g0><g1>`3/2 or 11/2 or 1.5`</g1>` ✔
 
 Representing the HTML tags as inline codes as specified in the XLIFF standard  also reduces the length of each tag, thus better legibility is obtained and the segments are much easier to handle.
 
@@ -302,7 +304,7 @@ Linguists need to see the character, not the code. While `&divide;` (÷) or `&pi
 Compare with the correct translation:
 
 > <kbd>source:</kbd> Punctuation works `&quot;`differently`&quot;` in French.  
-> <kbd>target:</kbd> La ponctuation est « différente » en français. ✅ <!-- :heavy_check_mark: -->
+> <kbd>target:</kbd> La ponctuation est « différente » en français. ✔ <!-- :heavy_check_mark: -->
 
 Escapes were used to represent (by means of ASCII text only) characters that were not available in the character encoding you are using. The W3C (group in charge of the HTML specification) advises to use an encoding that allows to represent characters in their normal form, rather than using escaped named character entities, because using escapes can make it difficult to read and maintain source code, and can also significantly increase file size.<span id="a10">[[10]](#10)</span> Nowadays, it should be possible to encode any text as UTF-8, which allows to use Unicode characters and removes the need for such escapes.
 
@@ -317,16 +319,16 @@ If it's unavoidable to have named character entities in the source content to re
 Both the approaches mentioned in the previous paragraph will produce one of the two following XLIFF codes (depending on the encoding chosen):
 
 ``` xml
-<source>(40 &#x00F7; 10) + (8 &#x00F7; 2)</source> ✅
+<source>(40 &#x00F7; 10) + (8 &#x00F7; 2)</source> ✔
 ```
 
 ``` xml
-<source>(40 ÷ 10) + (8 ÷ 2)</source> ✅
+<source>(40 ÷ 10) + (8 ÷ 2)</source> ✔
 ```
 
 which will be displayed as the following in the translation editor:
 
-> <kbd>1</kbd> (40 ÷ 10) + (8 ÷ 2) ✅
+> <kbd>1</kbd> (40 ÷ 10) + (8 ÷ 2) ✔
 
 In a nutshell, then: using the Unicode characters in their normal form is preferable to representing them with their numeric --preferably hexadecimal-- reference, and any of those two options is preferable to escaping the named character references with `&amp;`, or declaring them in the preamble of the document.
 
@@ -385,11 +387,11 @@ formmethod="post" required autofocus /></ph> cm taller than a little penguin.
 
 which will appear as follows in the translation editor (see file `02_halal/markup_input.html.xlf`):
 
-> <kbd>1</kbd> An emperor penguin is `<x0/>` cm taller than a little penguin.  ✅ <!-- :heavy_check_mark: -->
+> <kbd>1</kbd> An emperor penguin is `<x0/>` cm taller than a little penguin.  ✔ <!-- :heavy_check_mark: -->
 
 That preparation makes it very easy for the translator to insert the placeable tag in the translation of that segment in the position where the input field should appear in the target version. For example, in Khmer:
 
-> <kbd>1</kbd><kbd>target:</kbd> ព្រះចៅអធិរាជភេនឃ្វីនមានកំពស់ខ្ពស់ជាងភេនឃ្វីនតូចជាង `<x0/>` ហ្វីត។   ✅
+> <kbd>1</kbd><kbd>target:</kbd> ព្រះចៅអធិរាជភេនឃ្វីនមានកំពស់ខ្ពស់ជាងភេនឃ្វីនតូចជាង `<x0/>` ហ្វីត។   ✔
 
 File `markup_inline.svg.xlf` shows a similar case of text broken down at the two embedding SVG tags `<tspan>` and `</tspan>`.
 
@@ -486,7 +488,7 @@ In these cases, to achieve the correct translation the linguist might need to di
 | <kbd>1</kbd> | Front            | Rueda (fem.)       |
 | <kbd>2</kbd> | wheel            | delanter**a** (fem.)       |
 | <kbd>3</kbd> | Front            | Faro (masc.)       |
-| <kbd>4</kbd> | headlamp         | delanter**o** (masc.) ✅       |
+| <kbd>4</kbd> | headlamp         | delanter**o** (masc.) ✔       |
 
 In a nutshell, split sentences can be a nuisance to translate into certain languages with different word order than English -- the linguist might have to work around the translation in difficult or impossible ways. Also, productivity and internal consistency can be compromised if the same text appears later in the same project, or in future cycles, with different or correct segmentation.
 
@@ -495,13 +497,13 @@ In a nutshell, split sentences can be a nuisance to translate into certain langu
 
 The expected result in the cases above would have been to use a tag or a placeholder to encode the inline code:
 
-> <kbd>1</kbd> See uses on `%s` to show 2 children in her pictograph   ✅ <!-- :heavy_check_mark: -->  
-> <kbd>2</kbd> How many `%s` will they need to draw?   ✅ <!-- :heavy_check_mark: -->
+> <kbd>1</kbd> See uses on `%s` to show 2 children in her pictograph   ✔ <!-- :heavy_check_mark: -->  
+> <kbd>2</kbd> How many `%s` will they need to draw?   ✔ <!-- :heavy_check_mark: -->
 
-> <kbd>1</kbd> Click `<BUTTON/>` to move on.   ✅ <!-- :heavy_check_mark: -->
+> <kbd>1</kbd> Click `<BUTTON/>` to move on.   ✔ <!-- :heavy_check_mark: -->
 
-> <kbd>1</kbd> Front wheel   ✅ <!-- :heavy_check_mark: -->  
-> <kbd>2</kbd> Front headlamp   ✅ <!-- :heavy_check_mark: -->
+> <kbd>1</kbd> Front wheel   ✔ <!-- :heavy_check_mark: -->  
+> <kbd>2</kbd> Front headlamp   ✔ <!-- :heavy_check_mark: -->
 
 In the examples above where the segment has been properly prepared with placeholders, it is very easy (and common practice) for the translator to insert the placeables tags in the position where the inline codes belong in the target version.
 
@@ -516,7 +518,7 @@ Segments overloaded with markup make translation and all related subsequent lang
 Some inline codes are unavoidable, e.g. to provide style:
 
 ``` xml
-Put the lengths in order from <b>shortest</b> to <i>longest</i>. ✅
+Put the lengths in order from <b>shortest</b> to <i>longest</i>. ✔
 ```
 
 However, other tags are unnecessary and should be avoided or cleaned up before preparing the files. For example, closing and opening tags of the same kind in the middle of a sentence or even in the middle of a word:
@@ -539,12 +541,12 @@ In that example, there are a lot of `<strong>` tags there to do the same job tha
 The expected design of the source content in the case above would have been to embed the formatted text with one single tag pair.
 
 ``` xml
-<strong>Start Time</strong> ✅
+<strong>Start Time</strong> ✔
 ```
 
 This tag pair is actually suprasentential markup, which could be excluded from the prepared segment, thus producing the following simple display in the translation editor:
 
-> <kbd>1</kbd> Start Time   ✅ <!-- :heavy_check_mark: -->
+> <kbd>1</kbd> Start Time   ✔ <!-- :heavy_check_mark: -->
 
 The solution of this issue does not affect how the source content is prepared, but instead it relates to the pre-processing of the source content, before it is prepared. The actual preparation (parsing, extraction and segmentation) is the same regardless of whether the issue is present in the source files.
 
@@ -570,7 +572,7 @@ For example:
 
 One potential approach would be to represent the line break tags are as placeholders:
 
-> `1` Since the 1970s, scientists have been `<g0/>` worried about the amount of Dioxin, a `<g1/>` toxin in fish caught in Baltic Sea.   ✅ <!-- :heavy_check_mark: -->
+> `1` Since the 1970s, scientists have been `<g0/>` worried about the amount of Dioxin, a `<g1/>` toxin in fish caught in Baltic Sea.   ✔ <!-- :heavy_check_mark: -->
 
 However, a much better approach would be to get rid of those line breaks, which were there probably to hard wrap the text at a certain width to adapt to some expected space, and soft wrap the translation by other more convenient and dynamic means (e.g. styles) in the actual final publication medium. In general it is recommended to separate content from layout.
 
