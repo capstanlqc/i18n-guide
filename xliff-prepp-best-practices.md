@@ -28,7 +28,7 @@
     + [2.3. Encoding entities](#23-encoding-entities)
       - [2.3.1. Escaping named character entities](#231-escaping-named-character-entities)
       - [2.3.2. Unicode characters and code points](#232-unicode-characters-and-code-points)
-  * [3. Frequent issues](#3-frequent-issues)
+  * [3. Common issues](#3-common-issues)
     + [3.1. Split sentences](#31-split-sentences)
       - [Expected preparation](#expected-preparation)
       - [Tip](#tip)
@@ -411,7 +411,7 @@ When preparing XLIFF files with a localization engineering tool, e.g. Okapi Rain
 
 With a few negligible exceptions<span id="a13">[[13]](#13)</span>, there should be no reason why a UTF-8 encoding and Unicode characters cannot be used any content to be localized.
 
-## 3. Frequent issues
+## 3. Common issues
 
 Following the recommendations above is necessary but might not be enough to achieve an optimized process. The source content might present a number of pitfalls that require special attention when creating the XLIFF files. Let us see some of those frequent issues that may hamper language tasks.
 
