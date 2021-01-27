@@ -421,7 +421,7 @@ Maintaining the correspondence will produce the wrong order in the final content
 > <kbd>1</kbd> klïck  ❌ <!-- :x: -->  
 > <kbd>2</kbd> Tó móvê ón  ❌ <!-- :x: -->
 
-Breaking the natural correspondence will produce the right order in the final content but makes reuse of these materials problematic when translating subsequent cycle's content using the TM containing these translations:
+Breaking the natural correspondence will produce the right order in the final content but spoils the TM containing these translations, which will not be reusable when the same kind of content  needs to be translated in a subsequent cycle of the same project:
 
 > <kbd>1</kbd> <kbd>source:</kbd>  Click  
 >      <kbd>target:</kbd>  Tó móvê ón  ❌ <!-- :x: -->  
@@ -436,7 +436,7 @@ or
 >      <kbd>target:</kbd>   
 
 
-Auto-propagation can also become problematic, if the translation of a repeated segment (corresponding to part of the sentence) is different in different contexts, for example due to agreement with other parts of the sentence, e.g.
+Auto-propagation of broken translations can also become problematic if the translation of a repeated segment (corresponding to part of the sentence) must be different in different contexts, for example due to agreement with other parts of the sentence, e.g.
 
 > <kbd>1</kbd> Front  ❌ <!-- :x: -->  
 > <kbd>2</kbd> wheel  
@@ -444,6 +444,26 @@ Auto-propagation can also become problematic, if the translation of a repeated s
 > <kbd>4</kbd> headlamp
 
 For example, in Spanish adjectives need to agree in gender and number with the nouns they modify, e.g. the translation of "front" is "delantera" (feminine) in seg1 to agree with the Spanish equivalent of "wheel" (i.e. "rueda"), which has feminine grammatical gender, whereas it is "delantero" (masculine) in seg3 to agree with the Spanish equivalent of "headlamp" (i.e. "faro"), which has masculine grammatical gender.
+
+Auto-propagation would produce the following translation:
+
+> <kbd>1</kbd> <kbd>source:</kbd>  Front  
+>      <kbd>target:</kbd>  Rueda [fem.]  
+> <kbd>2</kbd> <kbd>source:</kbd>  wheel  
+>      <kbd>target:</kbd> delanter**a** [fem.]  
+> <kbd>1</kbd> <kbd>source:</kbd>  Front  
+>      <kbd>target:</kbd>  Faro [masc.]  
+> <kbd>2</kbd> <kbd>source:</kbd>  headlamp  
+>      <kbd>target:</kbd> delanter**a** [fem.] ❌  
+
+
+| #            | source           | target             |
+|:------------ |:---------------- |:------------------ |
+| <kbd>1</kbd> | Front            | Rueda (fem.)       |
+| <kbd>2</kbd> | wheel            | delanter**a** (fem.)       |
+| <kbd>3</kbd> | Front            | Faro (fem.)       |
+| <kbd>4</kbd> | headlamp         | delanter**a** (fem.) ❌       |
+
 
 In these cases, to achieve the correct translation the linguist might need to disable the default auto-propagation (to prevent the translation of seg1 being pulled automatically into seg3), but that manual step could fail or be easily overlooked.
 
