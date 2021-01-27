@@ -363,7 +363,7 @@ The original content (in file `original/markup_input.html`) looks like this:
 
 ``` xml
 <p>An emperor penguin is <input type="text" name="fname" autocomplete="off"
-size="4" id="emperor-penguin-versus-little-penguin" class="heigh-differnet"
+size="4" id="emperor-penguin-versus-little-penguin" class="height-different"
 pattern="[0-9]+" title="How many centimeters." formmethod="post" required
 autofocus /> cm taller than a little penguin.</p>
 ```
@@ -373,70 +373,74 @@ That code represents this display in the online questionnaire:
 ![](form.png)
 ![](https://wiki.capstan.be/lib/exe/fetch.php?w=400&tok=f465dd&media=tecdoc:form.png)
 
-Here, the expected preparation is to represent the text input field as content markup, as follows (and file `02_halal/markup_input.html.xlf` exemplifies):
+Here, the expected and recommended preparation is to represent the text input field as content markup, as follows (and file `02_halal/markup_input.html.xlf` exemplifies):
 
 ``` xml
 <source xml:lang="en">An emperor penguin is <ph id="1" ctype="x-input">&lt;input
 type="text" name="fname" autocomplete="off" size="4" id="emperor-penguin-versus-
-little-penguin" class="heigh-differnet" pattern="[0-9](0-9]+")+"
-[formmethod="post" required autofocus></ph> cm taller than a little penguin.
+little-penguin" class="height-different" pattern="[0-9]+"
+formmethod="post" required autofocus /></ph> cm taller than a little penguin.
 </source>
 ```
 
-which will appear as follows in the translation editor (see file ????)
+which will appear as follows in the translation editor (see file `02_halal/markup_input.html.xlf`):
 
-> <kbd>1</kbd> An emperor penguin is `<x0/>` cm taller than a little penguin.   ✅ <!-- :heavy_check_mark: -->
+> <kbd>1</kbd> An emperor penguin is `<x0/>` cm taller than a little penguin.  ✅ <!-- :heavy_check_mark: -->
+
+That preparation makes it very easy for the translator to insert the placeable tag in the translation of that segment in the position where the input field should appear in the target version. For example, in Khmer:
+
+> <kbd>1</kbd><kbd>target:</kbd> ព្រះចៅអធិរាជភេនឃ្វីនមានកំពស់ខ្ពស់ជាងភេនឃ្វីនតូចជាង `<x0/>` ហ្វីត។   ✅
 
 File `markup_inline.svg.xlf` shows a similar case of text broken down at the two embedding SVG tags `<tspan>` and `</tspan>`.
 
 Other similar examples:
 
-> <kbd>1</kbd> Click  ❌ <!-- :x: -->\
+> <kbd>1</kbd> Click  ❌ <!-- :x: -->  
 > <kbd>2</kbd> to move on.
 
-> <kbd>1</kbd> See uses on  ❌ <!-- :x: -->\
-> <kbd>2</kbd> to show 2 children in her pictograph\
-> <kbd>3</kbd> How many  ❌ <!-- :x: -->\
+> <kbd>1</kbd> See uses on  ❌ <!-- :x: -->  
+> <kbd>2</kbd> to show 2 children in her pictograph  
+> <kbd>3</kbd> How many  ❌ <!-- :x: -->  
 > <kbd>4</kbd> will they need to draw?
 
-> <kbd>1</kbd> Feed 5 penguins for  ❌ <!-- :x: -->\
+> <kbd>1</kbd> Feed 5 penguins for  ❌ <!-- :x: -->  
 > <kbd>2</kbd> zeds.
 
-> <kbd>1</kbd> Drag  ❌ <!-- :x: -->\
+> <kbd>1</kbd> Drag  ❌ <!-- :x: -->  
 > <kbd>2</kbd> onto the graph.
 
-> <kbd>1</kbd> When your drawing is done, click  ❌ <!-- :x: -->\
+> <kbd>1</kbd> When your drawing is done, click  ❌ <!-- :x: -->  
 > <kbd>2</kbd> to fill the garden with boxes of flowers.
 
 In all these cases the original content includes some element (e.g. "Click `[X](BUTTON)` to move on." or "Feed 5 penguins for `[QUANTITY]` zeds.") that has been interpreted as the end of a paragraph.
 
-Apart from the inconvenience that the full sentence will not be stored in the translation memory as one unit, this is a further problem if the target language expresses things in a different order than English, e.g. say, "Tó móvê ón klïck `[X]`)". In that case the linguist is forced to break the expected one-to-one segment correspondence, in order to maintain the correct order.
+Apart from the problem that the full sentence will not be stored in the translation memory as one unit, this is also problematic when the target language expresses things in a different order than English, e.g. say, "Tó móvê ón klïck `[X]`)". In that case the linguist is forced to break the expected one-to-one segment correspondence, in order to maintain the correct order.
 
 Maintaining the correspondence will produce the wrong order in the final content according to the syntax of the target language:
 
-> <kbd>1</kbd> klïck  ❌ <!-- :x: -->\
+> <kbd>1</kbd> klïck  ❌ <!-- :x: -->  
 > <kbd>2</kbd> Tó móvê ón  ❌ <!-- :x: -->
 
 Breaking the natural correspondence will produce the right order in the final content but makes reuse of these materials problematic when translating subsequent cycle's content using the TM containing these translations:
 
-> <kbd>1</kbd> <kbd>source:</kbd>  Click\
->      <kbd>target:</kbd>  Tó móvê ón  ❌ <!-- :x: -->\
-> <kbd>2</kbd> <kbd>source:</kbd>  to move on\
+> <kbd>1</kbd> <kbd>source:</kbd>  Click  
+>      <kbd>target:</kbd>  Tó móvê ón  ❌ <!-- :x: -->  
+> <kbd>2</kbd> <kbd>source:</kbd>  to move on  
 >      <kbd>target:</kbd>   klïk.  ❌ <!-- :x: -->
 
 or
 
-> <kbd>1</kbd> <kbd>source:</kbd>  Click\
->      <kbd>target:</kbd>  Tó móvê ón klïk  ❌ <!-- :x: -->\
-> <kbd>2</kbd> <kbd>source:</kbd>  to move on\
+> <kbd>1</kbd> <kbd>source:</kbd>  Click  
+>      <kbd>target:</kbd>  Tó móvê ón klïk  ❌ <!-- :x: -->  
+> <kbd>2</kbd> <kbd>source:</kbd>  to move on  
 >      <kbd>target:</kbd>   
 
 
 Auto-propagation can also become problematic, if the translation of a repeated segment (corresponding to part of the sentence) is different in different contexts, for example due to agreement with other parts of the sentence, e.g.
 
-> <kbd>1</kbd> Front  ❌ <!-- :x: -->\
-> <kbd>2</kbd> wheel\
-> <kbd>3</kbd> Front  ❌ <!-- :x: -->\
+> <kbd>1</kbd> Front  ❌ <!-- :x: -->  
+> <kbd>2</kbd> wheel  
+> <kbd>3</kbd> Front  ❌ <!-- :x: -->  
 > <kbd>4</kbd> headlamp
 
 For example, in Spanish adjectives need to agree in gender and number with the nouns they modify, e.g. the translation of "front" is "delantera" (feminine) in seg1 to agree with the Spanish equivalent of "wheel" (i.e. "rueda"), which has feminine grammatical gender, whereas it is "delantero" (masculine) in seg3 to agree with the Spanish equivalent of "headlamp" (i.e. "faro"), which has masculine grammatical gender.
