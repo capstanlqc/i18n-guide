@@ -1,9 +1,20 @@
 # Best practices for preparing XLIFF files
 
+
+## Document history
+
+| Date       | Author            | Comment            |
+|:---------- |:----------------- |:------------------ |
+| 2021-01-27 | Manuel Souto Pico | Review and updates |
+| 2018-05-25 | Manuel Souto Pico | Segmentation       |
+| 2018-02-02 | Manuel Souto Pico | Encoding entities  |
+| 2018-01-30 | Manuel Souto Pico | Creation           |
+
+
 ## Table of contents
 
-- [Best practices for preparing XLIFF files](#best-practices-for-preparing-xliff-files)
-  * [Table of contents](#table-of-contents)
+<!-- - [Best practices for preparing XLIFF files](#best-practices-for-preparing-xliff-files) -->
+
   * [Document history](#document-history)
   * [Introduction](#introduction)
     + [Sample project](#sample-project)
@@ -54,15 +65,6 @@
 	* [Guidelines for creating XLIFF 1.2 files for OmegaT](#guidelines-for-creating-xliff-12-files-for-omegat)
 5. [References](#references)
 -->
-
-## Document history
-
-| Date       | Author            | Comment            |
-|:---------- |:----------------- |:------------------ |
-| 2021-01-27 | Manuel Souto Pico | Review and updates |
-| 2018-05-25 | Manuel Souto Pico | Segmentation       |
-| 2018-02-02 | Manuel Souto Pico | Encoding entities  |
-| 2018-01-30 | Manuel Souto Pico | Creation           |
 
 
 <!--- https://gist.github.com/rxaviers/7360908 -->
