@@ -2,9 +2,13 @@
 
 ## Changes
 
-| Date       | Author           | Comment            |
-|:---------- |:---------------- |:------------------ |
-| 2021-01-27 | Mauel Souto Pico | Review and updates |
+| Date       | Author            | Comment            |
+|:---------- |:----------------- |:------------------ |
+| 2021-01-27 | Manuel Souto Pico | Review and updates |
+| 2018-05-25 | Manuel Souto Pico | Segmentation       |
+| 2018-02-02 | Manuel Souto Pico | Encoding entities  |
+| 2018-01-30 | Manuel Souto Pico | Creation           |
+
 
 <!--- https://gist.github.com/rxaviers/7360908 -->
 
