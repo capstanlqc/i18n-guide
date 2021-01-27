@@ -225,6 +225,7 @@ Since they are expected to appear in exactly the same position in the target ver
 
 > <kbd>1</kbd> What is the total length of the sticks in the line? ✔
 
+
 > <kbd>1</kbd> `<g0>`What is the total length of the sticks in the line?`</g0>` ❌
 
 #### 2.2.2. Intrasentential codes
@@ -373,7 +374,8 @@ autofocus /> cm taller than a little penguin.</p>
 That code represents this display in the online questionnaire:
 
 ![](images/form.png)
-![](https://wiki.capstan.be/lib/exe/fetch.php?w=400&tok=f465dd&media=tecdoc:form.png)
+
+<!-- ![](https://wiki.capstan.be/lib/exe/fetch.php?w=400&tok=f465dd&media=tecdoc:form.png) -->
 
 Here, the expected and recommended preparation is to represent the text input field as content markup, as follows (and file `02_halal/markup_input.html.xlf` exemplifies):
 
@@ -561,10 +563,10 @@ Provide feedback and tips to content authors and item developers and run some ta
 In some cases, line breaks are used to limit the length of each line in the source text. During extraction, the text might be split down at these line break tags.
 
 For example:
-> <kbd>1</kbd> Since the 1970s, scientists have been\
-> <kbd>2</kbd> `<br/>`  ❌ <!-- :x: -->\
-> <kbd>3</kbd> worried about the amount of Dioxin, a\
-> <kbd>4</kbd> `<br/>` ❌ <!-- :x: -->\
+> <kbd>1</kbd> Since the 1970s, scientists have been  
+> <kbd>2</kbd> `<br/>`  ❌ <!-- :x: -->  
+> <kbd>3</kbd> worried about the amount of Dioxin, a  
+> <kbd>4</kbd> `<br/>` ❌ <!-- :x: -->  
 > <kbd>5</kbd> toxin in fish caught in Baltic Sea.
 
 #### Expected preparation
@@ -580,8 +582,8 @@ In any case it should not be assumed that the translator will keep the line brea
 
 Therefore, our recommendation, in the first place, would be to avoid using line break tags in the source text. Secondly (assuming we are dealing with HTML content), the width of the text can be defined by means of CSS styles. That approach  achieves the same exact results without introducing any noise in the source text and without affecting the work of the translator. See https://jsfiddle.net/msoutopico/3p7x8ryr/1/ or the screenshot below:
 
-<!--- ![](markup_fiddl_wrap.png) -->
-<img src="images/markup_fiddl_wrap.png" width="500px">
+![](images/markup_fiddl_wrap.png)
+<!-- <img src="images/markup_fiddl_wrap.png" width="500px"> -->
 
 [comment]: <> (/** more issues. mixture of encodings **/)
 
