@@ -1,5 +1,11 @@
 # Best practices for preparing XLIFF files
 
+## Changes
+
+| Date       | Author           | Comment            |
+|:---------- |:---------------- |:------------------ |
+| 2021-01-27 | Mauel Souto Pico | Review and updates |
+
 <!--- https://gist.github.com/rxaviers/7360908 -->
 
 [comment]: <> (Your organization knows that you must prepare your content for translation in the XLIFF format. As your organization's lead engineer, you meet the technical requirements and know how to deal with the XML metalanguage to produce well-formed and valid, therefore interoperable XLIFF files that the linguists' translation editor can open.)
@@ -104,13 +110,13 @@ That will create a local version of the project for you and will open it. You ca
 The Okapi project, including the settings files, can also be downloaded from [`http://cat.capstan.be/xliff_bestpractices_okpprj.zip`](http://cat.capstan.be/xliff_bestpractices_okpprj.zip), although this is not necessary unless you want to recreate or customize the extraction process. To (re)create the XLIFF files, the `rnb` file must be open from Okapi Rainbow.
 
 
-## Requirements
+## 1. Requirements
 
 When creating XLIFF files, the only strict technical requirement is to create _well-formed_ and _valid_ XLIFF files, according to the XML syntax and the XLIFF specification <span id="a3">[[3]](#3)</span>. Created XLIFF files can be validated with the strict XML schema <span id="a4">[[4]](#4)</span> or using the XLIFF Checker <span id="a5">[[5]](#5)</span>.
 
 Well-formedness and validity are the bare minimum, but of course it is perfectly possible to produce XLIFF files that are valid and compliant with the XLIFF standard but that are not translation-friendly. The main purpose of this report is to promote some best practices, upon which the following recommendations are based.
 
-## Recommendations
+## 2. Recommendations
 
 Based on the localization industry's best practices for preparing files for translation and on cApStAn's experience in localization of international large-scale assessments and questionnaires, we can define a number of important recommendations or expectations.
 
@@ -137,7 +143,7 @@ There are other, recommendations about characters and whitespace might have a le
   * To avoid truncations and overflowing text, text should be wrapped dynamically in the publication medium instead of using linebreak codes in the source text.
   * Comments should not be extracted as translatable text.
 
-### 1. Segmentation
+### 2.1. Segmentation
 
 Translating or reviewing long paragraphs containing several sentences is inconvenient for several reasons.
 
@@ -200,7 +206,7 @@ Luckily, there again, default rulesets used by available tools already include t
 
 **☞** In the OmegaT project provided, file `01_haram/segment_para.html.xlf` shows a text that has been prepared without segmentation, whereas file `02_halal/segment_para.html.xlf` has been prepared with sentence-based segmentation.
 
-### 2. Inline codes
+### 2.2. Inline codes
 
 The source content might include inline codes, e.g. any HTML markup tags used to apply a certain behavior or property to part of the text. Often source content is HTML or some sort of similar markup language, where  markup is used to define layout, formatting and/or structure. The preparation of the source files as XLIFF entails dealing with those codes as appropriate.
 
@@ -211,7 +217,7 @@ Codes can be of two kinds:
 
 	The CAT tool will then correctly display inline elements as placeable tags, which translators can easily insert in the appropriate position in the translation of each segment. In the contrary, it is problematic for translators and reviewers to deal with inline codes that have not been protected as placeable tags, which also poses a risk to the integrity of the codes and the document.
 
-#### 2.1. Suprasentential codes
+#### 2.2.1. Suprasentential codes
 
 A leading opening tag appearing before the beginning of a sentence and its corresponding closing tag appearing after the end of the sentence are an example of suprasentential codes:
 
@@ -221,137 +227,132 @@ A leading opening tag appearing before the beginning of a sentence and its corre
 
 Since they are expected to appear in exactly the same position in the target version of that segment, they don't need to appear in the translation editor and the translator does not need to see them:
 
-> <kbd>1</kbd> What is the total length of the sticks in the line?✅
+> <kbd>1</kbd> What is the total length of the sticks in the line? ✅
 
-> <kbd>1</kbd> `<g0>`What is the total length of the sticks in the line?`</g0>`❌
 
-Let's see a more complex example. The file `markup_span.html` in the sample project includes the following text:
+> <kbd>1</kbd> `<g0>`What is the total length of the sticks in the line?`</g0>` ❌
+
+#### 2.2.2. Intrasentential codes
+
+The file `markup_span.html` in the sample project includes the following text:
 
 ``` html
-<p><span style='font-size:12pt;font-family:"times new roman", "serif"'>Code1: </span><span style='font-size:12pt;font-family:"times new roman", "serif"'>3/2 or 11/2 or 1.5</span></p>
+<p><span style='font-size:12pt;font-family:"times new roman","serif"'>Code1:
+</span><span style='font-size:12pt;font-family:"times new roman","serif"'>3/2 or
+11/2 or 1.5</span></p>
 ```
 
 which should be prepared as follows in the XLIFF file:
 
 ``` xml
 <source xml:lang="en"><bpt id="1" ctype="x-span">&lt;span style='font-size:12pt;
-font-family:"times new roman", "serif"'></bpt>Code1: <ept id="1">&lt;/span></ept>
+font-family:"times new roman","serif"'></bpt>Code1: <ept id="1">&lt;/span></ept>
 <bpt id="2" ctype="x-span">&lt;span style='font-size:12pt;font-family:"times new
-roman", "serif"'></bpt>3/2 or 11/2 or 1.5<ept id="2">&lt;/span></ept></source>
+roman","serif"'></bpt>3/2 or 11/2 or 1.5<ept id="2">&lt;/span></ept></source>
 ```
 
 which the CAT tool will display as, e.g.:
 
-> <kbd>1</kbd> `<g0>`Code1: `<g0><g1>`3/2 or 11/2 or 1.5`</g1>`✅
-
-Not representing the inline codes as expected could produce the following view in the CAT tool, which is not practicable for the linguist:
-
-> <kbd>1</kbd> `<span style="font-size:12pt;font-family:&quot;times new roman&quot;,&quot;serif
-&quot;">`Code1: ` </span><span style="font-size:12pt;font-family:&quot;times new roman
-&quot;, &quot;serif&quot;">`3/2 or 11/2 or 1.5`</span>`❌
+> <kbd>1</kbd> `<g0>`Code1: `<g0><g1>`3/2 or 11/2 or 1.5`</g1>` ✅
 
 Representing the HTML tags as inline codes as specified in the XLIFF standard  also reduces the length of each tag, thus better legibility is obtained and the segments are much easier to handle.
 
 Some CAT tools display a floating tooltip including the original inline codes when the linguist hovers over the placeable tag (e.g. `<g0>` below) in the segment, thus showing the translator what the tag stands for. For formats like HTML, this can be helpful for the savvy translator, whereas for other more obscure formats like Open XML it is less useful.
 
-
-
-
----
-
 <!-- :warning:  -->
-
+---
 ⚠️ **_WARNING:_**  
-
-| Escaping the HTML or XML tags by replacing `<` and `>` with `&lt;` and `&gt;` respectively is not a good approach, because the translation editor will consider the escaped markup as editable text rather than as locked codes and therefore the tags can be mishandled, let alone the fact that translation memories will be polluted. Furthermore, that approach does not reduce the length of inline codes, which means that the text is less readable and that can hamper the translation and bring about quality issues.  |
-| --- |
-
+Escaping the HTML or XML markup by replacing `<` and `>` with `&lt;` and `&gt;` respectively, etc. is not a good approach, because the translation editor will consider the escaped markup as editable text rather than as locked codes and therefore the tags can be mishandled, let alone the fact that translation memories will be polluted. Furthermore, that approach does not reduce the length of inline codes, which means that the text is less readable and that can hamper the translation and bring about quality issues.
 
 ---
 
-For example, if handled in that way, the above segment would look like this in the XLIFF file:
+For example, escaping the markup in the above segment would produce the following XLIFF file:
 
 ``` xml
-<source xml:lang="en">&lt;span style=&quot;font-size:12pt;font-family:&amp;quot;
-times new roman&amp;quot;, &amp;quot;serif&amp;quot;&quot;>Code1: &lt;/span&gt;
-&lt;span style=&quot;font-size:12pt;font-family:&amp;quot;times new roman&amp;
-quot;, &amp;quot;serif&amp;quot;&quot;>3/2 or 11/2 or 1.5&lt;/span&gt;</source>
+<source xml:lang="en">&lt;span style=&apos;font-size:12pt;font-family:&quot;
+times new roman&quot;,&quot;serif&quot;&apos;>Code1: &lt;/span&gt;
+&lt;span style=&apos;font-size:12pt;font-family:&quot;times new roman&amp;
+quot;,&quot;serif&quot;&apos;>3/2 or 11/2 or 1.5&lt;/span&gt;</source>
 ```
 
-and will be displayed like this to the linguist in the translation editor:
+which would produce the following view in the translation editor, which is not translation-friendly:
 
-> `<span style="font-size:12pt;font-family:&quot;times new roman&quot;,  &quot;serif&quot;">`Code1: `</span><span style="font-size:12pt;font-family:&quot;times new roman&quot;, &quot;serif&quot;">`3/2 or 11/2 or 1.5`</span>`
+> <kbd>1</kbd> `<span style='font-size:12pt;font-family:"times new roman","serif"'>`Code1: `</span><span style='font-size:12pt;font-family:"times new roman","serif"'>`3/2 or 11/2 or 1.5`</span>` ❌
 
-In the OmegaT project provided, files `markup_custom_xml.xlf` and `markup_span.html.xlf` show what the text looks like when the inline codes have been simply escaped (the ones in the `01_haram` folder) and when they have been properly encapsulated as XLIFF markup (the ones in folder `02_halal`). There are two files to exemplify both standard HTML tags (e.g. `<span>`) as well as custom-crafted, even awkward XML tags.
+In the sample project provided, files `markup_custom_xml.xlf` and `markup_span.html.xlf` show what the text looks like when the inline codes have been simply escaped (the ones in the `01_haram` folder) and when they have been properly encapsulated as XLIFF content markup (the ones in folder `02_halal`). There are two files to exemplify both standard HTML tags (e.g. `<span>`) as well as custom-crafted XML tags.
 
-### Encoding entities
+### 2.3. Encoding entities
 
-HTML source content might contain named character references (in the form of `&char;`) but these named entities are not allowed in XML and therefore cannot be used in an XLIFF file as such unless they are declared (except for `&`, `<` and `>`). There is more than one possibility to prepare source HTML content containing named entities, and some ways are preferable to others. Let us consider the `&divide;` entity as an example, found in the HTML content:
+HTML source content might contain named character entities (in the form of `&char;`) which are not allowed in XML and therefore cannot be used in an XLIFF file as such unless they are declared (except for `amp`, `lt`, `gt`, `apos`, `quot`). There is more than one possibility to prepare source HTML content containing named character entities, and some ways are preferable to others. Let us consider the `&divide;` entity as an example, found in the following HTML content:
 
 ``` xml
 <p>(40 &divide; 10) + (8 &divide; 2)</p>
 ```
 
+#### 2.3.1. Escaping named character entities
+
 One possibility to create a valid XLIFF file is to escape the entities, as follows:
 
 ``` xml
-<source>(40 &amp;divide; 10) + (8 &amp;divide; 2)</source>
+<source>(40 &amp;divide; 10) + (8 &amp;divide; 2)</source> ❌
 ```
 
-The escaping approach is not recommended, though. Escapes were used to represent (by means of ASCII text only) characters that were not available in the character encoding you are using. The W3C (group in charge of the HTML specification) advises to use an encoding that allows to represent characters in their normal form, rather than using escaped character entity references, because using escapes can make it difficult to read and maintain source code, and can also significantly increase file size.<span id="a10">[[10]](#10)</span> Therefore, nowadays you should use UTF-8 for the character encoding of any modern internationalized content, which removes the need to use character escapes for that reason.
+The escaping approach is discouraged, though. Among other reasons, this approach will make the translation editor display the named character entity rather than the actual character itself (which reduces readability and could be misleading or even unintelligible for the linguist), as shown below:
 
-Also, this way the named entity rather than the actual character itself will be displayed in the translation editor, as shown below (which reduces readability and could be misleading or even unintelligible for the linguist):
+> <kbd>1</kbd> 40 [&divide; 10) + (8 &divide; 2)  ❌
 
-> <kbd>1</kbd> 40 [&divide; 10) + (8 &divide; 2)
+Linguists need to see the character, not the code. While `&divide;` (÷) or `&pi;` (π) might be more or less transparent in the appropriate context, other entities such as `&le;` (≤) or `&zwnj;` (zero-width non-joiner) will be obscure and puzzling. The linguist could think that the named character entity must be maintained and therefore necessarily be used in the translation, whereas it might be the case that the target language spelling rules call for another character in that context. For example, this would be an incorrect translation according to French punctuation rules:
 
-Linguists need to see the character, not the code. While `&divide;` (÷) or `&pi;` (π) might be more or less transparent in the appropriate context, other entities such as `&le;` (≤) or `&zwnj;` (zero-width non-joiner) will be obscure and puzzling. The linguist could think that the named entity must be maintained and therefore necessarily be used in the translation, whereas it might be the case that the target language spelling rules call for another character in that context. For example, this would be an incorrect translation according to French punctuation rules:
-
-> <kbd>source</kbd> Punctuation works `&quot;`differently`&quot;` in French.\
-> <kbd>target</kbd> La ponctuation est `&quot;`différente`&quot;` en français. :x:
+> <kbd>source:</kbd> Punctuation works `&quot;`differently`&quot;` in French.\
+> <kbd>target:</kbd> La ponctuation est `&quot;`différente`&quot;` en français.  ❌ <!-- :x: -->
 
 Compare with the correct translation:
 
-> <kbd>source</kbd> Punctuation works `&quot;`differently`&quot;` in French.\
-> <kbd>target</kbd> La ponctuation est « différente » en français. :heavy_check_mark:
+> <kbd>source:</kbd> Punctuation works `&quot;`differently`&quot;` in French.\
+> <kbd>target:</kbd> La ponctuation est « différente » en français. ✅ <!-- :heavy_check_mark: -->
 
-Escapes can be a way of avoiding the use of a character for other reasons (e.g. if they conflict with other elements), in which case, you might want to escape some entities specifically. Escapes might also be useful to represent invisible or ambiguous characters, or characters that would otherwise be difficult to handle, such as whitespace or invisible Unicode control characters (e.g. using `&rlm;` in HTML source content --and `&#x200F;` in the prepared XLIFF file-- helps spot these characters).[11] However, in all other cases, it is preferable to avoid the escape.
+Escapes were used to represent (by means of ASCII text only) characters that were not available in the character encoding you are using. The W3C (group in charge of the HTML specification) advises to use an encoding that allows to represent characters in their normal form, rather than using escaped named character entities, because using escapes can make it difficult to read and maintain source code, and can also significantly increase file size.<span id="a10">[[10]](#10)</span> Nowadays, it should be possible to encode any text as UTF-8, which allows to use Unicode characters and removes the need for such escapes.
 
-A different approach is to represent the same character by means of the universal Unicode code point expressed as a numeric entity (e.g. the hexadecimal entity `&#x00F7;`) or as the Unicode character itself (e.g. `÷`), the latter being slightly preferable because it simplifies maintenance and running text searches directly in the XLIFF files with, say, grep or any other text-based tool.
+Escapes can be a way of avoiding the use of a character for other reasons (e.g. if they conflict with other elements), in which case, you might want to escape some entities specifically. Escapes might also be useful to represent invisible or ambiguous characters, or characters that would otherwise be difficult to handle, such as whitespace or invisible Unicode control characters (e.g. using `&rlm;` in HTML source content --and `&#x200F;` in the prepared XLIFF file-- helps spot these characters).<span id="a11">[[11]](#11)</span> However, in all other cases, it is preferable to avoid the escape.
 
-A simple pre-processing of the source content is possible to convert the HTML named entities into Unicode code points or Unicode characters. Even better, the ideal scenario would be to configure the authoring tool where the source content is authored so that such non-ASCII or special characters are represented using the Unicode character or numeric entities -- in which case no pre-processing conversion is necessary.  How authors insert symbols or special characters that are not on their keyboard depends on their authoring tool and their platform, but normally they can either pick the character from a special character palette (e.g. the Character Map in Windows or Character Viewer in Mac) or insert it by using a key combination, e.g. <kbd>ALT+0176</kbd> on the keypad to insert the degree symbol (i.e. `°`).[12]
+#### 2.3.2. Unicode characters and code points
 
-Both the approaches in the previous paragraph will produce one of the two following XLIFF codes (depending on the encoding chosen):
+A different approach is to represent the same character by means of the universal Unicode code point expressed as a numeric entity (e.g. the hexadecimal entity `&#x00F7;`) or as the Unicode character itself (e.g. `÷`). The latter is preferable because it simplifies maintenance and running text searches directly in the raw XLIFF files with, say, grep or any other text-based tool.
+
+If it's unavoidable to have named character entities in the source content to represent special characters, a simple pre-processing of the source content can be used to convert them into Unicode code points or Unicode characters. However, the ideal scenario would be to configure the authoring tool where the source content is authored so that special characters or symbols can be inserted directly by means of the Unicode character or the numeric entity. How authors insert symbols or special characters that are not on their keyboard depends on their authoring tool and their platform, but normally they can either pick the character from a special character palette (e.g. the Character Map in Windows or Character Viewer in Mac) or insert it by using a key combination, e.g. <kbd>ALT+0176</kbd> on the keypad to insert the degree symbol (i.e. `°`).<span id="a12">[[12]](#12)</span>
+
+Both the approaches mentioned in the previous paragraph will produce one of the two following XLIFF codes (depending on the encoding chosen):
 
 ``` xml
-<source>(40 &#x00F7; 10) + (8 &#x00F7; 2)</source>
+<source>(40 &#x00F7; 10) + (8 &#x00F7; 2)</source> ✅
 ```
 
 ``` xml
-<source>(40 ÷ 10) + (8 ÷ 2)</source>
+<source>(40 ÷ 10) + (8 ÷ 2)</source> ✅
 ```
 
 which will be displayed as the following in the translation editor:
 
-> <kbd>1</kbd> (40 ÷ 10) + (8 ÷ 2)
+> <kbd>1</kbd> (40 ÷ 10) + (8 ÷ 2) ✅
 
 In a nutshell, then: using the Unicode characters in their normal form is preferable to representing them with their numeric --preferably hexadecimal-- reference, and any of those two options is preferable to escaping the named character references with `&amp;`, or declaring them in the preamble of the document.
 
 | Approach  | Example   | Well-formed |  Recommended |
 | --------- | --------- | ----------- | ------------ |
 | Unicode character	 | `÷`  | yes | yes (more preferable) |
-| numeric (hex) character reference   | `&#x00F7;`	| yes  | yes (less preferable) |
-| unescaped named character reference | `&divide;`	| no (unless declared) | no (but feasible if declared in the document) |
-| escaped named character reference   | `&amp;divide;`	| yes  | no  |
+| numeric (hex) character entity   | `&#x00F7;`	| yes  | yes (less preferable) |
+| unescaped named character entity | `&divide;`	| no (unless declared) | no (but feasible if declared in the document) |
+| escaped named character entity   | `&amp;divide;`	| yes  | no  |
 
-When preparing XLIFF files with Okapi Rainbow, both named entities and numeric entities in the source content will be encoded as the Unicode character in the XLIFF file. In the OmegaT project provided, you can see how the three possible inputs (in file `original/entities.html`) are encoded in the same way (as the Unicode character) using the recommended approach in file `02_halal/entities.html.xlf` and in the same unrecommended way in file `01_haram/entities.html.xlf`.
+When preparing XLIFF files with a localization engineering tool, e.g. Okapi Rainbow, both named and numeric character entities in the source content will be encoded as the Unicode character in the XLIFF file. In the sample OmegaT project provided, you can see how the three possible inputs (in file `original/entities.html`) are encoded in the same way (as the Unicode character) using the recommended approach in file `02_halal/entities.html.xlf` as well as in the discouraged way in file `01_haram/entities.html.xlf`.
 
-Some Unicode characters should be avoided in a markup context, and their numeric entity should be used instead [13]. Other than those, in a UTF-8 context (e.g. any content to be localized) there should be no reason why Unicode characters cannot be used.
+With a few negligible exceptions<span id="a13">[[13]](#13)</span>, there should be no reason why a UTF-8 encoding and Unicode characters cannot be used any content to be localized.
 
-## Frequent issues
+## 3. Frequent issues
 
-Following the recommendations above is necessary but might not be enough for an optimized process. The source content might present a number of pitfalls that require special attention when creating the XLIFF files. Let us see some of those frequent issues that hamper the language tasks.
+Following the recommendations above is necessary but might not be enough to achieve an optimized process. The source content might present a number of pitfalls that require special attention when creating the XLIFF files. Let us see some of those frequent issues that may hamper language tasks.
 
-### Split sentences
+### 3.1. Split sentences
 
 Sometimes sentences might be broken in two or more parts because the extraction filter is treating an embedded code as the end of the paragraph. In the OmegaT project provided, file `01_haram/markup_input.html.xlf` shows how the sentence is broken at the text input code:
 
@@ -391,27 +392,27 @@ little-penguin" class="heigh-differnet" pattern="[0-9](0-9]+")+"
 
 which will appear as follows in the translation editor (see file ????)
 
-> <kbd>1</kbd> An emperor penguin is `<x0/>` cm taller than a little penguin. :heavy_check_mark:
+> <kbd>1</kbd> An emperor penguin is `<x0/>` cm taller than a little penguin.   ✅ <!-- :heavy_check_mark: -->
 
 File `markup_inline.svg.xlf` shows a similar case of text broken down at the two embedding SVG tags `<tspan>` and `</tspan>`.
 
 Other similar examples:
 
-> <kbd>1</kbd> Click :x:\
+> <kbd>1</kbd> Click  ❌ <!-- :x: -->\
 > <kbd>2</kbd> to move on.
 
-> <kbd>1</kbd> See uses on :x:\
+> <kbd>1</kbd> See uses on  ❌ <!-- :x: -->\
 > <kbd>2</kbd> to show 2 children in her pictograph\
-> <kbd>3</kbd> How many :x:\
+> <kbd>3</kbd> How many  ❌ <!-- :x: -->\
 > <kbd>4</kbd> will they need to draw?
 
-> <kbd>1</kbd> Feed 5 penguins for :x:\
+> <kbd>1</kbd> Feed 5 penguins for  ❌ <!-- :x: -->\
 > <kbd>2</kbd> zeds.
 
-> <kbd>1</kbd> Drag :x:\
+> <kbd>1</kbd> Drag  ❌ <!-- :x: -->\
 > <kbd>2</kbd> onto the graph.
 
-> <kbd>1</kbd> When your drawing is done, click :x:\
+> <kbd>1</kbd> When your drawing is done, click  ❌ <!-- :x: -->\
 > <kbd>2</kbd> to fill the garden with boxes of flowers.
 
 In all these cases the original content includes some element (e.g. "Click `[X](BUTTON)` to move on." or "Feed 5 penguins for `[QUANTITY]` zeds.") that has been interpreted as the end of a paragraph.
@@ -420,29 +421,29 @@ Apart from the inconvenience that the full sentence will not be stored in the tr
 
 Maintaining the correspondence will produce the wrong order in the final content according to the syntax of the target language:
 
-> <kbd>1</kbd> klïck :x:\
-> <kbd>2</kbd> Tó móvê ón :x:
+> <kbd>1</kbd> klïck  ❌ <!-- :x: -->\
+> <kbd>2</kbd> Tó móvê ón  ❌ <!-- :x: -->
 
 Breaking the natural correspondence will produce the right order in the final content but makes reuse of these materials problematic when translating subsequent cycle's content using the TM containing these translations:
 
-> <kbd>1</kbd> <kbd>source</kbd>  Click\
->      <kbd>target</kbd>  Tó móvê ón :x:\
-> <kbd>2</kbd> <kbd>source</kbd>  to move on\
->      <kbd>target</kbd>   klïk. :x:
+> <kbd>1</kbd> <kbd>source:</kbd>  Click\
+>      <kbd>target:</kbd>  Tó móvê ón  ❌ <!-- :x: -->\
+> <kbd>2</kbd> <kbd>source:</kbd>  to move on\
+>      <kbd>target:</kbd>   klïk.  ❌ <!-- :x: -->
 
 or
 
-> <kbd>1</kbd> <kbd>source</kbd>  Click\
->      <kbd>target</kbd>  Tó móvê ón klïk :x:\
-> <kbd>2</kbd> <kbd>source</kbd>  to move on\
->      <kbd>target</kbd>   
+> <kbd>1</kbd> <kbd>source:</kbd>  Click\
+>      <kbd>target:</kbd>  Tó móvê ón klïk  ❌ <!-- :x: -->\
+> <kbd>2</kbd> <kbd>source:</kbd>  to move on\
+>      <kbd>target:</kbd>   
 
 
 Auto-propagation can also become problematic, if the translation of a repeated segment (corresponding to part of the sentence) is different in different contexts, for example due to agreement with other parts of the sentence, e.g.
 
-> <kbd>1</kbd> Front :x:\
+> <kbd>1</kbd> Front  ❌ <!-- :x: -->\
 > <kbd>2</kbd> wheel\
-> <kbd>3</kbd> Front :x:\
+> <kbd>3</kbd> Front  ❌ <!-- :x: -->\
 > <kbd>4</kbd> headlamp
 
 For example, in Spanish adjectives need to agree in gender and number with the nouns they modify, e.g. the translation of "front" is "delantera" (feminine) in seg1 to agree with the Spanish equivalent of "wheel" (i.e. "rueda"), which has feminine grammatical gender, whereas it is "delantero" (masculine) in seg3 to agree with the Spanish equivalent of "headlamp" (i.e. "faro"), which has masculine grammatical gender.
@@ -457,13 +458,13 @@ In the second example above, “she uses one” _something_ and the respondent i
 
 The expected result in the cases above would have been to use a tag or a placeholder to encode the inline code:
 
-> <kbd>1</kbd> See uses on %s to show 2 children in her pictograph :heavy_check_mark: \
-> <kbd>2</kbd> How many %s will they need to draw? :heavy_check_mark:
+> <kbd>1</kbd> See uses on %s to show 2 children in her pictograph   ✅ <!-- :heavy_check_mark: --> \
+> <kbd>2</kbd> How many %s will they need to draw?   ✅ <!-- :heavy_check_mark: -->
 
-> <kbd>1</kbd> Click `<BUTTON/>` to move on. :heavy_check_mark:
+> <kbd>1</kbd> Click `<BUTTON/>` to move on.   ✅ <!-- :heavy_check_mark: -->
 
-> <kbd>1</kbd> Front wheel :heavy_check_mark: \
-> <kbd>2</kbd> Front headlamp :heavy_check_mark:
+> <kbd>1</kbd> Front wheel   ✅ <!-- :heavy_check_mark: --> \
+> <kbd>2</kbd> Front headlamp   ✅ <!-- :heavy_check_mark: -->
 
 In the examples above where the segment has been properly prepared with inline codes, it’s not a problem for the translator to transfer the codes to the place where they belongs in the translation, as any modern translation editor allows to do that easily with a keyboard shortcut.
 
@@ -506,7 +507,7 @@ The expected design of the source content in the case above would have been to e
 
 This tag pair is actually suprasentential markup, which could be excluded from the prepared segment, thus producing the following simple display in the translation editor:
 
-> <kbd>1</kbd> Start Time :heavy_check_mark:
+> <kbd>1</kbd> Start Time   ✅ <!-- :heavy_check_mark: -->
 
 **Solution**:
 
@@ -521,14 +522,14 @@ In some cases, linebreaks are used to limit the length of each line in the text.
 
 For example:
 > <kbd>1</kbd> Since the 1970s, scientists have been\
-> <kbd>2</kbd> `<br/>` :x:\
+> <kbd>2</kbd> `<br/>`  ❌ <!-- :x: -->\
 > <kbd>3</kbd> worried about the amount of Dioxin, a\
-> <kbd>4</kbd> `<br/>`:x:\
+> <kbd>4</kbd> `<br/>` ❌ <!-- :x: -->\
 > <kbd>5</kbd> toxin in fish caught in Baltic Sea.
 
 The expected segmentation is the following, where the line break HTML tags are interpreted and represented as inline codes:
 
-> `1` Since the 1970s, scientists have been `<br/>` worried about the amount of Dioxin, a toxin in fish caught in Baltic Sea. :heavy_check_mark:
+> `1` Since the 1970s, scientists have been `<br/>` worried about the amount of Dioxin, a toxin in fish caught in Baltic Sea.   ✅ <!-- :heavy_check_mark: -->
 
 However, it should not be assumed that the translator will keep the line break tags in the translation or that their location will be equivalent to the source.
 
