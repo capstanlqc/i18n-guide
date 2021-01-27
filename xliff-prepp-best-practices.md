@@ -583,7 +583,7 @@ In any case it should not be assumed that the translator will keep the line brea
 Therefore, our recommendation, in the first place, would be to avoid using line break tags in the source text. Secondly (assuming we are dealing with HTML content), the width of the text can be defined by means of CSS styles. That approach  achieves the same exact results without introducing any noise in the source text and without affecting the work of the translator. See https://jsfiddle.net/msoutopico/3p7x8ryr/1/ or the screenshot below:
 
 <!-- ![](images/markup_fiddl_wrap.png) -->
-<img src="images/markup_fiddl_wrap.png" width="500px">
+<img src="images/markup_fiddl_wrap.png" width="700px">
 
 [comment]: <> (/** more issues. mixture of encodings **/)
 
