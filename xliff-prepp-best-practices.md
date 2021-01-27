@@ -646,7 +646,7 @@ In this case the OmegaT project must use the Okapi XLIFF filter.
 
 ## References
 
-1. OmegaT is a free and open source computer-assisted translation tool (CAT-tool) that cApStAn uses to translate and review/edit XLIFF files in international large-scale translation projects. It offers many more technical possibilities than OLT. See our  OmegaT installation and customization guide: https://slides.com/capstan/omegat-installation-and-customization-guide/fullscreen [⏎](#a1)
+1. <span id="1"></span> OmegaT is a free and open source computer-assisted translation tool (CAT-tool) that cApStAn uses to translate and review/edit XLIFF files in international large-scale translation projects. It offers many more technical possibilities than OLT. See our  OmegaT installation and customization guide: https://slides.com/capstan/omegat-installation-and-customization-guide/fullscreen [⏎](#a1)
 
 2. <span id="2"></span> See [https://okapiframework.org/wiki/index.php?title=Rainbow](https://okapiframework.org/wiki/index.php?title=Rainbow)  [⏎](#a2)
 
