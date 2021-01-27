@@ -303,12 +303,14 @@ The escaping approach is discouraged, though. Among other reasons, this approach
 
 Linguists need to see the character, not the code. While `&divide;` (÷) or `&pi;` (π) might be more or less transparent in the appropriate context, other entities such as `&le;` (≤) or `&zwnj;` (zero-width non-joiner) will be obscure and puzzling. The linguist could think that the named character entity must be maintained and therefore necessarily be used in the translation, whereas it might be the case that the target language spelling rules call for another character in that context. For example, this would be an incorrect translation according to French punctuation rules:
 
-> <kbd>source:</kbd> Punctuation works `&quot;`differently`&quot;` in French.\
+> <kbd>source:</kbd> Punctuation works `&quot;`differently`&quot;` in French.
+>
 > <kbd>target:</kbd> La ponctuation est `&quot;`différente`&quot;` en français.  ❌ <!-- :x: -->
 
 Compare with the correct translation:
 
-> <kbd>source:</kbd> Punctuation works `&quot;`differently`&quot;` in French.\
+> <kbd>source:</kbd> Punctuation works `&quot;`differently`&quot;` in French.
+>
 > <kbd>target:</kbd> La ponctuation est « différente » en français. ✅ <!-- :heavy_check_mark: -->
 
 Escapes were used to represent (by means of ASCII text only) characters that were not available in the character encoding you are using. The W3C (group in charge of the HTML specification) advises to use an encoding that allows to represent characters in their normal form, rather than using escaped named character entities, because using escapes can make it difficult to read and maintain source code, and can also significantly increase file size.<span id="a10">[[10]](#10)</span> Nowadays, it should be possible to encode any text as UTF-8, which allows to use Unicode characters and removes the need for such escapes.
@@ -363,7 +365,7 @@ Sometimes sentences might be broken in two or more parts because the extraction 
 
 displayed in the translation editor as:
 
-> <kbd>1</kbd> An emperor penguin is\
+> <kbd>1</kbd> An emperor penguin is ❌  
 > <kbd>2</kbd> cm taller than a little penguin.
 
 The original content (in file `original/markup_input.html`) looks like this:
@@ -371,8 +373,8 @@ The original content (in file `original/markup_input.html`) looks like this:
 ``` xml
 <p>An emperor penguin is <input type="text" name="fname" autocomplete="off"
 size="4" id="emperor-penguin-versus-little-penguin" class="heigh-differnet"
-pattern="[title="How many centimeters." formmethod="post" required autofocus>
-cm taller than a little penguin.</p>
+pattern="[0-9]+" title="How many centimeters." formmethod="post" required
+autofocus /> cm taller than a little penguin.</p>
 ```
 
 That code represents this display in the online questionnaire:
@@ -380,7 +382,7 @@ That code represents this display in the online questionnaire:
 ![](form.png)
 ![](https://wiki.capstan.be/lib/exe/fetch.php?w=400&tok=f465dd&media=tecdoc:form.png)
 
-Here, the expected preparation is to represent the text input field markup as inline codes, as follows (and can be seen in `02_halal/markup_input.html.xlf`):
+Here, the expected preparation is to represent the text input field as content markup, as follows (and file `02_halal/markup_input.html.xlf` exemplifies):
 
 ``` xml
 <source xml:lang="en">An emperor penguin is <ph id="1" ctype="x-input">&lt;input
