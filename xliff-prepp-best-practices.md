@@ -13,7 +13,6 @@
     + [2.2. Inline codes](#22-inline-codes)
       - [2.2.1. Suprasentential codes](#221-suprasentential-codes)
       - [2.2.2. Intrasentential codes](#222-intrasentential-codes)
-  * [<!-- :warning:  -->](#------warning------)
     + [2.3. Encoding entities](#23-encoding-entities)
       - [2.3.1. Escaping named character entities](#231-escaping-named-character-entities)
       - [2.3.2. Unicode characters and code points](#232-unicode-characters-and-code-points)
