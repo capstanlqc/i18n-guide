@@ -79,6 +79,11 @@
 
 This report includes recommendations for preparing content for translation in the XLIFF format with a view to producing XLIFF files that optimize the different language tasks and language asset management both in the short and the long run. It also focuses on common issues that can be problematic for language experts and how those issues can be avoided.
 
+Often, there are no ultimate prescribed solutions, but following or not the recommendations in this document can make all the difference between hindering or crippling language tasks (the work of translators, reconcilers, reviewers, verifiers, etc.) and making the linguist's work enjoyable and bound to good results.
+
+
+### Notation
+
 In this document, segments as the linguist sees them in the translation editor are represented as follows (preceded by the segment number):
 
 > <kbd>31</kbd> This is a segment
