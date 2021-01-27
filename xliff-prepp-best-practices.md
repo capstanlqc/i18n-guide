@@ -1,6 +1,28 @@
 # Best practices for preparing XLIFF files
 
-## Changes
+## Table of contents
+
+<!-- typora:
+[TOC]
+-->
+
+0. [Introduction](#introduction)
+	* [Sample project](#sample-project)
+1. [Requirements](#1-requirements)
+2. [Recommendations](#2-recommendations)
+	1. [Segmentation](#21-segmentation)
+	2. [Inline codes](#22-inline-codes)
+	3. [Encoding entities](#23-encoding-entities)
+3. [Frequent issues](#3-frequent-issues)
+	1. [Split sentences](#31-split-sentences)
+	2. [Markup nimiety](#32-markup-nimiety)
+	3. [Ending segments at line breaks](#33-ending-segments-at-line-breaks)
+4. [Annexes](#Annexes)
+	* [Guidelines for creating XLIFF 1.2 files for OmegaT](#guidelines-for-creating-xliff-12-files-for-omegat)
+5. [References](#references)
+
+
+## Document history
 
 | Date       | Author            | Comment            |
 |:---------- |:----------------- |:------------------ |
@@ -12,11 +34,11 @@
 
 <!--- https://gist.github.com/rxaviers/7360908 -->
 
-[comment]: <> (Your organization knows that you must prepare your content for translation in the XLIFF format. As your organization's lead engineer, you meet the technical requirements and know how to deal with the XML metalanguage to produce well-formed and valid, therefore interoperable XLIFF files that the linguists' translation editor can open.)
+[comment]: <> "Your organization knows that you must prepare your content for translation in the XLIFF format. As your organization's lead engineer, you meet the technical requirements and know how to deal with the XML metalanguage to produce well-formed and valid, therefore interoperable XLIFF files that the linguists' translation editor can open."
 
-[comment]: <> (However, you might be preparing your organization's content in a way that makes translation and review more difficult than they should be, or even a nightmare, because you might not be aware of some localization and internationalization sensitive issues and might be working things around to comply with the XLIFF standard without applying best practices that do take into account the translator’s perspective.)
+[comment]: <> "However, you might be preparing your organization's content in a way that makes translation and review more difficult than they should be, or even a nightmare, because you might not be aware of some localization and internationalization sensitive issues and might be working things around to comply with the XLIFF standard without applying best practices that do take into account the translator’s perspective."
 
-[comment]: <> (In cApStAn we like to intervene and advise from an early stage, sharing our translation and internationalization know-how, even before the source content is conceived and typeset, to make sure our partners' engineers craft good XLIFF files that our linguists will not struggle with.)
+[comment]: <> "In cApStAn we like to intervene and advise from an early stage, sharing our translation and internationalization know-how, even before the source content is conceived and typeset, to make sure our partners' engineers craft good XLIFF files that our linguists will not struggle with."
 
 ## Introduction
 
@@ -66,44 +88,44 @@ The original files have been prepared as XLIFF in two different ways, to show th
 -->
 
     xliff_bestpractices_omtprj (project)
-	.
-	├── dictionary
-	├── glossary
-	├── manifest.rkm
-	├── omegat
-	│   ├── ...
-	├── omegat.project
-	├── original
-	│   └── 02_halal
-	│       ├── entities.html
-	│       ├── markup_custom.xml
-	│       ├── markup_inline.svg
-	│       ├── markup_input.html
-	│       ├── markup_span.html
-	│       └── segmen_para.html
-	├── source
-	│   ├── 01_haram
-	│   │   ├── entities.html.xlf
-	│   │   ├── markup_custom.xml.xlf
-	│   │   ├── markup_inline.svg.xlf
-	│   │   ├── markup_input.html.xlf
-	│   │   ├── markup_span.html.xlf
-	│   │   └── segmen_para.html.xlf
-	│   └── 02_halal
-	│       ├── entities.html.xlf
-	│       ├── markup_custom.xml.xlf
-	│       ├── markup_inline.svg.xlf
-	│       ├── markup_input.html.xlf
-	│       ├── markup_span.html.xlf
-	│       └── segmen_para.html.xlf
-	├── target
-	└── tm
+    .
+    ├── dictionary
+    ├── glossary
+    ├── manifest.rkm
+    ├── omegat
+    │   ├── ...
+    ├── omegat.project
+    ├── original
+    │   └── 02_halal
+    │       ├── entities.html
+    │       ├── markup_custom.xml
+    │       ├── markup_inline.svg
+    │       ├── markup_input.html
+    │       ├── markup_span.html
+    │       └── segmen_para.html
+    ├── source
+    │   ├── 01_haram
+    │   │   ├── entities.html.xlf
+    │   │   ├── markup_custom.xml.xlf
+    │   │   ├── markup_inline.svg.xlf
+    │   │   ├── markup_input.html.xlf
+    │   │   ├── markup_span.html.xlf
+    │   │   └── segmen_para.html.xlf
+    │   └── 02_halal
+    │       ├── entities.html.xlf
+    │       ├── markup_custom.xml.xlf
+    │       ├── markup_inline.svg.xlf
+    │       ├── markup_input.html.xlf
+    │       ├── markup_span.html.xlf
+    │       └── segmen_para.html.xlf
+    ├── target
+    └── tm
 
 You can open the XLIFF files and look at them in an XML editor, but probably the best way to see the impact of the different preparation is to open the project in OmegaT and compare each _haram_ file with its corresponding _halal_ files. The project can be downloaded twice with different names and two instances of OmegaT can be run simultaneously for a handier comparison.
 
 To open the project in OmegaT:
 
-[comment]: <> (Download and install our custom version of OmegaT: http://cat.capstan.be/OmegaTcp_installer.exe)
+[comment]: <> "Download and install our custom version of OmegaT: http://cat.capstan.be/OmegaTcp_installer.exe"
 
   - Install and customize OmegaT as per our [installation and customization guide](https://slides.com/capstan/omegat-installation-and-customization-guide/fullscreen) <span id="a1">[[1]](#1)</span>
   - In OmegaT, go to     **Project** >     **Download team project** and enter the following details:
@@ -589,7 +611,7 @@ Therefore, our recommendation, in the first place, would be to avoid using line 
 <!-- ![](images/markup_fiddl_wrap.png =700x) -->
 <img src="images/markup_fiddl_wrap.png" width="700" />
 
-[comment]: <> (/** more issues. mixture of encodings **/)
+[comment]: <> "/** more issues. mixture of encodings **/"
 
 
 
