@@ -585,8 +585,6 @@ Therefore, our recommendation, in the first place, would be to avoid using line 
 <!-- ![](images/markup_fiddl_wrap.png =700x) -->
 <img src="images/markup_fiddl_wrap.png" width="700" />
 
-![](images/markup_fiddl_wrap.png =700x)
-
 [comment]: <> (/** more issues. mixture of encodings **/)
 
 
