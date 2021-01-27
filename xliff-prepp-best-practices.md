@@ -140,7 +140,7 @@ There are other, recommendations about characters and whitespace might have a le
 
   * Unicode characters should be used instead escaped HTML entities.
   * Excessive whitespace and inline line breaks should be avoided.
-  * To avoid truncations and overflowing text, text should be wrapped dynamically in the publication medium instead of using linebreak codes in the source text.
+  * To avoid truncations and overflowing text, text should be wrapped dynamically in the publication medium instead of using line break codes in the source text.
   * Comments should not be extracted as translatable text.
 
 ### 2.1. Segmentation
@@ -423,18 +423,31 @@ Maintaining the correspondence will produce the wrong order in the final content
 
 Breaking the natural correspondence will produce the right order in the final content but spoils the TM containing these translations, which will not be reusable when the same kind of content  needs to be translated in a subsequent cycle of the same project:
 
+<!--
 > <kbd>1</kbd> <kbd>source:</kbd>  Click  
->      <kbd>target:</kbd>  Tó móvê ón  ❌ <!-- :x: -->  
+>      <kbd>target:</kbd>  Tó móvê ón  ❌
 > <kbd>2</kbd> <kbd>source:</kbd>  to move on  
->      <kbd>target:</kbd>   klïk.  ❌ <!-- :x: -->
+>      <kbd>target:</kbd>   klïk.  ❌
 
 or
 
 > <kbd>1</kbd> <kbd>source:</kbd>  Click  
->      <kbd>target:</kbd>  Tó móvê ón klïk  ❌ <!-- :x: -->  
+>      <kbd>target:</kbd>  Tó móvê ón klïk  ❌
 > <kbd>2</kbd> <kbd>source:</kbd>  to move on  
 >      <kbd>target:</kbd>   
+-->
 
+| #            | source           | target             |
+|:------------ |:---------------- |:------------------ |
+| <kbd>1</kbd> | Click            | Tó móvê ón ❌    |
+| <kbd>2</kbd> | to move on       | klïk ❌  |
+
+or
+
+| #            | source           | target             |
+|:------------ |:---------------- |:------------------ |
+| <kbd>1</kbd> | Click            | Tó móvê ón klïk ❌    |
+| <kbd>2</kbd> | to move on       |   |
 
 Auto-propagation of broken translations can also become problematic if the translation of a repeated segment (corresponding to part of the sentence) must be different in different contexts, for example due to agreement with other parts of the sentence, e.g.
 
@@ -447,6 +460,7 @@ For example, in Spanish adjectives need to agree in gender and number with the n
 
 Auto-propagation would produce the following translation:
 
+<!--
 > <kbd>1</kbd> <kbd>source:</kbd>  Front  
 >      <kbd>target:</kbd>  Rueda [fem.]  
 > <kbd>2</kbd> <kbd>source:</kbd>  wheel  
@@ -455,43 +469,49 @@ Auto-propagation would produce the following translation:
 >      <kbd>target:</kbd>  Faro [masc.]  
 > <kbd>2</kbd> <kbd>source:</kbd>  headlamp  
 >      <kbd>target:</kbd> delanter**a** [fem.] ❌  
-
+-->
 
 | #            | source           | target             |
 |:------------ |:---------------- |:------------------ |
 | <kbd>1</kbd> | Front            | Rueda (fem.)       |
 | <kbd>2</kbd> | wheel            | delanter**a** (fem.)       |
-| <kbd>3</kbd> | Front            | Faro (fem.)       |
+| <kbd>3</kbd> | Front            | Faro (masc.)       |
 | <kbd>4</kbd> | headlamp         | delanter**a** (fem.) ❌       |
 
 
-In these cases, to achieve the correct translation the linguist might need to disable the default auto-propagation (to prevent the translation of seg1 being pulled automatically into seg3), but that manual step could fail or be easily overlooked.
+In these cases, to achieve the correct translation the linguist might need to disable the default auto-propagation (to prevent the translation of the first occurrence being pulled automatically into the second occurrence), but that manual step could fail or be easily overlooked.
+
+| #            | source           | target             |
+|:------------ |:---------------- |:------------------ |
+| <kbd>1</kbd> | Front            | Rueda (fem.)       |
+| <kbd>2</kbd> | wheel            | delanter**a** (fem.)       |
+| <kbd>3</kbd> | Front            | Faro (masc.)       |
+| <kbd>4</kbd> | headlamp         | delanter**o** (masc.) ✅       |
 
 In a nutshell, split sentences can be a nuisance to translate into certain languages with different word order than English -- the linguist might have to work around the translation in difficult or impossible ways. Also, productivity and internal consistency can be compromised if the same text appears later in the same project, or in future cycles, with different or correct segmentation.
 
-In the second example above, “she uses one” _something_ and the respondent is being asked “how many” _of something_ the person will need… The object referred to is missing, so it seems that the entity referring to that object was taken as the end of that structural unit.
 
-**Expected preparation**:
+#### Expected preparation
 
 The expected result in the cases above would have been to use a tag or a placeholder to encode the inline code:
 
-> <kbd>1</kbd> See uses on %s to show 2 children in her pictograph   ✅ <!-- :heavy_check_mark: --> \
-> <kbd>2</kbd> How many %s will they need to draw?   ✅ <!-- :heavy_check_mark: -->
+> <kbd>1</kbd> See uses on `%s` to show 2 children in her pictograph   ✅ <!-- :heavy_check_mark: -->  
+> <kbd>2</kbd> How many `%s` will they need to draw?   ✅ <!-- :heavy_check_mark: -->
 
 > <kbd>1</kbd> Click `<BUTTON/>` to move on.   ✅ <!-- :heavy_check_mark: -->
 
-> <kbd>1</kbd> Front wheel   ✅ <!-- :heavy_check_mark: --> \
+> <kbd>1</kbd> Front wheel   ✅ <!-- :heavy_check_mark: -->  
 > <kbd>2</kbd> Front headlamp   ✅ <!-- :heavy_check_mark: -->
 
-In the examples above where the segment has been properly prepared with inline codes, it’s not a problem for the translator to transfer the codes to the place where they belongs in the translation, as any modern translation editor allows to do that easily with a keyboard shortcut.
+In the examples above where the segment has been properly prepared with placeholders, it is very easy (and common practice) for the translator to insert the placeables tags in the position where the inline codes belong in the target version.
 
-**Solution**:
+#### Tip
 
-To avoid this issue, then, ask a trained linguist to run a source review on your draft XLIFF files and adjust the extraction filter accordingly, so that it knows that that particular code must be treated as an inline code (extracted along with the surrounding text and protected) and not as the end of a paragraph.
+To avoid this kind of issue, then, ask a translation technologist or a trained linguist to run a source review on your draft XLIFF files and then adjust the extraction filter accordingly, so that the filter knows which inline codes must be extracted along with the surrounding text and protected, and not interpreted as end of a paragraph.
 
-### Markup nimiety
+### 3.2. Markup nimiety
 
-Segments overloaded with markup make translation and all related subsequent language tasks more difficult, therefore increasing the chance to introduce errors in the translation, especially in right-to-left languages such as Arabic.
+Segments overloaded with markup make translation and all related subsequent language tasks more difficult, therefore increasing the chance to introduce errors in the translation, especially in right-to-left languages such as Arabic or Hebrew.
 
 Some inline codes are unavoidable, e.g. to provide style:
 
@@ -499,7 +519,7 @@ Some inline codes are unavoidable, e.g. to provide style:
 Put the lengths in order from <b>shortest</b> to <i>longest</i>. ✅
 ```
 
-However, other tags are unnecessary and should be avoided. For example, closing and opening tags of the same kind in the middle of a sentence or even in the middle of a word:
+However, other tags are unnecessary and should be avoided or cleaned up before preparing the files. For example, closing and opening tags of the same kind in the middle of a sentence or even in the middle of a word:
 
 ``` xml
 Vehicl</strong><strong>es in 2000  ❌
@@ -514,9 +534,9 @@ When this happens repeatedly, it results in segments that are (unnecessarily) ve
 
 In that example, there are a lot of `<strong>` tags there to do the same job that could be achieved with simply one tag pair. This tag multiplicity might arise from adding superfluous formatting in a word processor or a wysiwyg editor to create the source, or from converting with OCR or from PDF.
 
-**Expected preparation**:
+#### Expected preparation
 
-The expected design of the source content in the case above would have been to embed the formatted text with one tag pair.
+The expected design of the source content in the case above would have been to embed the formatted text with one single tag pair.
 
 ``` xml
 <strong>Start Time</strong> ✅
@@ -526,16 +546,18 @@ This tag pair is actually suprasentential markup, which could be excluded from t
 
 > <kbd>1</kbd> Start Time   ✅ <!-- :heavy_check_mark: -->
 
-**Solution**:
+The solution of this issue does not affect how the source content is prepared, but instead it relates to the pre-processing of the source content, before it is prepared. The actual preparation (parsing, extraction and segmentation) is the same regardless of whether the issue is present in the source files.
 
-Provide feedback and tips to item developers and run some tag clean-up before extracting the text that must be included in the XLIFF files (tools like TransTools Document Cleaner can be used for that) <span id="14">[[14]](#1)</span>.
+#### Tip
 
-The solution of this issue does not affect how the source content is prepared, but instead it relates to the pre-processing of the source content, before it is prepared. The actually preparation (parsing, extraction and segmentation) is the same regardless of whether the issue is present in the source files.
+Provide feedback and tips to content authors and item developers and run some tag clean-up before extracting the text that must be included in the XLIFF files (tools like CodeZapper or TransTools Document Cleaner can be used for that in Word)<span id="14">[[14]](#14)</span>.
 
 
-### Ending segments at linebreaks
 
-In some cases, linebreaks are used to limit the length of each line in the text. When the text is HTML, the text might be broken down at linebreak tags.
+
+### 3.3. Ending segments at line breaks
+
+In some cases, line breaks are used to limit the length of each line in the source text. During extraction, the text might be split down at these line break tags.
 
 For example:
 > <kbd>1</kbd> Since the 1970s, scientists have been\
@@ -544,17 +566,16 @@ For example:
 > <kbd>4</kbd> `<br/>` ❌ <!-- :x: -->\
 > <kbd>5</kbd> toxin in fish caught in Baltic Sea.
 
-The expected segmentation is the following, where the line break HTML tags are interpreted and represented as inline codes:
+#### Expected preparation
 
-> `1` Since the 1970s, scientists have been `<br/>` worried about the amount of Dioxin, a toxin in fish caught in Baltic Sea.   ✅ <!-- :heavy_check_mark: -->
+One potential approach would be to represent the line break tags are as placeholders:
 
-However, it should not be assumed that the translator will keep the line break tags in the translation or that their location will be equivalent to the source.
+> `1` Since the 1970s, scientists have been `<g0/>` worried about the amount of Dioxin, a `<g1/>` toxin in fish caught in Baltic Sea.   ✅ <!-- :heavy_check_mark: -->
 
-**Solution**:
+However, a much better approach would be to get rid of those line breaks, which were there probably to hard wrap the text at a certain width to adapt to some expected space, and soft wrap the translation by other more convenient and dynamic means (e.g. styles) in the actual final publication medium. In general it is recommended to separate content from layout.
 
-To avoid this issue, ask a linguist to run a source review on your draft XLIFF files and adjust the extraction filter accordingly, so that it treats the linebreak element as markup (extracted along with the surrounding text and protected) and not as the end of the paragraph.
+In any case it should not be assumed that the translator will keep the line break tags in the translation or that their location will need to be equivalent to the source
 
-However, if the purpose of the line break tags is indeed to wrap the text at a certain width, there might be more convenient ways to achieve that, without tags, such as CSS styles for HTML content. In general it is recommended to separate content from layout.
 
 Therefore, our recommendation, in the first place, would be to avoid using line break tags in the source text. Secondly (assuming we are dealing with HTML content), the width of the text can be defined by means of CSS styles. That approach  achieves the same exact results without introducing any noise in the source text and without affecting the work of the translator. See https://jsfiddle.net/msoutopico/3p7x8ryr/1/ or the screenshot below:
 
@@ -562,6 +583,12 @@ Therefore, our recommendation, in the first place, would be to avoid using line 
 <img src="markup_fiddl_wrap.png" width="500px">
 
 [comment]: <> (/** more issues. mixture of encodings **/)
+
+
+
+#### Tip
+
+To avoid this issue, ask a linguist to run a source review on your draft XLIFF files and then adjust the extraction filter accordingly, so that the line break element is treated as an inline code (extracted along with the surrounding text and protected) and not as the end of the paragraph.
 
 
 ## Annexes
