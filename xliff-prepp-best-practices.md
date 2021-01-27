@@ -123,7 +123,7 @@ Let's now be a bit more specific, about segmentation and inline codes:
   * Text must be segmented by sentence. Each segment should contain one single sentence, not a full paragraph or several sentences.
   * All translatable content must be extracted and all untranslatable content must be excluded during the extraction.
   * Inline codes should not be interpreted as end of paragraph or as boundaries between text units/blocks, to avoid breaking down sentences in fragments.
-  * Inline codes and markup should ideally be represented as specified by the XLIFF standard so that the translation editor can recognize, lock and display them as placeable tags.
+  * Inline codes and markup should ideally be represented using the notation specified by the XLIFF standard so that the translation editor can recognize, lock and display them as placeable tags.
 	* If markup is not represented as tags and is escaped instead, then each markup block should be as short as possible, and custom tags might need to be created to protect escaped markup.
   * The number of tags should be as low as possible.
   	* Some clean-up of the source files or some back and forth between localization engineers and source content authors is sometimes necessary).
@@ -200,34 +200,38 @@ Luckily, there again, default rulesets used by available tools already include t
 
 **☞** In the OmegaT project provided, file `01_haram/segment_para.html.xlf` shows a text that has been prepared without segmentation, whereas file `02_halal/segment_para.html.xlf` has been prepared with sentence-based segmentation.
 
-### 2. Markup and inline codes
+### 2. Inline codes
 
-The source content might include markup, e.g. any HTML tag used to apply a certain behavior or property to part of the text. Often source content is HTML or some sort of similar markup language, where therefore tags are used to define layout, formatting and/or structure. The preparation of the source files as XLIFF entails dealing with those codes as appropriate.
+The source content might include inline codes, e.g. any HTML markup tags used to apply a certain behavior or property to part of the text. Often source content is HTML or some sort of similar markup language, where  markup is used to define layout, formatting and/or structure. The preparation of the source files as XLIFF entails dealing with those codes as appropriate.
 
 Codes can be of two kinds:
 
-  * Suprasentential and intersentential codes (i.e. codes that embed a sentence, or stand outside of a sentence, or between sentences, or operate at a higher level than the sentence) should not be included in segments.
-  * Intrasentential codes (i.e. codes that stand inside a sentence) must be represented as inline elements (also called "content markup") according to the guidelines of the XLIFF specification <span id="a9">[[9]](#9)</span>.
+  * Suprasentential or intersentential codes (i.e. codes that embed a sentence, or stand outside of a sentence, or between sentences, or operate at a higher level than the sentence) should not be included in segments.
+  * Intrasentential codes (i.e. codes that are included inside a sentence, often as spanning codes or code pairs) must be represented as inline elements (also called "content markup") according to the guidelines of the XLIFF specification <span id="a9">[[9]](#9)</span>.
+
+	The CAT tool will then correctly display inline elements as placeable tags, which translators can easily insert in the appropriate position in the translation of each segment. In the contrary, it is problematic for translators and reviewers to deal with inline codes that have not been protected as placeable tags, which also poses a risk to the integrity of the codes and the document.
+
+#### 2.1. Suprasentential codes
 
 A leading opening tag appearing before the beginning of a sentence and its corresponding closing tag appearing after the end of the sentence are an example of suprasentential codes:
 
 ``` html
-<p>What is the total length of the sticks in the line?</p>
+<p class="foo">What is the total length of the sticks in the line?</p>
 ```
 
-They don't need to appear in the translation editor and the translator does not need to see them:
+Since they are expected to appear in exactly the same position in the target version of that segment, they don't need to appear in the translation editor and the translator does not need to see them:
 
-> <kbd>1</kbd> What is the total length of the sticks in the line?
+> <kbd>1</kbd> What is the total length of the sticks in the line?✅
 
-On the other hand, the file `markup_span.html` from the sample project includes the following text:
+> <kbd>1</kbd> `<g0>`What is the total length of the sticks in the line?`</g0>`❌
 
-``` xml
-<p><span style="font-size:12pt;font-family:&quot;times new roman&quot;,&quot;serif
-&quot;">Code1: </span><span style="font-size:12pt;font-family:&quot;times new roman
-&quot;, &quot;serif&quot;">3/2 or 11/2 or 1.5</span></p>
+Let's see a more complex example. The file `markup_span.html` in the sample project includes the following text:
+
+``` html
+<p><span style='font-size:12pt;font-family:"times new roman", "serif"'>Code1: </span><span style='font-size:12pt;font-family:"times new roman", "serif"'>3/2 or 11/2 or 1.5</span></p>
 ```
 
-which should be prepared as:
+which should be prepared as follows in the XLIFF file:
 
 ``` xml
 <source xml:lang="en"><bpt id="1" ctype="x-span">&lt;span style='font-size:12pt;
@@ -236,21 +240,32 @@ font-family:"times new roman", "serif"'></bpt>Code1: <ept id="1">&lt;/span></ept
 roman", "serif"'></bpt>3/2 or 11/2 or 1.5<ept id="2">&lt;/span></ept></source>
 ```
 
-which will appear in the translation editor as:
+which the CAT tool will display as, e.g.:
 
-> <kbd>1</kbd> `<g0>`Code1: `<g0><g1>`3/2 or 11/2 or 1.5`</g1>`
+> <kbd>1</kbd> `<g0>`Code1: `<g0><g1>`3/2 or 11/2 or 1.5`</g1>`✅
 
+Not representing the inline codes as expected could produce the following view in the CAT tool, which is not practicable for the linguist:
 
-In OmegaT, if the translator needs to see what the inline code represents, hovering over the tag (e.g. `<g0>` below) displays the tag content as a tooltip, so the linguist knows what the markup means.
+> <kbd>1</kbd> `<span style="font-size:12pt;font-family:&quot;times new roman&quot;,&quot;serif
+&quot;">`Code1: ` </span><span style="font-size:12pt;font-family:&quot;times new roman
+&quot;, &quot;serif&quot;">`3/2 or 11/2 or 1.5`</span>`❌
 
 Representing the HTML tags as inline codes as specified in the XLIFF standard  also reduces the length of each tag, thus better legibility is obtained and the segments are much easier to handle.
+
+Some CAT tools display a floating tooltip including the original inline codes when the linguist hovers over the placeable tag (e.g. `<g0>` below) in the segment, thus showing the translator what the tag stands for. For formats like HTML, this can be helpful for the savvy translator, whereas for other more obscure formats like Open XML it is less useful.
+
+
 
 
 ---
 
-:warning: **_WARNING:_**  
+<!-- :warning:  -->
 
-Escaping the HTML or XML tags by replacing `<` and `>` with `&lt;` and `&gt;` respectively is not a good approach, because the translation editor will consider the escaped markup as editable text rather than as locked codes and therefore the tags can be mishandled, let alone the fact that translation memories will be polluted. Furthermore, that approach does not reduce the length of inline codes, which means that the text is less readable and that can hamper the translation and bring about quality issues.
+⚠️ **_WARNING:_**  
+
+| Escaping the HTML or XML tags by replacing `<` and `>` with `&lt;` and `&gt;` respectively is not a good approach, because the translation editor will consider the escaped markup as editable text rather than as locked codes and therefore the tags can be mishandled, let alone the fact that translation memories will be polluted. Furthermore, that approach does not reduce the length of inline codes, which means that the text is less readable and that can hamper the translation and bring about quality issues.  |
+| --- |
+
 
 ---
 
@@ -597,3 +612,5 @@ For example:
 13. <span id="13"></span> See https://www.w3.org/International/questions/qa-chars-vs-markup#not [⏎](#a13)
 
 14. <span id="14"></span> See http://kb.memoq.com/article/AA-00485/0/Cleaning-unnecessary-tags-with-TransTools-Document-Cleaner.html [⏎](#a14)
+
+<!-- tools -->
