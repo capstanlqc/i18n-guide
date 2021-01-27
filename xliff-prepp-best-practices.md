@@ -2,6 +2,39 @@
 
 ## Table of contents
 
+- [Best practices for preparing XLIFF files](#best-practices-for-preparing-xliff-files)
+  * [Table of contents](#table-of-contents)
+  * [Document history](#document-history)
+  * [Introduction](#introduction)
+    + [Sample project](#sample-project)
+  * [1. Requirements](#1-requirements)
+  * [2. Recommendations](#2-recommendations)
+    + [2.1. Segmentation](#21-segmentation)
+    + [2.2. Inline codes](#22-inline-codes)
+      - [2.2.1. Suprasentential codes](#221-suprasentential-codes)
+      - [2.2.2. Intrasentential codes](#222-intrasentential-codes)
+  * [<!-- :warning:  -->](#------warning------)
+    + [2.3. Encoding entities](#23-encoding-entities)
+      - [2.3.1. Escaping named character entities](#231-escaping-named-character-entities)
+      - [2.3.2. Unicode characters and code points](#232-unicode-characters-and-code-points)
+  * [3. Frequent issues](#3-frequent-issues)
+    + [3.1. Split sentences](#31-split-sentences)
+      - [Expected preparation](#expected-preparation)
+      - [Tip](#tip)
+    + [3.2. Markup nimiety](#32-markup-nimiety)
+      - [Expected preparation](#expected-preparation-1)
+      - [Tip](#tip-1)
+    + [3.3. Ending segments at line breaks](#33-ending-segments-at-line-breaks)
+      - [Expected preparation](#expected-preparation-2)
+      - [Tip](#tip-2)
+  * [Annexes](#annexes)
+    + [Guidelines for creating XLIFF 1.2 files for OmegaT](#guidelines-for-creating-xliff-12-files-for-omegat)
+      - [Check list for translation](#check-list-for-translation)
+      - [Check list for bilingual review](#check-list-for-bilingual-review)
+  * [References](#references)
+  
+<!-- <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small> -->
+
 <!-- typora:
 [TOC]
 -->
