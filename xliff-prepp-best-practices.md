@@ -107,7 +107,7 @@ To open the project in OmegaT:
 
 That will create a local version of the project for you and will open it. You can click on the different files in the project files window to display the different content in the translation editor.
 
-The Okapi project, including the settings files, can also be downloaded from [`http://cat.capstan.be/xliff_bestpractices_okpprj.zip`](http://cat.capstan.be/xliff_bestpractices_okpprj.zip), although this is not necessary unless you want to recreate or customize the extraction process. To (re)create the XLIFF files, the `rnb` file must be open from Okapi Rainbow.<span id="a2">[[2]](#2)</span>
+That sample OmegaT project was created using Okapi Rainbow.<span id="a2">[[2]](#2)</span> The Rainbow project, including the settings files, can also be downloaded from [`http://cat.capstan.be/xliff_bestpractices_okpprj.zip`](http://cat.capstan.be/xliff_bestpractices_okpprj.zip), although this is not necessary unless you want to recreate or customize the extraction process. To (re)create the XLIFF files, the `rnb` file must be open from Okapi Rainbow.
 
 
 ## 1. Requirements
@@ -198,7 +198,7 @@ Luckily, there again, default rulesets used by available tools already include t
 | --- |
 -->
 
-**☞** In the OmegaT project provided, file `01_haram/segment_para.html.xlf` shows a text that has been prepared without segmentation, whereas file `02_halal/segment_para.html.xlf` has been prepared with sentence-based segmentation.
+**☞** In the sample OmegaT project provided, file `01_haram/segment_para.html.xlf` shows a text that has been prepared without segmentation, whereas file `02_halal/segment_para.html.xlf` has been prepared with sentence-based segmentation.
 
 ### 2.2. Inline codes
 
@@ -227,7 +227,7 @@ Since they are expected to appear in exactly the same position in the target ver
 
 #### 2.2.2. Intrasentential codes
 
-The file `markup_span.html` in the sample project includes the following text:
+**☞** The file `markup_span.html` in the sample project includes the following text:
 
 ``` html
 <p><span style='font-size:12pt;font-family:"times new roman","serif"'>Code1:
@@ -272,7 +272,7 @@ which would produce the following view in the translation editor, which is not t
 
 > <kbd>1</kbd> `<span style='font-size:12pt;font-family:"times new roman","serif"'>`Code1: `</span><span style='font-size:12pt;font-family:"times new roman","serif"'>`3/2 or 11/2 or 1.5`</span>` ❌
 
-In the sample project provided, files `markup_custom_xml.xlf` and `markup_span.html.xlf` show what the text looks like when the inline codes have been simply escaped (the ones in the `01_haram` folder) and when they have been properly encapsulated as XLIFF content markup (the ones in folder `02_halal`). There are two files to exemplify both standard HTML tags (e.g. `<span>`) as well as custom-crafted XML tags.
+**☞** In the sample project provided, files `markup_custom_xml.xlf` and `markup_span.html.xlf` show what the text looks like when the inline codes have been simply escaped (the ones in the `01_haram` folder) and when they have been properly encapsulated as XLIFF content markup (the ones in folder `02_halal`). There are two files to exemplify both standard HTML tags (e.g. `<span>`) as well as custom-crafted XML tags.
 
 ### 2.3. Encoding entities
 
@@ -337,7 +337,7 @@ In a nutshell, then: using the Unicode characters in their normal form is prefer
 | unescaped named character entity | `&divide;`	| no (unless declared) | no (but feasible if declared in the document) |
 | escaped named character entity   | `&amp;divide;`	| yes  | no  |
 
-When preparing XLIFF files with a localization engineering tool, e.g. Okapi Rainbow, both named and numeric character entities in the source content will be encoded as the Unicode character in the XLIFF file. In the sample OmegaT project provided, you can see how the three possible inputs (in file `original/entities.html`) are encoded in the same way (as the Unicode character) using the recommended approach in file `02_halal/entities.html.xlf` as well as in the discouraged way in file `01_haram/entities.html.xlf`.
+When preparing XLIFF files with a localization engineering tool, e.g. Okapi Rainbow, both named and numeric character entities in the source content will be encoded as the Unicode character in the XLIFF file. **☞** In the sample OmegaT project provided, you can see how the three possible inputs (in file `original/entities.html`) are encoded in the same way (as the Unicode character) using the recommended approach in file `02_halal/entities.html.xlf` as well as in the discouraged way in file `01_haram/entities.html.xlf`.
 
 With a few negligible exceptions<span id="a13">[[13]](#13)</span>, there should be no reason why a UTF-8 encoding and Unicode characters cannot be used any content to be localized.
 
@@ -347,7 +347,7 @@ Following the recommendations above is necessary but might not be enough to achi
 
 ### 3.1. Split sentences
 
-Sometimes sentences might be broken in two or more parts because the extraction filter is treating an embedded code as the end of the paragraph. In the OmegaT project provided, file `01_haram/markup_input.html.xlf` shows how the sentence is broken at the text input code:
+Sometimes sentences might be broken in two or more parts because the extraction filter is treating an embedded code as the end of the paragraph. **☞** In the OmegaT project provided, file `01_haram/markup_input.html.xlf` shows how the sentence is broken at the text input code:
 
 ``` xml
 <source>An emperor penguin is</source>
