@@ -77,7 +77,7 @@
 
 ## Introduction
 
-This report includes recommendations for preparing content for translation in the XLIFF format with a view to producing XLIFF files that optimize the different language tasks and language asset management both in the short and the long run. It also focuses on issues that can be problematic for language experts and how those issues can be avoided.
+This report includes recommendations for preparing content for translation in the XLIFF format with a view to producing XLIFF files that optimize the different language tasks and language asset management both in the short and the long run. It also focuses on common issues that can be problematic for language experts and how those issues can be avoided.
 
 In this document, segments as the linguist sees them in the translation editor are represented as follows (preceded by the segment number):
 
@@ -185,7 +185,7 @@ Based on the localization industry's best practices for preparing files for tran
 
 First and foremost, one generic recommendation:
 
-* Use the existing technology. There's a rich array of tools and libraries in the localization industry, both commercial and open source, that embody a lot of know-how accumulated over the last decades. If you try to reinvent the wheel, it'll take you much longer and you'll achieve worse results. Use what exists, and improve it if you can.
+* Use the existing technology. There's a rich array of tools and libraries in the localization industry, both commercial and open source, that embody the know-how accumulated over the last decades. If you try to reinvent the wheel, it'll take you much longer and you'll achieve worse results. Use what exists, and improve it if you can, and only then develop your own technology if you see that what 
 
 Let's now be a bit more specific, about segmentation and inline codes:
 
