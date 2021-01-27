@@ -157,16 +157,11 @@ Segmentation should occur after each sentence, so that each sentence is included
 
 If the text is segmented, this long paragraph can be handled as independent sentences and therefore becomes much more manageable for the linguist. The expected result is:
 
-> <kbd>1</kbd> Lorem ipsum dolor sit amet, consectetur adipiscing elit…
->
-> <kbd>2</kbd> Aliquam ex nisi, mattis pulvinar nulla sed, commodo mattis ligula.
->
-> <kbd>3</kbd> Nulla sit amet leo lacinia, pellentesque mi non, aliquam augue?
->
-> <kbd>4</kbd> Pellentesque tempor dictum dui in imperdiet.
->
-> <kbd>5</kbd> Fusce ligula arcu, hendrerit eu dignissim eget, consequat quis sem!
->
+> <kbd>1</kbd> Lorem ipsum dolor sit amet, consectetur adipiscing elit…  
+> <kbd>2</kbd> Aliquam ex nisi, mattis pulvinar nulla sed, commodo mattis ligula.  
+> <kbd>3</kbd> Nulla sit amet leo lacinia, pellentesque mi non, aliquam augue?  
+> <kbd>4</kbd> Pellentesque tempor dictum dui in imperdiet.  
+> <kbd>5</kbd> Fusce ligula arcu, hendrerit eu dignissim eget, consequat quis sem!  
 > <kbd>6</kbd> Maecenas eget ligula dapibus, dictum purus vitae, sodales neque.
 
 To implement segmentation, you must use segmentation rules. Different tools might have slightly different implementations, but they all use regular expressions to match the patterns that correspond to sentence boundaries. SRX <span id="a6">[[6]](#1)</span> is an XML-based standard of the localization industry used to define segmentation rules, and it can be used by Okapi Framework <span id="a7">[[7]](#7)</span>. Segmentation rulesets can be easily created and customized in Okapi Ratel <span id="a8">[[8]](#8)</span>.
@@ -193,8 +188,7 @@ Sometimes it is necessary or convenient to create more specific rules to meet th
 
 To avoid segmenting after abbreviations and in other similar cases, exceptions are necessary to prevent or mask the general rule. Without the appropriate exceptions for abbreviations, we would obtain incorrect segmentations such as:
 
-> <kbd>1</kbd> NBC canceled Mr.
->
+> <kbd>1</kbd> NBC canceled Mr.  
 > <kbd>2</kbd> Robinson, the freshman comedy series.
 
 Luckily, there again, default rulesets used by available tools already include the most frequent abbreviations.
@@ -228,7 +222,6 @@ A leading opening tag appearing before the beginning of a sentence and its corre
 Since they are expected to appear in exactly the same position in the target version of that segment, they don't need to appear in the translation editor and the translator does not need to see them:
 
 > <kbd>1</kbd> What is the total length of the sticks in the line? ✅
-
 
 > <kbd>1</kbd> `<g0>`What is the total length of the sticks in the line?`</g0>` ❌
 
@@ -303,14 +296,12 @@ The escaping approach is discouraged, though. Among other reasons, this approach
 
 Linguists need to see the character, not the code. While `&divide;` (÷) or `&pi;` (π) might be more or less transparent in the appropriate context, other entities such as `&le;` (≤) or `&zwnj;` (zero-width non-joiner) will be obscure and puzzling. The linguist could think that the named character entity must be maintained and therefore necessarily be used in the translation, whereas it might be the case that the target language spelling rules call for another character in that context. For example, this would be an incorrect translation according to French punctuation rules:
 
-> <kbd>source:</kbd> Punctuation works `&quot;`differently`&quot;` in French.
->
+> <kbd>source:</kbd> Punctuation works `&quot;`differently`&quot;` in French.  
 > <kbd>target:</kbd> La ponctuation est `&quot;`différente`&quot;` en français.  ❌ <!-- :x: -->
 
 Compare with the correct translation:
 
-> <kbd>source:</kbd> Punctuation works `&quot;`differently`&quot;` in French.
->
+> <kbd>source:</kbd> Punctuation works `&quot;`differently`&quot;` in French.  
 > <kbd>target:</kbd> La ponctuation est « différente » en français. ✅ <!-- :heavy_check_mark: -->
 
 Escapes were used to represent (by means of ASCII text only) characters that were not available in the character encoding you are using. The W3C (group in charge of the HTML specification) advises to use an encoding that allows to represent characters in their normal form, rather than using escaped named character entities, because using escapes can make it difficult to read and maintain source code, and can also significantly increase file size.<span id="a10">[[10]](#10)</span> Nowadays, it should be possible to encode any text as UTF-8, which allows to use Unicode characters and removes the need for such escapes.
