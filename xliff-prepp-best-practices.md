@@ -530,8 +530,7 @@ Vehicl</strong><strong>es in 2000  ❌
 When this happens repeatedly, it results in segments that are (unnecessarily) very translation unfriendly. For example:
 
 ``` xml
-<strong>Star</strong><strong>t </strong><strong>T</strong><strong>i</strong><strong>me
-</strong>  ❌
+<strong>Star</strong><strong>t </strong><strong>T</strong><strong>i</strong><strong>me</strong>  ❌
 ```
 
 In that example, there are a lot of `<strong>` tags there to do the same job that could be achieved with simply one tag pair. This tag multiplicity might arise from adding superfluous formatting in a word processor or a wysiwyg editor to create the source, or from converting with OCR or from PDF.
