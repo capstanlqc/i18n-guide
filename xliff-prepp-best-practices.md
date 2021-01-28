@@ -189,6 +189,12 @@ Well-formedness and validity are the bare minimum, but of course it is perfectly
 
 Based on the localization industry's best practices for preparing files for translation and on cApStAn's experience in localization of international large-scale assessments and questionnaires, we can define a number of important recommendations or expectations.
 
+Tools you could use to extract XLIFF files:
+* [Maxprograms' OpenXLIFF filters / XLIFF Manager](https://www.maxprograms.com/products/openxliff.html) (open source)
+* [Okapi Rainbow](https://okapiframework.org/wiki/index.php?title=Rainbow) (open source)
+* [memoQ](https://www.memoq.com/) (commercial)
+* [SDL Trados Studio](https://www.sdltrados.com/) (commercial)
+
 First and foremost, one generic recommendation:
 
 * Use the existing technology. There's a rich array of tools and libraries in the localization industry, both commercial and open source, that embody the know-how accumulated over the last decades. If you try to reinvent the wheel, it'll take you much longer and you'll achieve worse results. Use what exists, and improve it if you can, and only then develop your own technology if you see that what 
