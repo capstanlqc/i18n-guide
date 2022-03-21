@@ -180,9 +180,9 @@ You might need to get a prompt asking for credentials. Use the following:
   - Password: `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`
 
 
-<!-- 
-That sample OmegaT project was created using Okapi Rainbow.<span id="a2">[[2]](#2)</span> The Rainbow project, including the settings files, can also be downloaded from [`http://cat.capstan.be/xliff_bestpractices_okpprj.zip`](http://cat.capstan.be/xliff_bestpractices_okpprj.zip), although this is not necessary unless you want to recreate or customize the extraction process. To (re)create the XLIFF files, the `rnb` file must be open from Okapi Rainbow.
--->
+
+The sample XLIFF files in the project above or the project itself can be re-created using Okapi Rainbow.<span id="a2">[[2]](#2)</span> The Rainbow project, including the settings files, filters, segmentation rules etc., can also be downloaded from this link [`okapi_rainbow_project.tar.gz`](https://github.com/capstanlqc/i18n_guide/raw/main/okapi_rainbow_project.tar.gz), although this is not necessary unless you want to recreate or customize the extraction process. Instructions to use the Rainbow project can be found in the README.md file.
+
 
 ## 1. Requirements
 
