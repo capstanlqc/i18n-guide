@@ -97,9 +97,10 @@ To illustrate the DO's and DON'T's, an OmegaT sample project is provided, conta
 
   * the original files (XML, HTML, SVG, etc.), in folder `original`
   * the problematic XLIFF files, in folder `source/01_haram`
-  * the optimal XLIFF files, in folder `source/02_halal`
+  * the optimal XLIFF files, in folders `source/02_halal_xlf1` (for XLIFF version v.1.2)
+  * the optimal XLIFF files, in folders `source/02_halal_xlf2` (for XLIFF version v.2.0)
 
-The original files have been prepared as XLIFF in two different ways, to show the ideal preparation and its antithesis. <!-- The `original` folder contains the source content, the `source` folder contains the files prepared for translation: the `haram` folder contains the problma tic files, and the `halal` folder contains the files with the recommended preparation. --> This is the file structure in the project:
+The original files have been prepared as XLIFF in two different ways (so-called here "halal" and "haram"), to show the ideal preparation and its antithesis, respectively. <!-- The `original` folder contains the source content, the `source` folder contains the files prepared for translation: the `haram` folder contains the problma tic files, and the `halal` folder contains the files with the recommended preparation. --> This is the file structure in the project:
 
 <!--
     xliff_bestpractices_omtprj (project)
@@ -134,16 +135,15 @@ The original files have been prepared as XLIFF in two different ways, to show th
     ├── glossary
     ├── manifest.rkm
     ├── omegat
-    │   ├── ...
+    │   └── ...
     ├── omegat.project
     ├── original
-    │   └── 02_halal
-    │       ├── entities.html
-    │       ├── markup_custom.xml
-    │       ├── markup_inline.svg
-    │       ├── markup_input.html
-    │       ├── markup_span.html
-    │       └── segmen_para.html
+    │   ├── entities.html
+    │   ├── markup_custom.xml
+    │   ├── markup_inline.svg
+    │   ├── markup_input.html
+    │   ├── markup_span.html
+    │   └── segmen_para.html
     ├── source
     │   ├── 01_haram
     │   │   ├── entities.html.xlf
@@ -152,7 +152,7 @@ The original files have been prepared as XLIFF in two different ways, to show th
     │   │   ├── markup_input.html.xlf
     │   │   ├── markup_span.html.xlf
     │   │   └── segmen_para.html.xlf
-    │   └── 02_halal
+    │   └── 02_halal_xlf#
     │       ├── entities.html.xlf
     │       ├── markup_custom.xml.xlf
     │       ├── markup_inline.svg.xlf
@@ -162,22 +162,27 @@ The original files have been prepared as XLIFF in two different ways, to show th
     ├── target
     └── tm
 
-You can open the XLIFF files and look at them in an XML editor, but probably the best way to see the impact of the different preparation is to open the project in OmegaT and compare each _haram_ file with its corresponding _halal_ files. The project can be downloaded twice with different names and two instances of OmegaT can be run simultaneously for a handier comparison.
+You can open the XLIFF files and look at them in a text editor, but probably the best way to see the impact of the different preparation is to open the project in OmegaT and compare each _haram_ file with its corresponding _halal_ equivalent(s). The project can be downloaded twice with different names and two instances of OmegaT can be run simultaneously for a handier comparison.
 
 To open the project in OmegaT:
 
 [comment]: <> "Download and install our custom version of OmegaT: http://cat.capstan.be/OmegaTcp_installer.exe"
 
-  - Install and customize OmegaT as per our [installation and customization guide](https://slides.com/capstan/omegat-installation-and-customization-guide/fullscreen) <span id="a1">[[1]](#1)</span>
+  - Install and customize OmegaT 5.7 as per our [installation and customization guide](https://slides.com/capstan/omegat5-installation-and-customization-guide/fullscreen) <span id="a1">[[1]](#1)</span>
   - In OmegaT, go to     **Project** >     **Download team project** and enter the following details:
-    - url: `http://svn.capstan.be/testproject1/xliff_bestpractices_omtprj`
-	- credentials: `capstanview` (username) / `cApStAn2016` (password)
-	- your preferred path to your local copy of the project.
+    - Repository URL: [`https://github.com/capstanlqc/XLIFF_bestpractices_OMT`](https://github.com/capstanlqc/XLIFF_bestpractices_OMT)
+	- New local project folder: your preferred path to your local copy of the project.
 
 That will create a local version of the project for you and will open it. You can click on the different files in the project files window to display the different content in the translation editor.
 
-That sample OmegaT project was created using Okapi Rainbow.<span id="a2">[[2]](#2)</span> The Rainbow project, including the settings files, can also be downloaded from [`http://cat.capstan.be/xliff_bestpractices_okpprj.zip`](http://cat.capstan.be/xliff_bestpractices_okpprj.zip), although this is not necessary unless you want to recreate or customize the extraction process. To (re)create the XLIFF files, the `rnb` file must be open from Okapi Rainbow.
+You might need to get a prompt asking for credentials. Use the following:
+  - Username: `i18n-dummy`
+  - Password: `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`
 
+
+<!-- 
+That sample OmegaT project was created using Okapi Rainbow.<span id="a2">[[2]](#2)</span> The Rainbow project, including the settings files, can also be downloaded from [`http://cat.capstan.be/xliff_bestpractices_okpprj.zip`](http://cat.capstan.be/xliff_bestpractices_okpprj.zip), although this is not necessary unless you want to recreate or customize the extraction process. To (re)create the XLIFF files, the `rnb` file must be open from Okapi Rainbow.
+-->
 
 ## 1. Requirements
 
