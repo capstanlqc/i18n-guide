@@ -177,7 +177,7 @@ That will create a local version of the project for you and will open it. You ca
 
 You might need to get a prompt asking for credentials. Use the following:
   - Username: `i18n-dummy`
-  - Password: `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`
+  - Password: `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`
 
 
 
