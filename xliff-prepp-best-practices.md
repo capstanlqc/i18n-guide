@@ -5,10 +5,10 @@
 
 | Date       | Author            | Comment            |
 |:---------- |:----------------- |:------------------ |
-| 2021-01-27 | Manuel Souto Pico | Review and updates |
-| 2018-05-25 | Manuel Souto Pico | Segmentation       |
-| 2018-02-02 | Manuel Souto Pico | Encoding entities  |
 | 2018-01-30 | Manuel Souto Pico | Creation           |
+| 2018-02-02 | Manuel Souto Pico | Encoding entities  |
+| 2018-05-25 | Manuel Souto Pico | Segmentation       |
+| 2021-01-27 | Manuel Souto Pico | Review and updates |
 | 2022-03-21 | Manuel Souto Pico | Updated OMT project (SVN to Github) and OmegaT version (4.2 to 5.7) |
 
 ## Table of contents
