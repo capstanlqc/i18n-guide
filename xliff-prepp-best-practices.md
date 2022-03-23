@@ -173,10 +173,9 @@ To open the project in OmegaT:
     - Repository URL: [`https://github.com/capstanlqc/XLIFF_bestpractices_OMT`](https://github.com/capstanlqc/XLIFF_bestpractices_OMT)
 	- New local project folder: your preferred path to your local copy of the project.
 
-That will create a local version of the project for you and will open it. You can click on the different files in the project files window to display the different content in the translation editor.
+That will create a local version of the project for you and open it. To open files in the translation editor, you may press **Ctrl+L** and then either type part of the file name or just click on a file to select it and open it. Typing also helps to filter the list of files.
 
-You might get a prompt asking for credentials, which you can get from [here](https://rentry.co/i18n-dummy).
-
+Credentials are available [here](https://rentry.co/i18n-dummy).
 
 The sample XLIFF files in the project above or the project itself can be re-created using Okapi Rainbow.<span id="a2">[[2]](#2)</span> The Rainbow project, including the settings files, filters, segmentation rules etc., can also be downloaded from this link [`okapi_rainbow_project.tar.gz`](https://github.com/capstanlqc/i18n_guide/raw/main/okapi_rainbow_project.tar.gz), although this is not necessary unless you want to recreate or customize the extraction process. Instructions to use the Rainbow project can be found in the README.md file.
 
