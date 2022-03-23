@@ -10,6 +10,7 @@
 | 2018-05-25 | Manuel Souto Pico | Segmentation       |
 | 2021-01-27 | Manuel Souto Pico | Review and updates |
 | 2022-03-21 | Manuel Souto Pico | Updated OMT project (SVN to Github) and OmegaT version (4.2 to 5.7) |
+| 2022-03-23 | Manuel Souto Pico | Updated credentials of dummy user |
 
 ## Table of contents
 
