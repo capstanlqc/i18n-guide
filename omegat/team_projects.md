@@ -145,6 +145,7 @@ To obtain the translated documents in the target language, you have two options:
 Alternatively, you may simply pull all translations from the repository to a local copy of the project in your machine (outside the git checkout folder) and generate the target files there. Running OmegaT on the project in console mode should do the trick:
 
 ```
+git pull origin master
 java -jar /path/to/OmegaT.jar /path/to/proj --mode=console-translate
 ```
 
