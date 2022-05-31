@@ -24,7 +24,7 @@ Before creating the team projects, you must have:
 * [created an organization in Github](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/creating-a-new-organization-from-scratch) -- already done: https://github.com/capstanlqc/
 * [renamed the repository default branch from `main` to `master`](https://docs.github.com/en/organizations/managing-organization-settings/managing-the-default-branch-name-for-repositories-in-your-organization#setting-the-default-branch-name) -- done for capstanlqc
 * [added your translators as members of the organization](https://docs.github.com/en/enterprise-server@3.0/organizations/managing-membership-in-your-organization/adding-people-to-your-organization)
-* [set the organization's base permissions to give members writing privileges](https://docs.github.com/en/organizations/managing-access-to-your-organizations-repositories/setting-base-permissions-for-an-organization)
+* [set the organization's base permissions to give members writing privileges](https://docs.github.com/en/organizations/managing-access-to-your-organizations-repositories/setting-base-permissions-for-an-organization) -- done for capstanlqc
 
 ## 2 Managing the team project
 
