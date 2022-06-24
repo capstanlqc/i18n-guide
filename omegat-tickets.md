@@ -198,9 +198,9 @@ Follow up with this.
 	
 ### [RFE #931](https://bitbucket.org/okapiframework/okapi/issues/931/openxml-filter-remove-redundant-bidi): OpenXML Filter: remove redundant BIDI properties clarification for DOCX documents with RTL target langauge
 
-### [BUG #23](https://bitbucket.org/okapiframework/omegat-plugin/issues/23/translation-registered-as-same-as-source): Translation registered as same as source not taken into account
+### [Okapi plugin #23](https://bitbucket.org/okapiframework/omegat-plugin/issues/23/translation-registered-as-same-as-source): Translation registered as same as source not taken into account
 
-### [BUG #22](https://bitbucket.org/okapiframework/omegat-plugin/issues/22/segment-set-as-not-empty-in-xliff): Segment set as <EMPTY> not empty in XLIFF
+### [Okapi plugin #22](https://bitbucket.org/okapiframework/omegat-plugin/issues/22/segment-set-as-not-empty-in-xliff): Segment set as <EMPTY> not empty in XLIFF
 ----
 
 ## Other tickets open for sponsorship
