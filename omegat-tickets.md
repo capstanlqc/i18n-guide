@@ -53,7 +53,7 @@
 | 2020-01-27 | [#977](#bug-977-character-and-tag-are-glued-together-in-arabic) | Character and tag are glued together in Arabic | Bug | Open | OmegaT |
 | 2020-01-22 | [#975](#bug-975-id-binding-context-damaged-with-olifant-edited-tmx-files) | ID-binding context damaged with Olifant-edited TMX files | Bug | Open | OmegaT |
 | 2018-04-13 | [#23](#) | Translation registered as same as source not taken into account | BUG | Open! | Okapi plugin |
-
+| 2018-04-13 | [#22](#) | Segment set as <EMPTY> not empty in XLIFF | BUG | Open! | Okapi plugin |
 
 
 ## 2022
@@ -199,6 +199,8 @@ Follow up with this.
 ### [RFE #931](https://bitbucket.org/okapiframework/okapi/issues/931/openxml-filter-remove-redundant-bidi): OpenXML Filter: remove redundant BIDI properties clarification for DOCX documents with RTL target langauge
 
 ### [BUG #23](https://bitbucket.org/okapiframework/omegat-plugin/issues/23/translation-registered-as-same-as-source): Translation registered as same as source not taken into account
+
+### [BUG #22](https://bitbucket.org/okapiframework/omegat-plugin/issues/22/segment-set-as-not-empty-in-xliff): Segment set as <EMPTY> not empty in XLIFF
 ----
 
 ## Other tickets open for sponsorship
