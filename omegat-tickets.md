@@ -150,10 +150,6 @@ Re-test with latest version of Okapi plugin.
 
 ## 2020
 
-Embed Excel ??? 
-
-
-
 ### [RFF #1527](https://sourceforge.net/p/omegat/feature-requests/1527/) Do not export untranslated segments 
 
 This feature request aims at preventing the problem that users might inadvertedly create bilingual target files (mixing text in the source and the target languages) if they leave some segments untranslated. OmegaT should not opinionatedly use the source text as the translation if the segment is not translated.
