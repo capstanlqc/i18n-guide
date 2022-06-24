@@ -1,3 +1,32 @@
+# OmegaT and Okapi tickets opened after 2020
+
+| # 																			 	| Created	 	| Title 																	| Type 		| Status 	| Tool 			|
+|----------------------------------------------------------------------------------:|---------		|-------																	|----------	|--------   |-- 			|
+| [#37](#html-sub-filter-in-json-filter-not-working-in-omegat) 						| 2022-05-14	| HTML sub-filter in JSON filter not working in OmegaT						| BUG 		| Resolved 	| Okapi-plugin 	|
+| [#36](#alternative-translations-do-not-work-for-repetitions-within-paragraphs) 	| 2022-04-08	| Alternative translations do not work for repetitions within paragraphs	| BUG 		| Open 	  	| Okapi-plugin 	|
+| [#1098](#) 											| 2022-05-24	| The "file names" option does not work in search results from TMs 			| BUG 		| Resolved 	| OmegaT 	 	|
+| [#1617](#) 											| 2022-05-12 	| RFE: handling ID-bound alternative translations more efficiently 			| RFE 		| Open 	  	| OmegaT 	 	|
+| [#1101](#) 											| 2022-05-31 	| No ID-bound matching in /tm/tmx2source									| RFE 		| Open 	  	| OmegaT 	 	|
+| [#1098](#) 											| 2022-05-24	| The "file names" option does not work in search results from TMs			| BUG 		| Resolved 	| OmegaT 	 	|
+| [#1099](#) 											| 2022-05-24 	| Absolute paths used in search results from TMs 							| BUG 		| Resolved 	| OmegaT 	 	|
+| [#1092](#) 											| 2022-03-02 	| Enforced ID-bound alternative translations not recognized					| BUG 		| Resolved 	| OmegaT 	 	|
+| - | 
+| [#1070](#Unexpected enforced translation (first match) in OmegaT 4.3) 			| 2021-09-24 	| Unexpected enforced translation (first match) in OmegaT 4.3  	 			| BUG 		| Open 		| OmegaT 		|
+| [#1592](#option-to-choose-how-matches-are-sorted-(asc-or-desc))					| 2021-09-21	| Option to choose how matches are sorted (asc or desc) 					| RFE< 		| Open 	  	| OmegaT 	 	|
+| [#1578](#Do not propose source text as match from other languages) 				| 2021-06-25 	| Do not propose source text as match from other languages 					| RFF 		| Open 		| OmegaT 		|
+| [#1566](#Replace glossary hits when inserting fuzzy match) 						| 2021-05-09 	| Replace glossary hits when inserting fuzzy match 							| RFF 		| Open 		| OmegaT 		|
+| [#1565](#give-each-segment-a-unique-id) 											| 2021-05-05	| Give each segment a unique ID 											| RFE<		| Open 	  	| OmegaT 	 	|
+| [#1046](#Glossary has wrong encoding for non-ASCII characters) 					| 2021-04-30  	| Glossary has wrong encoding for non-ASCII characters  					| BUG 		| Rejected 	| OmegaT 		|
+| [#1038](#Option "Remove leading and trailing tags" removes tags that are not a tag pair) | 2021-03-02 | Option "Remove leading and trailing tags" removes tags that are not a tag pair | BUG | Open 	| OmegaT 		|
+| [#1037](#Next Unique Segment shortcut conflicts with Log Out on Mac) 				| 2021-02-16 	| Next Unique Segment shortcut conflicts with Log Out on Mac  				| BUG 		| Open 		| OmegaT 		|
+| [#1032](#OmegaT ignores system variable %appdata% on Windows) 					| 2021-01-22 	| OmegaT ignores system variable %appdata% on Windows 						| BUG 		| Open 		| OmegaT 		|
+| [#1546](#Include OMT plugin in the vanilla installation) 							| 2021-01-20 	| Include OMT plugin in the vanilla installation 							| BUG 		| Open 		| OmegaT 		|
+| [#1027](#Resolve Conflicts dialog is useless when enforced matches are updated) 	| 2020-12-10 	| Resolve Conflicts dialog is useless when enforced matches are updated 	| BUG 		| Open 		| OmegaT 		|
+| [#1529](#Folder `scripts/application_close` to run scripts when OmegaT closes) 	| 2020-12-10 	| Folder `scripts/application_close` to run scripts when OmegaT closes 		| BUG 		| Open 		| OmegaT 		|
+
+
+
+
 # OmegaT and Okapi tickets opened (or still open) in 2020
 
 | # 							 	| Created	| Title 					| Type		 | Status     	   | Tool |
@@ -26,6 +55,68 @@
 | [#977](#bug-977-character-and-tag-are-glued-together-in-arabic) | 2020.01.27 | Character and tag are glued together in Arabic | Bug | Open | OmegaT |
 | [#975](#bug-975-id-binding-context-damaged-with-olifant-edited-tmx-files) | 2020.01.22 | ID-binding context damaged with Olifant-edited TMX files | Bug | Open | OmegaT |
 
+
+----
+
+## 2022
+
+
+
+### [Okapi-plugin #37](https://bitbucket.org/okapiframework/omegat-plugin/issues/37/html-sub-filter-in-json-filter-not-working) HTML sub-filter in JSON filter not working in OmegaT
+
+Blocking issue for translation JSON files with embedded HTML content in OmegaT. Same as [OmegaT #1097](https://sourceforge.net/p/omegat/bugs/1097/).
+
+### [Okapi-plugin #36](https://bitbucket.org/okapiframework/omegat-plugin/issues/36/alternative-translations-do-not-work-for#comment-63775946) Alternative translations do not work for repetitions within paragraphs
+
+Same as [OmegaT #1616](https://sourceforge.net/p/omegat/feature-requests/1616/).
+
+### [OmegaT #1592](https://sourceforge.net/p/omegat/feature-requests/1592/) Option to choose how matches are sorted (asc or desc) 
+
+### [OmegaT #1565](https://sourceforge.net/p/omegat/feature-requests/1565/) Give each segment a unique ID
+
+### [OmegaT #1617](https://sourceforge.net/p/omegat/feature-requests/1617/) RFE: handling ID-bound alternative translations more efficiently 
+
+### [OmegaT #1098](https://sourceforge.net/p/omegat/bugs/1098/) The "file names" option does not work in search results from TMs 
+
+### [OmegaT #1099](https://sourceforge.net/p/omegat/bugs/1099/) Absolute paths used in search results from TMs
+
+### [OmegaT #1101](https://sourceforge.net/p/omegat/bugs/1101/) No ID-bound matching in /tm/tmx2source 
+
+### [OmegaT #1092](https://sourceforge.net/p/omegat/bugs/1092/) Enforced ID-bound alternative translations not recognized 
+
+
+
+### [OmegaT #1090](https://sourceforge.net/p/omegat/bugs/1090/) Fails to load TM using <ph> tags 	2022-02-21 
+
+### [OmegaT #1608](https://sourceforge.net/p/omegat/feature-requests/1608/) Add notes to the translator in /tm/notes/foo.tmx 	2022-02-16
+
+
+## 2021
+
+### [OmegaT #1070](https://sourceforge.net/p/omegat/bugs/1070/) Unexpected enforced translation (first match) in OmegaT 4.3  	 2021-09-24
+
+### [OmegaT #1591](https://sourceforge.net/p/omegat/feature-requests/1591/) Option to export project's master TMs when pressing Ctrl+D 2021-09-21
+
+### [OmegaT #1578](https://sourceforge.net/p/omegat/feature-requests/1578/) Do not propose source text as match from other languages 2021-06-25 
+
+### [OmegaT #1566](https://sourceforge.net/p/omegat/feature-requests/1566/) Replace glossary hits when inserting fuzzy match 2021-05-09
+
+### [OmegaT #1046](https://sourceforge.net/p/omegat/bugs/1046/) Glossary has wrong encoding for non-ASCII characters  2021-04-30  Rejected
+
+### [OmegaT #1038](https://sourceforge.net/p/omegat/bugs/1038/) Option "Remove leading and trailing tags" removes tags that are not a tag pair 2021-03-02 Open
+
+### [OmegaT #1037](https://sourceforge.net/p/omegat/bugs/1037/) Next Unique Segment shortcut conflicts with Log Out on Mac  2021-02-16 Open
+
+### [OmegaT #1032](https://sourceforge.net/p/omegat/bugs/1032/) OmegaT ignores system variable %appdata% on Windows  2021-01-22 Open
+
+### [>OmegaT #1546](https://sourceforge.net/p/omegat/feature-requests/1546/) Include OMT plugin in the vanilla installation 2021-01-20 Open
+
+### #1027](https://sourceforge.net/p/omegat/bugs/1027/) Resolve Conflicts dialog is useless when enforced matches are updated  2020-12-10  Open
+
+### #1529](https://sourceforge.net/p/omegat/feature-requests/1529/) Folder `scripts/application_close` to run scripts when OmegaT closes  2020-12-10	RFF 	Open
+
+
+---
 
 Embed Excel ??? 
 
@@ -85,3 +176,10 @@ Not reproduceable.
 ### [Bug #932](https://bitbucket.org/okapiframework/okapi/issues/932/hook-for-omegat-translation-kit-not): Hook for OmegaT translation kit not working anymore
 	
 ### [RFE #931](https://bitbucket.org/okapiframework/okapi/issues/931/openxml-filter-remove-redundant-bidi): OpenXML Filter: remove redundant BIDI properties clarification for DOCX documents with RTL target langauge
+
+
+----
+
+## Other tickets open for sponsorship
+
+### [OmegaT #1497](https://sourceforge.net/p/omegat/feature-requests/1497/) Automatically create system-wide TM repository (2020-06-28)
