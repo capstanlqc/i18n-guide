@@ -13,7 +13,8 @@
 | 2022-05-12 | [#1617](#omegat-1617-rfe-handling-id-bound-alternative-translations-more-efficiently)		| RFE: handling ID-bound alternative translations more efficiently 			| RFE 		| Open 	  	| OmegaT 	 	|
 | 2022-03-02 | [#1092](#omegat-1092-enforced-id-bound-alternative-translations-not-recognized)				| Enforced ID-bound alternative translations not recognized					| BUG 		| Resolved 	| OmegaT 	 	|
 | 2022-02-21 | [#1090](#omegat-1090-fails-to-load-tm-using-ph-tags) 										| Fails to load TM using <ph> tags 											| BUG 		| Open 		| OmegaT 		|
-| 2022-02-16 | [#1608](#omegat-1608-add-notes-to-the-translator-in-tmnotesfootmx) 							| Add notes to the translator in /tm/notes/foo.tmx 							| RFF 		| open!		| OmegaT 		|
+| 2022-02-16 | [#1608](#omegat-1608-add-notes-to-the-translator-in-tmnotesfootmx) 							| Add notes to the translator in /tm/notes/foo.tmx 							| RFF 		| Open!		| OmegaT 		|
+| 2022-01-19 | [#35](#) | Improve tags conversion to match OmegaT tags better | RFE | Open| Okapi plugin |
 | - |
 | 2021-09-24 | [#1070](#omegat-1070-unexpected-enforced-translation-first-match-in-omegat-43) 				| Unexpected enforced translation (first match) in OmegaT 4.3  	 			| BUG 		| Open 		| OmegaT 		|
 | 2021-09-21 | [#1592](#omegat-1592-option-to-choose-how-matches-are-sorted-asc-or-desc)					| Option to choose how matches are sorted (asc or desc) 					| RFE 		| Open~	  	| OmegaT 	 	|
@@ -52,8 +53,9 @@
 | 2020-01-27 | [#979](#bug-979-arabic-fuzzy-matches-not-wrapped-in-fm-pane) | Arabic fuzzy matches not wrapped in FM pane | Bug | Open | OmegaT |
 | 2020-01-27 | [#977](#bug-977-character-and-tag-are-glued-together-in-arabic) | Character and tag are glued together in Arabic | Bug | Open | OmegaT |
 | 2020-01-22 | [#975](#bug-975-id-binding-context-damaged-with-olifant-edited-tmx-files) | ID-binding context damaged with Olifant-edited TMX files | Bug | Open | OmegaT |
-| 2018-04-13 | [#23](#) | Translation registered as same as source not taken into account | BUG | Open! | Okapi plugin |
-| 2018-04-13 | [#22](#) | Segment set as <EMPTY> not empty in XLIFF | BUG | Open! | Okapi plugin |
+| - |
+| 2018-04-13 | [#23](#okapiplugin-23-translation-registered-as-same-as-source-not-taken-into-account) 		| Translation registered as same as source not taken into account | BUG | Open! | Okapi plugin |
+| 2018-04-13 | [#22](#okapiplugin-22-segment-set-as--not-empty-in-xliff) 									| Segment set as <EMPTY> not empty in XLIFF | BUG | Open! | Okapi plugin |
 
 
 ## 2022
@@ -91,6 +93,9 @@ With Aaron's tips I could find the issue and propose a fix. Fixed in 5.8.1.
 
 This would be necessary (or very handy) in projects where we need to use second source for a reference version, and it would be confusing to use the same space for translation notes.
 
+### [Okapi plugin #35](https://bitbucket.org/okapiframework/omegat-plugin/issues/35/improve-tags-conversion-to-match-omegat) Improve tags conversion to match OmegaT tags better
+
+Online discussion: https://groups.google.com/g/okapi-users/c/de5LTH7hP4g/m/PysP0msQBwAJ?utm_medium=email&utm_source=footer
 
 
 ## 2021
