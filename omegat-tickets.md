@@ -36,7 +36,7 @@
 | 2020-09-29 | [#993](#bug-993-okapi-xliff-filter-for-omegat-registersexpects-segment-ids-that-break-id-bound-matches) | Okapi XLIFF filter for OmegaT registers/expects segment IDs that break ID-bound matches | Bug | Open | Okapi |
 | 2020-09-21 | [#1520](#rff-1520-two-many-locations-for-user-added-plugins) | Two many locations for user-added plugins | RFE | Rejected | OmegaT |
 | 2020-09-21 | [#1519](#rfe-1519-omegat-uses-wrongold-version-of-plugin-in-case-of-conflict) | OmegaT uses wrong/old version of plugin in case of conflict | RFE | Open | OmegaT |
-| 2020-08-14 | [#969](#rfe-969-resname-from-xliff-appears-in-the-comment-field-in-omegat) | Resname (from XLIFF) appears in the comment field in OmegaT | RFE | Open | Okapi |
+| 2020-08-14 | [#969](#rfe-969-resname-from-xliff-appears-in-the-comment-field-in-omegat) | Resname (from XLIFF) appears in the comment field in OmegaT | RFE | Open~ | Okapi |
 | 2020-07-16 | [#1003](#bug-1003-matches-containing-non-alphabetical-text-are-ignored-in-tm-leverage) | Matches containing non-alphabetical text are ignored in TM leverage |  Bug | Open | OmegaT |
 | 2020-08-21 | [#1015](#bug-1015-matches-ignored-if-the-two-locales-have-the-same-language-subtag) | Matches ignored if the two locales have the same language subtag | Bug | Open | OmegaT |
 | 2020-07-16 | [#1002](#bug-1002-choice-of-gui-language-during-re-installation-is-ignored) | Choice of GUI language during re-installation is ignored | Bug | Fixed | OmegaT |
@@ -52,6 +52,7 @@
 | 2020-01-27 | [#979](#bug-979-arabic-fuzzy-matches-not-wrapped-in-fm-pane) | Arabic fuzzy matches not wrapped in FM pane | Bug | Open | OmegaT |
 | 2020-01-27 | [#977](#bug-977-character-and-tag-are-glued-together-in-arabic) | Character and tag are glued together in Arabic | Bug | Open | OmegaT |
 | 2020-01-22 | [#975](#bug-975-id-binding-context-damaged-with-olifant-edited-tmx-files) | ID-binding context damaged with Olifant-edited TMX files | Bug | Open | OmegaT |
+| 2018-04-13 | [#23](#) | Translation registered as same as source not taken into account | BUG | Open! | Okapi plugin |
 
 
 
@@ -183,6 +184,8 @@ Not reproduceable.
 
 ### [Bug #933](https://bitbucket.org/okapiframework/okapi/issues/933/openxml-filter-formatting-issues-in-arabic): OpenXML filter: formatting issues in Arabic translation (RTL)
 
+On hold, TBC whether Word is the formatting for coding guides in PISA25. As soon as it's confirmed, this ticket would have highest priority. 
+
 ### [RFE #969](https://bitbucket.org/okapiframework/okapi/issues/969/resname-from-xliff-appears-in-the-comment): Resname (from XLIFF) appears in the comment field in OmegaT
 
 Several details could be optimized in the Comments pane vs Segment Properties pane: resname, ID, comment, etc. Test with JSON to XLIFF roundtrip.
@@ -195,7 +198,7 @@ Follow up with this.
 	
 ### [RFE #931](https://bitbucket.org/okapiframework/okapi/issues/931/openxml-filter-remove-redundant-bidi): OpenXML Filter: remove redundant BIDI properties clarification for DOCX documents with RTL target langauge
 
-
+### [BUG #23](https://bitbucket.org/okapiframework/omegat-plugin/issues/23/translation-registered-as-same-as-source): Translation registered as same as source not taken into account
 ----
 
 ## Other tickets open for sponsorship
