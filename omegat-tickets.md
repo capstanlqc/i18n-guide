@@ -12,7 +12,7 @@
 | 2022-05-24 | [#1098](#omegat-1098-the-file-names-option-does-not-work-in-search-results-from-tms)	| The "file names" option does not work in search results from TMs					| BUG 		| Resolved 	| OmegaT 	 	|
 | 2022-05-12 | [#1617](#omegat-1617-rfe-handling-id-bound-alternative-translations-more-efficiently)		| RFE: handling ID-bound alternative translations more efficiently 			| RFE 		| Open 	  	| OmegaT 	 	|
 | 2022-03-02 | [#1092](#omegat-1092-enforced-id-bound-alternative-translations-not-recognized)				| Enforced ID-bound alternative translations not recognized					| BUG 		| Resolved 	| OmegaT 	 	|
-| 2022-02-22 | [#1128](#) | Table filter: Merge step does not keep edited translation | BUG | Open! | Okapi |
+| 2022-02-22 | [#1128](#okapi-1128-table-filter-merge-step-does-not-keep-edited-translation) 				| Table filter: Merge step does not keep edited translation 				| BUG 		| Open! 	| Okapi 		|
 | 2022-02-21 | [#1090](#omegat-1090-fails-to-load-tm-using-ph-tags) 										| Fails to load TM using <ph> tags 											| BUG 		| Open 		| OmegaT 		|
 | 2022-02-16 | [#1608](#omegat-1608-add-notes-to-the-translator-in-tmnotesfootmx) 							| Add notes to the translator in /tm/notes/foo.tmx 							| RFF 		| Open!		| OmegaT 		|
 | 2022-01-19 | [#35](#okapiplugin-35-improve-tags-conversion-to-match-omegat-tags-better) 					| Improve tags conversion to match OmegaT tags better 						| RFE 		| Open?		| Okapi plugin |
@@ -21,6 +21,7 @@
 | 2021-09-21 | [#1592](#omegat-1592-option-to-choose-how-matches-are-sorted-asc-or-desc)					| Option to choose how matches are sorted (asc or desc) 					| RFE 		| Open~	  	| OmegaT 	 	|
 | 2021-09-21 | [#1591](#omegat-1591-option-to-export-projects-master-tms-when-pressing-ctrld) 				| Option to export project's master TMs when pressing Ctrl+D 				| RFF 		| Open 		| OmegaT 		|
 | 2021-06-25 | [#1578](#omegat-1578-do-not-propose-source-text-as-match-from-other-languages)				| Do not propose source text as match from other languages 					| RFF 		| Open 		| OmegaT 		|
+| 2021-05-10 | [#1055](#)	| Unable to set <EMPTY> translation in OmegaT with Okapi filter OpenXML | BUG | Open? | Okapi plugin | 
 | 2021-05-09 | [#1566](#omegat-1566-replace-glossary-hits-when-inserting-fuzzy-match)						| Replace glossary hits when inserting fuzzy match 							| RFF 		| Open 		| OmegaT 		|
 | 2021-05-05 | [#1565](#omegat-1565-give-each-segment-a-unique-id)											| Give each segment a unique ID 											| RFE		| Open!!  	| OmegaT 	 	|
 | 2021-04-30 | [#1046](#omegat-1046-glossary-has-wrong-encoding-for-non-ascii-characters)					| Glossary has wrong encoding for non-ASCII characters  					| BUG 		| Rejected 	| OmegaT 		|
@@ -111,11 +112,13 @@ Online discussion: https://groups.google.com/g/okapi-users/c/de5LTH7hP4g/m/PysP0
 
 ### [OmegaT #1592](https://sourceforge.net/p/omegat/feature-requests/1592/) Option to choose how matches are sorted (asc or desc) 
 
-### [OmegaT #1591](https://sourceforge.net/p/omegat/feature-requests/1591/) Option to export project's master TMs when pressing Ctrl+D 2021-09-21
+### [OmegaT #1591](https://sourceforge.net/p/omegat/feature-requests/1591/) Option to export project's master TMs when pressing Ctrl+D
 
-### [OmegaT #1578](https://sourceforge.net/p/omegat/feature-requests/1578/) Do not propose source text as match from other languages 2021-06-25 
+### [OmegaT #1578](https://sourceforge.net/p/omegat/feature-requests/1578/) Do not propose source text as match from other languages
 
-### [OmegaT #1566](https://sourceforge.net/p/omegat/feature-requests/1566/) Replace glossary hits when inserting fuzzy match 2021-05-09
+### [Okapi plugin #1055](https://bitbucket.org/okapiframework/okapi/issues/1055/unable-to-set-translation-in-omegat-with) Unable to set <EMPTY> translation in OmegaT with Okapi filter OpenXML
+
+### [OmegaT #1566](https://sourceforge.net/p/omegat/feature-requests/1566/) Replace glossary hits when inserting fuzzy match
 
 ### [OmegaT #1565](https://sourceforge.net/p/omegat/feature-requests/1565/) Give each segment a unique ID
 
