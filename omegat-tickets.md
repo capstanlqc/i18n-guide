@@ -28,8 +28,7 @@
 | 2021-04-30 | [#1046](#omegat-1046-glossary-has-wrong-encoding-for-non-ascii-characters)					| Glossary has wrong encoding for non-ASCII characters  					| BUG 		| Rejected 	| OmegaT 		|
 | 2021-03-02 | [#1038](#omegat-1038-option-remove-leading-and-trailing-tags-removes-tags-that-are-not-a-tag-pair) | "Remove leading/trailing tags" removes tags that are not a tag pair | BUG 		| Open 		| OmegaT 		|
 | 2021-02-16 | [#1037](#omegat-1037-next-unique-segment-shortcut-conflicts-with-log-out-on-mac) 			| Next Unique Segment shortcut conflicts with Log Out on Mac  				| BUG 		| Open 		| OmegaT 		|
-| 2021-02-04 | [#1020](#) | OpenXML filter for OmegaT gives error when opening Excel file with embedded HTML | BUG | Open! | OmegaT |
-
+| 2021-02-04 | [#1020](#omegat-1020-openxml-filter-for-omegat-gives-error-when-opening-excel-file-with-embedded-html) | OpenXML filter for OmegaT gives error when opening Excel file with embedded HTML | BUG | Open? | OmegaT |
 | 2021-01-22 | [#1032](#omegat-1032-omegat-ignores-system-variable-appdata-on-windows) 						| OmegaT ignores system variable %appdata% on Windows 						| BUG 		| Open 		| OmegaT 		|
 | 2021-01-20 | [#1546](#omegat-1546-include-omt-plugin-in-the-vanilla-installation) 						| Include OMT plugin in the vanilla installation 							| RFF 		| Open!		| OmegaT 		|
 | 2020-12-10 | [#1027](#omegat-1027-resolve-conflicts-dialog-is-useless-when-enforced-matches-are-updated) 	| Resolve Conflicts dialog is useless when enforced matches are updated 	| BUG 		| Open 		| OmegaT 		|
@@ -136,6 +135,8 @@ Very important, lack of unique segment ID is a common source of support requests
 ### [OmegaT #1037](https://sourceforge.net/p/omegat/bugs/1037/) Next Unique Segment shortcut conflicts with Log Out on Mac
 
 ### [OmegaT #1020](https://bitbucket.org/okapiframework/okapi/issues/1020/openxml-filter-for-omegat-gives-error-when) OpenXML filter for OmegaT gives error when opening Excel file with embedded HTML
+
+Re-test with latest version of Okapi plugin.
 
 ### [OmegaT #1032](https://sourceforge.net/p/omegat/bugs/1032/) OmegaT ignores system variable %appdata% on Windows
 
