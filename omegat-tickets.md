@@ -12,9 +12,10 @@
 | 2022-05-24 | [#1098](#omegat-1098-the-file-names-option-does-not-work-in-search-results-from-tms)	| The "file names" option does not work in search results from TMs					| BUG 		| Resolved 	| OmegaT 	 	|
 | 2022-05-12 | [#1617](#omegat-1617-rfe-handling-id-bound-alternative-translations-more-efficiently)		| RFE: handling ID-bound alternative translations more efficiently 			| RFE 		| Open 	  	| OmegaT 	 	|
 | 2022-03-02 | [#1092](#omegat-1092-enforced-id-bound-alternative-translations-not-recognized)				| Enforced ID-bound alternative translations not recognized					| BUG 		| Resolved 	| OmegaT 	 	|
+| 2022-02-22 | [#1128](#) | Table filter: Merge step does not keep edited translation | BUG | Open! | Okapi |
 | 2022-02-21 | [#1090](#omegat-1090-fails-to-load-tm-using-ph-tags) 										| Fails to load TM using <ph> tags 											| BUG 		| Open 		| OmegaT 		|
 | 2022-02-16 | [#1608](#omegat-1608-add-notes-to-the-translator-in-tmnotesfootmx) 							| Add notes to the translator in /tm/notes/foo.tmx 							| RFF 		| Open!		| OmegaT 		|
-| 2022-01-19 | [#35](#) | Improve tags conversion to match OmegaT tags better | RFE | Open| Okapi plugin |
+| 2022-01-19 | [#35](#okapiplugin-35-improve-tags-conversion-to-match-omegat-tags-better) 					| Improve tags conversion to match OmegaT tags better 						| RFE 		| Open?		| Okapi plugin |
 | - |
 | 2021-09-24 | [#1070](#omegat-1070-unexpected-enforced-translation-first-match-in-omegat-43) 				| Unexpected enforced translation (first match) in OmegaT 4.3  	 			| BUG 		| Open 		| OmegaT 		|
 | 2021-09-21 | [#1592](#omegat-1592-option-to-choose-how-matches-are-sorted-asc-or-desc)					| Option to choose how matches are sorted (asc or desc) 					| RFE 		| Open~	  	| OmegaT 	 	|
@@ -83,9 +84,15 @@ Hiroshi fixed it.
 
 ### [OmegaT #1617](https://sourceforge.net/p/omegat/feature-requests/1617/) RFE: handling ID-bound alternative translations more efficiently
 
+Originally reported as [Okapi 1106](https://bitbucket.org/okapiframework/okapi/issues/1106/rfe-okapi-xliff-filter-for-omegat-handling).
+
 ### [OmegaT #1092](https://sourceforge.net/p/omegat/bugs/1092/) Enforced ID-bound alternative translations not recognized 
 
 With Aaron's tips I could find the issue and propose a fix. Fixed in 5.8.1.
+
+### [Okapi #1128](https://bitbucket.org/okapiframework/okapi/issues/1128/table-filter-merge-step-does-not-keep) Table filter: Merge step does not keep edited translation
+
+Online exchange at https://groups.google.com/g/okapi-users/c/lBo0LRASJyA/m/viK3SfsiBAAJ?utm_medium=email&utm_source=footer
 
 ### [OmegaT #1090](https://sourceforge.net/p/omegat/bugs/1090/) Fails to load TM using <ph> tags
 
