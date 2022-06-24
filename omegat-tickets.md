@@ -21,13 +21,15 @@
 | 2021-09-21 | [#1592](#omegat-1592-option-to-choose-how-matches-are-sorted-asc-or-desc)					| Option to choose how matches are sorted (asc or desc) 					| RFE 		| Open~	  	| OmegaT 	 	|
 | 2021-09-21 | [#1591](#omegat-1591-option-to-export-projects-master-tms-when-pressing-ctrld) 				| Option to export project's master TMs when pressing Ctrl+D 				| RFF 		| Open 		| OmegaT 		|
 | 2021-06-25 | [#1578](#omegat-1578-do-not-propose-source-text-as-match-from-other-languages)				| Do not propose source text as match from other languages 					| RFF 		| Open 		| OmegaT 		|
-| 2021-05-10 | [#1055](#okapiplugin-1055-unable-to-set--translation-in-omegat-with-okapi-filter-openxml)	| Unable to set <EMPTY> translation in OmegaT with Okapi filter OpenXML 	| BUG | Open? | Okapi plugin | 
-| 2021-05-09 | [#1054](#) | Error parsing XML content (with OpenXML filter in OmegaT) | 	
+| 2021-05-10 | [#1055](#okapiplugin-1055-unable-to-set--translation-in-omegat-with-okapi-filter-openxml)	| Unable to set <EMPTY> translation in OmegaT with Okapi filter OpenXML 	| BUG 		| Open? 	| Okapi plugin | 
+| 2021-05-09 | [#1054](#okapiplugin-1054-error-parsing-xml-content-with-openxml-filter-in-omegat) 			| Error parsing XML content (with OpenXML filter in OmegaT) 				| BUG  		| Open!		| Okapi plugin |
 | 2021-05-09 | [#1566](#omegat-1566-replace-glossary-hits-when-inserting-fuzzy-match)						| Replace glossary hits when inserting fuzzy match 							| RFF 		| Open 		| OmegaT 		|
 | 2021-05-05 | [#1565](#omegat-1565-give-each-segment-a-unique-id)											| Give each segment a unique ID 											| RFE		| Open!!  	| OmegaT 	 	|
 | 2021-04-30 | [#1046](#omegat-1046-glossary-has-wrong-encoding-for-non-ascii-characters)					| Glossary has wrong encoding for non-ASCII characters  					| BUG 		| Rejected 	| OmegaT 		|
 | 2021-03-02 | [#1038](#omegat-1038-option-remove-leading-and-trailing-tags-removes-tags-that-are-not-a-tag-pair) | "Remove leading/trailing tags" removes tags that are not a tag pair | BUG 		| Open 		| OmegaT 		|
 | 2021-02-16 | [#1037](#omegat-1037-next-unique-segment-shortcut-conflicts-with-log-out-on-mac) 			| Next Unique Segment shortcut conflicts with Log Out on Mac  				| BUG 		| Open 		| OmegaT 		|
+| 2021-02-04 | [#1020](#) | OpenXML filter for OmegaT gives error when opening Excel file with embedded HTML | BUG | Open! | OmegaT |
+
 | 2021-01-22 | [#1032](#omegat-1032-omegat-ignores-system-variable-appdata-on-windows) 						| OmegaT ignores system variable %appdata% on Windows 						| BUG 		| Open 		| OmegaT 		|
 | 2021-01-20 | [#1546](#omegat-1546-include-omt-plugin-in-the-vanilla-installation) 						| Include OMT plugin in the vanilla installation 							| RFF 		| Open!		| OmegaT 		|
 | 2020-12-10 | [#1027](#omegat-1027-resolve-conflicts-dialog-is-useless-when-enforced-matches-are-updated) 	| Resolve Conflicts dialog is useless when enforced matches are updated 	| BUG 		| Open 		| OmegaT 		|
@@ -35,10 +37,10 @@
 | - |
 | 2020-11-27 | [#1527](#rff-1527-do-not-export-untranslated-segments) 										| Do not export untranslated segments 										| RFE 		| Open 	   	| OmegaT |
 | 2020-11-13 | [#558](#bug-558-incorrect-display-of-rtl-segments-in-the-fuzzy-matches-pane) 				| Incorrect display of RTL segments in the Fuzzy Matches pane 				| Bug 		| Open 		| OmegaT |
-| 2020-11-11 | [#1005](#bug-1005-xliff-filter-for-omegat-hides-files-with-doctype-including-url) | XLIFF filter (for OmegaT) hides files with DOCTYPE including URL | Bug | Invalid | Okapi |
-| 2020-10-28 | [#1020](#bug-1020-project-file-filters-are-not-preserved) 			| Project file filters are not preserved	| Bug 		| Open | OmegaT |
+| 2020-11-11 | [#1005](#bug-1005-xliff-filter-for-omegat-hides-files-with-doctype-including-url) 			| XLIFF filter (for OmegaT) hides files with DOCTYPE including URL | Bug | Invalid | Okapi |
+| 2020-10-28 | [#1020](#bug-1020-project-file-filters-are-not-preserved) 									| Project file filters are not preserved									| Bug 		| Open 		| OmegaT |
 | 2020-09-29 | [#993](#bug-993-okapi-xliff-filter-for-omegat-registersexpects-segment-ids-that-break-id-bound-matches) | Okapi XLIFF filter for OmegaT registers/expects segment IDs that break ID-bound matches | Bug | Open | Okapi |
-| 2020-09-21 | [#1520](#rff-1520-two-many-locations-for-user-added-plugins) | Two many locations for user-added plugins | RFE | Rejected | OmegaT |
+| 2020-09-21 | [#1520](#rff-1520-two-many-locations-for-user-added-plugins)									| Two many locations for user-added plugins | RFE | Rejected | OmegaT |
 | 2020-09-21 | [#1519](#rfe-1519-omegat-uses-wrongold-version-of-plugin-in-case-of-conflict) | OmegaT uses wrong/old version of plugin in case of conflict | RFE | Open | OmegaT |
 | 2020-08-14 | [#969](#rfe-969-resname-from-xliff-appears-in-the-comment-field-in-omegat) | Resname (from XLIFF) appears in the comment field in OmegaT | RFE | Open~ | Okapi |
 | 2020-07-16 | [#1003](#bug-1003-matches-containing-non-alphabetical-text-are-ignored-in-tm-leverage) | Matches containing non-alphabetical text are ignored in TM leverage |  Bug | Open | OmegaT |
@@ -132,6 +134,8 @@ Very important, lack of unique segment ID is a common source of support requests
 ### [OmegaT #1038](https://sourceforge.net/p/omegat/bugs/1038/) Option "Remove leading and trailing tags" removes tags that are not a tag pair
 
 ### [OmegaT #1037](https://sourceforge.net/p/omegat/bugs/1037/) Next Unique Segment shortcut conflicts with Log Out on Mac
+
+### [OmegaT #1020](https://bitbucket.org/okapiframework/okapi/issues/1020/openxml-filter-for-omegat-gives-error-when) OpenXML filter for OmegaT gives error when opening Excel file with embedded HTML
 
 ### [OmegaT #1032](https://sourceforge.net/p/omegat/bugs/1032/) OmegaT ignores system variable %appdata% on Windows
 
