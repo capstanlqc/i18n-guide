@@ -4,7 +4,7 @@
 # OmegaT and Okapi tickets opened (or still open) since 2020
 
 | Created    | # 							 																| Title 																	| Type		| Status   	| Tool 			|
-|-----------:|---------------------------------------------------------------------------------------------:|-------																	|---------	|--------   |-- 			|
+|:-----------|---------------------------------------------------------------------------------------------:|:------																	|:---------	|:------	|:-- 			|
 | 2022-05-14 | [#37](#okapi-plugin-37-html-sub-filter-in-json-filter-not-working-in-omegat) 				| HTML sub-filter in JSON filter not working in OmegaT						| BUG 		| Resolved 	| Okapi plugin |
 | 2022-04-08 | [#36](#okapi-plugin-36-alternative-translations-do-not-work-for-repetitions-within-paragraphs) | Alternative translations do not work for repetitions within paragraphs	| BUG 		| Open!	  	| Okapi plugin |
 | 2022-05-31 | [#1101](#omegat-1101-no-id-bound-matching-in-tmtmx2source)									| No ID-bound matching in /tm/tmx2source									| RFE 		| Open 	  	| OmegaT 	 	|
