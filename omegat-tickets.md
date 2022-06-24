@@ -5,77 +5,74 @@
 
 | # 							 	| Created	| Title 					| Type		 | Status     	   | Tool |
 |-------------------------------------------------------------:|---------	|-------					|----------	|--------          |-- |
-| [#1527](#rff-1527-do-not-export-untranslated-segments) 		| 2020.11.27 | Do not export untranslated segments 		| RFE 		| Open 	   | OmegaT |
-| [#558](#bug-558-incorrect-display-of-rtl-segments-in-the-fuzzy-matches-pane) 	| 2020.11.13 | Incorrect display of RTL segments in the Fuzzy Matches pane | Bug | Open |OmegaT |
-| N/A									| 2020.10.28 | Global TM ................. RD##?				| RFF	     	| N/A  | OmegaT |
-| [#1005](#bug-1005-xliff-filter-for-omegat-hides-files-with-doctype-including-url) | 2020.11.11 | XLIFF filter (for OmegaT) hides files with DOCTYPE including URL | Bug | Invalid | Okapi |
-| [#1020](#bug-1020-project-file-filters-are-not-preserved) 			| 2020.10.28 | Project file filters are not preserved	| Bug 		| Open | OmegaT |
-| [#993](#bug-993-okapi-xliff-filter-for-omegat-registersexpects-segment-ids-that-break-id-bound-matches) | 2020.09.29 | Okapi XLIFF filter for OmegaT registers/expects segment IDs that break ID-bound matches | Bug | Open | Okapi |
-| [#1520](#rff-1520-two-many-locations-for-user-added-plugins) | 2020.09.21 | Two many locations for user-added plugins | RFE | Rejected | OmegaT |
-| [#1519](#rfe-1519-omegat-uses-wrongold-version-of-plugin-in-case-of-conflict) | 2020.09.21 | OmegaT uses wrong/old version of plugin in case of conflict | RFE | Open | OmegaT |
-| [#969](#rfe-969-resname-from-xliff-appears-in-the-comment-field-in-omegat) | 2020.08.14 | Resname (from XLIFF) appears in the comment field in OmegaT | RFE | Open | Okapi |
-| [#1003](#bug-1003-matches-containing-non-alphabetical-text-are-ignored-in-tm-leverage) | 2020.07.16 | Matches containing non-alphabetical text are ignored in TM leverage |  Bug | Open | OmegaT |
-| [#1015](#bug-1015-matches-ignored-if-the-two-locales-have-the-same-language-subtag) | 2020.08.21 | Matches ignored if the two locales have the same language subtag | Bug | Open | OmegaT |
-| [#1002](#bug-1002-choice-of-gui-language-during-re-installation-is-ignored) | 2020.07.16 | Choice of GUI language during re-installation is ignored | Bug | Fixed | OmegaT |
-| [#1471](#rfe-1471-rff-full-segment-option-in-search-dialog) | 2020.07.04 | "Full segment" option in search dialog | RFE | Open | OmegaT |
-| [#947](#rfe-947-openxml-filter-improve-the-segmentation-quality-and-merge-with-complex-script-formatting) | 2020.06.13 | OpenXML Filter: improve the segmentation quality and merge with complex script formatting | RFE | Open | Okapi |
-| [#933](#bug-933-openxml-filter-formatting-issues-in-arabic-translation-rtl) | 2020.04.27 | OpenXML filter: formatting issues in Arabic translation (RTL) | Bug | Fixed | Okapi |
-| [#932](#bug-932-hook-for-omegat-translation-kit-not-working-anymore) | 2020.04.26 | Hook for OmegaT translation kit not working anymore | Bug | Open | Okapi |
-| [#931](#rfe-931-openxml-filter-remove-redundant-bidi-properties-clarification-for-docx-documents-with-rtl-target-langauge) | 2020.04.15 | OpenXML Filter: remove redundant BIDI properties clarification for DOCX documents with RTL target langauge | RFE | Open | Okapi |
-| [#987](#bug-987--use-as-default-translation-does-not-work) | 2020.04.08 | "Use as default translation" does not work | Bug | Open | OmegaT |
-| [#988](#bug-988-rle-and-lre-control-characters-not-visible-in-editor) | 2020.03.01 | RLE and LRE control characters not visible in editor | Bug | Fixed | OmegaT |
-| [#982](#bug-982-layout-issues-in-target-word-files-in-arabic) | 2020.02.24 | Layout issues in target Word files in Arabic | Bug | Open | OmegaT |
-| [#979](#bug-979-arabic-fuzzy-matches-not-wrapped-in-fm-pane) | 2020.01.27 | Arabic fuzzy matches not wrapped in FM pane | Bug | Open | OmegaT |
-| [#977](#bug-977-character-and-tag-are-glued-together-in-arabic) | 2020.01.27 | Character and tag are glued together in Arabic | Bug | Open | OmegaT |
-| [#975](#bug-975-id-binding-context-damaged-with-olifant-edited-tmx-files) | 2020.01.22 | ID-binding context damaged with Olifant-edited TMX files | Bug | Open | OmegaT |
+| 2020-11-27 | [#1527](#rff-1527-do-not-export-untranslated-segments) 		| Do not export untranslated segments 		| RFE 		| Open 	   | OmegaT |
+| 2020-11-13 | [#558](#bug-558-incorrect-display-of-rtl-segments-in-the-fuzzy-matches-pane) 	| Incorrect display of RTL segments in the Fuzzy Matches pane | Bug | Open |OmegaT |
+| 2020-11-11 | [#1005](#bug-1005-xliff-filter-for-omegat-hides-files-with-doctype-including-url) | XLIFF filter (for OmegaT) hides files with DOCTYPE including URL | Bug | Invalid | Okapi |
+| 2020-10-28 | [#1020](#bug-1020-project-file-filters-are-not-preserved) 			| Project file filters are not preserved	| Bug 		| Open | OmegaT |
+| 2020-09-29 | [#993](#bug-993-okapi-xliff-filter-for-omegat-registersexpects-segment-ids-that-break-id-bound-matches) | Okapi XLIFF filter for OmegaT registers/expects segment IDs that break ID-bound matches | Bug | Open | Okapi |
+| 2020-09-21 | [#1520](#rff-1520-two-many-locations-for-user-added-plugins) | Two many locations for user-added plugins | RFE | Rejected | OmegaT |
+| 2020-09-21 | [#1519](#rfe-1519-omegat-uses-wrongold-version-of-plugin-in-case-of-conflict) | OmegaT uses wrong/old version of plugin in case of conflict | RFE | Open | OmegaT |
+| 2020-08-14 | [#969](#rfe-969-resname-from-xliff-appears-in-the-comment-field-in-omegat) | Resname (from XLIFF) appears in the comment field in OmegaT | RFE | Open | Okapi |
+| 2020-07-16 | [#1003](#bug-1003-matches-containing-non-alphabetical-text-are-ignored-in-tm-leverage) | Matches containing non-alphabetical text are ignored in TM leverage |  Bug | Open | OmegaT |
+| 2020-08-21 | [#1015](#bug-1015-matches-ignored-if-the-two-locales-have-the-same-language-subtag) | Matches ignored if the two locales have the same language subtag | Bug | Open | OmegaT |
+| 2020-07-16 | [#1002](#bug-1002-choice-of-gui-language-during-re-installation-is-ignored) | Choice of GUI language during re-installation is ignored | Bug | Fixed | OmegaT |
+| 2020-07-04 | [#1471](#rfe-1471-rff-full-segment-option-in-search-dialog) | "Full segment" option in search dialog | RFE | Open | OmegaT |
+| 2020-06-28 | [#1497](omegat-1497-automatically-create-system-wide-tm-repository) | Automatically create system-wide TM repository | RFF	     	| Open  | OmegaT |
+| 2020-06-13 | [#947](#rfe-947-openxml-filter-improve-the-segmentation-quality-and-merge-with-complex-script-formatting) | OpenXML Filter: improve the segmentation quality and merge with complex script formatting | RFE | Open | Okapi |
+| 2020-04-27 | [#933](#bug-933-openxml-filter-formatting-issues-in-arabic-translation-rtl) | OpenXML filter: formatting issues in Arabic translation (RTL) | Bug | Fixed | Okapi |
+| 2020-04-26 | [#932](#bug-932-hook-for-omegat-translation-kit-not-working-anymore) | Hook for OmegaT translation kit not working anymore | Bug | Open | Okapi |
+| 2020-04-15 | [#931](#rfe-931-openxml-filter-remove-redundant-bidi-properties-clarification-for-docx-documents-with-rtl-target-langauge) | OpenXML Filter: remove redundant BIDI properties clarification in RTL | RFE | Open | Okapi |
+| 2020-04-08 | [#987](#bug-987--use-as-default-translation-does-not-work) | "Use as default translation" does not work | Bug | Open | OmegaT |
+| 2020-03-01 | [#988](#bug-988-rle-and-lre-control-characters-not-visible-in-editor) | RLE and LRE control characters not visible in editor | Bug | Fixed | OmegaT |
+| 2020-02-24 | [#982](#bug-982-layout-issues-in-target-word-files-in-arabic) | Layout issues in target Word files in Arabic | Bug | Open | OmegaT |
+| 2020-01-27 | [#979](#bug-979-arabic-fuzzy-matches-not-wrapped-in-fm-pane) | Arabic fuzzy matches not wrapped in FM pane | Bug | Open | OmegaT |
+| 2020-01-27 | [#977](#bug-977-character-and-tag-are-glued-together-in-arabic) | Character and tag are glued together in Arabic | Bug | Open | OmegaT |
+| 2020-01-22 | [#975](#bug-975-id-binding-context-damaged-with-olifant-edited-tmx-files) | ID-binding context damaged with Olifant-edited TMX files | Bug | Open | OmegaT |
 
 
 # OmegaT and Okapi tickets opened after 2020
 
 | # 																			 	| Created	 	| Title 																	| Type 		| Status 	| Tool 			|
 |----------------------------------------------------------------------------------:|---------		|-------																	|----------	|--------   |-- 			|
-| [#37](#okapi-plugin-37-html-sub-filter-in-json-filter-not-working-in-omegat) 						| 2022-05-14	| HTML sub-filter in JSON filter not working in OmegaT						| BUG 		| Resolved 	| Okapi-plugin 	|
-| [#36](#okapi-plugin-36-alternative-translations-do-not-work-for-repetitions-within-paragraphs) 	| 2022-04-08	| Alternative translations do not work for repetitions within paragraphs	| BUG 		| Open 	  	| Okapi-plugin 	|
-| [#1098](#omegat-1592-option-to-choose-how-matches-are-sorted-asc-or-desc)							| 2022-05-24	| The "file names" option does not work in search results from TMs 			| BUG 		| Resolved 	| OmegaT 	 	|
-| [#1617](#) 											| 2022-05-12 	| RFE: handling ID-bound alternative translations more efficiently 			| RFE 		| Open 	  	| OmegaT 	 	|
-| [#1101](#) 											| 2022-05-31 	| No ID-bound matching in /tm/tmx2source									| RFE 		| Open 	  	| OmegaT 	 	|
-| [#1098](#) 											| 2022-05-24	| The "file names" option does not work in search results from TMs			| BUG 		| Resolved 	| OmegaT 	 	|
-| [#1099](#) 											| 2022-05-24 	| Absolute paths used in search results from TMs 							| BUG 		| Resolved 	| OmegaT 	 	|
-| [#1092](#) 											| 2022-03-02 	| Enforced ID-bound alternative translations not recognized					| BUG 		| Resolved 	| OmegaT 	 	|
+| 2022-05-14 | [#37](#okapi-plugin-37-html-sub-filter-in-json-filter-not-working-in-omegat) 				| HTML sub-filter in JSON filter not working in OmegaT						| BUG 		| Resolved 	| Okapi plugin |
+| 2022-04-08 | [#36](#okapi-plugin-36-alternative-translations-do-not-work-for-repetitions-within-paragraphs) | Alternative translations do not work for repetitions within paragraphs	| BUG 		| Open 	  	| Okapi plugin |
+| 2022-05-12 | [#1617](#omegat-1617-rfe-handling-id-bound-alternative-translations-more-efficiently)		| RFE: handling ID-bound alternative translations more efficiently 			| RFE 		| Open 	  	| OmegaT 	 	|
+| 2022-05-31 | [#1101](#omegat-1101-no-id-bound-matching-in-tmtmx2source)									| No ID-bound matching in /tm/tmx2source									| RFE 		| Open 	  	| OmegaT 	 	|
+| 2022-05-24 | [#1099](#omegat-1099-absolute-paths-used-in-search-results-from-tms)							| Absolute paths used in search results from TMs 							| BUG 		| Resolved 	| OmegaT 	 	|
+| 2022-05-24 | [#1098](#omegat-1098-the-file-names-option-does-not-work-in-search-results-from-tms)	| The "file names" option does not work in search results from TMs					| BUG 		| Resolved 	| OmegaT 	 	|
+| 2022-03-02 | [#1092](#omegat-1092-enforced-id-bound-alternative-translations-not-recognized)				| Enforced ID-bound alternative translations not recognized					| BUG 		| Resolved 	| OmegaT 	 	|
+| 2022-02-21 | [#1090](#omegat-1090-fails-to-load-tm-using-ph-tags) 										| Fails to load TM using <ph> tags 											| BUG 		| Open 		| OmegaT 		|
+| 2022-02-16 | [#1608](#omegat-1608-add-notes-to-the-translator-in-tmnotesfootmx) 							| Add notes to the translator in /tm/notes/foo.tmx 							| RFF 		| open 		| OmegaT 		|
 | - |
-| [#1070](#unexpected-enforced-translation-(first-match)-in-OmegaT-4.3) 			| 2021-09-24 	| Unexpected enforced translation (first match) in OmegaT 4.3  	 			| BUG 		| Open 		| OmegaT 		|
-| [#1592](#option-to-choose-how-matches-are-sorted-(asc-or-desc))					| 2021-09-21	| Option to choose how matches are sorted (asc or desc) 					| RFE< 		| Open 	  	| OmegaT 	 	|
-| [#1578](#Do-not-propose-source-text-as-match-from-other-languages) 				| 2021-06-25 	| Do not propose source text as match from other languages 					| RFF 		| Open 		| OmegaT 		|
-| [#1566](#Replace-glossary-hits-when-inserting-fuzzy-match) 						| 2021-05-09 	| Replace glossary hits when inserting fuzzy match 							| RFF 		| Open 		| OmegaT 		|
-| [#1565](#omegat-1565-give-each-segment-a-unique-id)								| 2021-05-05	| Give each segment a unique ID 											| RFE<		| Open 	  	| OmegaT 	 	|
-| [#1046](#Glossary-has-wrong-encoding-for-non-ASCII-characters) 					| 2021-04-30  	| Glossary has wrong encoding for non-ASCII characters  					| BUG 		| Rejected 	| OmegaT 		|
-| [#1038](#Option-"Remove-leading-and-trailing-tags"-removes-tags-that-are-not-a-tag-pair) | 2021-03-02 | Option "Remove leading and trailing tags" removes tags that are not a tag pair | BUG | Open 	| OmegaT 		|
-| [#1037](#Next-Unique-Segment-shortcut-conflicts-with-Log-Out-on-Mac) 				| 2021-02-16 	| Next Unique Segment shortcut conflicts with Log Out on Mac  				| BUG 		| Open 		| OmegaT 		|
-| [#1032](#OmegaT-ignores-system-variable-%appdata%-on-Windows) 					| 2021-01-22 	| OmegaT ignores system variable %appdata% on Windows 						| BUG 		| Open 		| OmegaT 		|
-| [#1546](#Include-OMT-plugin-in-the-vanilla-installation) 							| 2021-01-20 	| Include OMT plugin in the vanilla installation 							| BUG 		| Open 		| OmegaT 		|
-| [#1027](#Resolve-Conflicts-dialog-is-useless-when-enforced-matches-are-updated) 	| 2020-12-10 	| Resolve Conflicts dialog is useless when enforced matches are updated 	| BUG 		| Open 		| OmegaT 		|
-| [#1529](#Folder-`scripts/application_close`-to-run-scripts-when-OmegaT-closes) 	| 2020-12-10 	| Folder `scripts/application_close` to run scripts when OmegaT closes 		| BUG 		| Open 		| OmegaT 		|
+| 2021-09-24 | [#1070](#omegat-1070-unexpected-enforced-translation-first-match-in-omegat-43) 				| Unexpected enforced translation (first match) in OmegaT 4.3  	 			| BUG 		| Open 		| OmegaT 		|
+| 2021-09-21 | [#1592](#omegat-1592-option-to-choose-how-matches-are-sorted-asc-or-desc)					| Option to choose how matches are sorted (asc or desc) 					| RFE< 		| Open 	  	| OmegaT 	 	|
+| 2021-06-25 | [#1578](#omegat-1578-do-not-propose-source-text-as-match-from-other-languages)				| Do not propose source text as match from other languages 					| RFF 		| Open 		| OmegaT 		|
+| 2021-05-09 | [#1566](#omegat-1566-replace-glossary-hits-when-inserting-fuzzy-match)						| Replace glossary hits when inserting fuzzy match 							| RFF 		| Open 		| OmegaT 		|
+| 2021-05-05 | [#1565](#omegat-1565-give-each-segment-a-unique-id)											| Give each segment a unique ID 											| RFE<		| Open 	  	| OmegaT 	 	|
+| 2021-04-30 | [#1046](#omegat-1046-glossary-has-wrong-encoding-for-non-ascii-characters)					| Glossary has wrong encoding for non-ASCII characters  					| BUG 		| Rejected 	| OmegaT 		|
+| 2021-03-02 | [#1038](#omegat-1038-option-remove-leading-and-trailing-tags-removes-tags-that-are-not-a-tag-pair) | Option "Remove leading and trailing tags" removes tags that are not a tag pair | BUG | Open 	| OmegaT 		|
+| 2021-02-16 | [#1037](#omegat-1037-next-unique-segment-shortcut-conflicts-with-log-out-on-mac) 			| Next Unique Segment shortcut conflicts with Log Out on Mac  				| BUG 		| Open 		| OmegaT 		|
+| 2021-01-22 | [#1032](#omegat-1032-omegat-ignores-system-variable-appdata-on-windows) 						| OmegaT ignores system variable %appdata% on Windows 						| BUG 		| Open 		| OmegaT 		|
+| 2021-01-20 | [#1546](#omegat-1546-include-omt-plugin-in-the-vanilla-installation) 						| Include OMT plugin in the vanilla installation 							| BUG 		| Open 		| OmegaT 		|
+| 2020-12-10 | [#1027](#omegat-1027-resolve-conflicts-dialog-is-useless-when-enforced-matches-are-updated) 	| Resolve Conflicts dialog is useless when enforced matches are updated 	| BUG 		| Open 		| OmegaT 		|
+| 2020-12-10 | [#1529](#omegat-1529-folder-`scripts/application_close`-to-run-scripts-when-OmegaT-closes) 	| Folder `scripts/application_close` to run scripts when OmegaT closes 		| BUG 		| Open 		| OmegaT 		|
+
+
 
 
 
 ## 2022
 
 
-### [Okapi-plugin #37](https://bitbucket.org/okapiframework/omegat-plugin/issues/37/html-sub-filter-in-json-filter-not-working) HTML sub-filter in JSON filter not working in OmegaT
+### [Okapi plugin #37](https://bitbucket.org/okapiframework/omegat-plugin/issues/37/html-sub-filter-in-json-filter-not-working) HTML sub-filter in JSON filter not working in OmegaT
 
 Blocking issue for translation JSON files with embedded HTML content in OmegaT. Same as [OmegaT #1097](https://sourceforge.net/p/omegat/bugs/1097/).
 
-### [Okapi-plugin #36](https://bitbucket.org/okapiframework/omegat-plugin/issues/36/alternative-translations-do-not-work-for#comment-63775946) Alternative translations do not work for repetitions within paragraphs
+### [Okapi plugin #36](https://bitbucket.org/okapiframework/omegat-plugin/issues/36/alternative-translations-do-not-work-for#comment-63775946) Alternative translations do not work for repetitions within paragraphs
 
 Same as [OmegaT #1616](https://sourceforge.net/p/omegat/feature-requests/1616/).
 
 ### [OmegaT #1617](https://sourceforge.net/p/omegat/feature-requests/1617/) RFE: handling ID-bound alternative translations more efficiently 
-
-### [OmegaT #1608](https://sourceforge.net/p/omegat/feature-requests/1608/) Add notes to the translator in /tm/notes/foo.tmx 	2022-02-16
-
-### [OmegaT #1592](https://sourceforge.net/p/omegat/feature-requests/1592/) Option to choose how matches are sorted (asc or desc) 
-
-### [OmegaT #1565](https://sourceforge.net/p/omegat/feature-requests/1565/) Give each segment a unique ID
 
 ### [OmegaT #1101](https://sourceforge.net/p/omegat/bugs/1101/) No ID-bound matching in /tm/tmx2source 
 
@@ -85,14 +82,21 @@ Same as [OmegaT #1616](https://sourceforge.net/p/omegat/feature-requests/1616/).
 
 ### [OmegaT #1092](https://sourceforge.net/p/omegat/bugs/1092/) Enforced ID-bound alternative translations not recognized 
 
-### [OmegaT #1090](https://sourceforge.net/p/omegat/bugs/1090/) Fails to load TM using <ph> tags 	2022-02-21 
+### [OmegaT #1090](https://sourceforge.net/p/omegat/bugs/1090/) Fails to load TM using <ph> tags
+
+### [OmegaT #1608](https://sourceforge.net/p/omegat/feature-requests/1608/) Add notes to the translator in /tm/notes/foo.tmx
+
 
 
 
 
 ## 2021
 
-### [OmegaT #1070](https://sourceforge.net/p/omegat/bugs/1070/) Unexpected enforced translation (first match) in OmegaT 4.3  	 2021-09-24
+### [OmegaT #1070](https://sourceforge.net/p/omegat/bugs/1070/) Unexpected enforced translation (first match) in OmegaT 4.3
+
+### [OmegaT #1592](https://sourceforge.net/p/omegat/feature-requests/1592/) Option to choose how matches are sorted (asc or desc) 
+
+### [OmegaT #1565](https://sourceforge.net/p/omegat/feature-requests/1565/) Give each segment a unique ID
 
 ### [OmegaT #1591](https://sourceforge.net/p/omegat/feature-requests/1591/) Option to export project's master TMs when pressing Ctrl+D 2021-09-21
 
@@ -108,11 +112,11 @@ Same as [OmegaT #1616](https://sourceforge.net/p/omegat/feature-requests/1616/).
 
 ### [OmegaT #1032](https://sourceforge.net/p/omegat/bugs/1032/) OmegaT ignores system variable %appdata% on Windows  2021-01-22 Open
 
-### [>OmegaT #1546](https://sourceforge.net/p/omegat/feature-requests/1546/) Include OMT plugin in the vanilla installation 2021-01-20 Open
+### [OmegaT #1546](https://sourceforge.net/p/omegat/feature-requests/1546/) Include OMT plugin in the vanilla installation 2021-01-20 Open
 
-### #1027](https://sourceforge.net/p/omegat/bugs/1027/) Resolve Conflicts dialog is useless when enforced matches are updated  2020-12-10  Open
+### [OmegaT #1027](https://sourceforge.net/p/omegat/bugs/1027/) Resolve Conflicts dialog is useless when enforced matches are updated  2020-12-10  Open
 
-### #1529](https://sourceforge.net/p/omegat/feature-requests/1529/) Folder `scripts/application_close` to run scripts when OmegaT closes  2020-12-10	RFF 	Open
+### [OmegaT #1529](https://sourceforge.net/p/omegat/feature-requests/1529/) Folder `scripts/application_close` to run scripts when OmegaT closes  2020-12-10	RFF 	Open
 
 
 ---
