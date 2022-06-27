@@ -48,12 +48,11 @@ It will ask for the passphrase in the second command, and that's it. You only ne
 Navigate to the parent folder where you would like to create the OmegaT folder that you want to push to the repository. There, run the following command: 
 
 ```bash
-$ yes no | gh repo create ORG/REPO --confirm --private --clone --team TEAM
+$ yes no | gh repo create ORG/REPO --private --clone --team TEAM
 ```
 
 The basic command is `gh repo create REPO`. The rest of arguments are optional:
 
-* `--confirm` (or `-y` for short) skips the confirmation prompt
 * `--private` makes the new repository private (alternatively, you can use `--public` if privacy is not required)
 * `--clone` creates a local copy of the repository folder
 * `--team TEAM` points to the organization team that will be granted access to the repo
