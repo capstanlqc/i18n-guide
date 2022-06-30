@@ -61,6 +61,7 @@
 | - |
 | 2018-04-13 | [#23](#okapiplugin-23-translation-registered-as-same-as-source-not-taken-into-account) 		| Translation registered as same as source not taken into account 			| BUG | Open! | Okapi plugin |
 | 2018-04-13 | [#22](#okapiplugin-22-segment-set-as--not-empty-in-xliff) 									| Segment set as `<EMPTY>` not empty in XLIFF 								| BUG | Open! | Okapi plugin |
+| 2017-04-17 | [#18](#set-the-state-of-the-target-to-translated-when-saving)								| Set the state of the target to 'translated' when saving					| RFE | Open! | Okapi plugin |
 
 
 ## 2022
@@ -150,7 +151,7 @@ Re-test with latest version of Okapi plugin.
 
 
 
-## 2020
+## 2020 and earlier 
 
 ### [RFF #1527](https://sourceforge.net/p/omegat/feature-requests/1527/) Do not export untranslated segments 
 
@@ -222,6 +223,9 @@ Follow up with this.
 ### [Okapi plugin #23](https://bitbucket.org/okapiframework/omegat-plugin/issues/23/translation-registered-as-same-as-source): Translation registered as same as source not taken into account
 
 ### [Okapi plugin #22](https://bitbucket.org/okapiframework/omegat-plugin/issues/22/segment-set-as-not-empty-in-xliff): Segment set as `<EMPTY>` not empty in XLIFF
+
+### [Okapi plugin #18](https://bitbucket.org/okapiframework/omegat-plugin/issues/18) Set the state of the target to 'translated' when saving
+
 ----
 
 ## Other tickets open for sponsorship
