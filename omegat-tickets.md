@@ -61,7 +61,7 @@
 | - |
 | 2018-04-13 | [#23](#okapiplugin-23-translation-registered-as-same-as-source-not-taken-into-account) 		| Translation registered as same as source not taken into account 			| BUG | Open! | Okapi plugin |
 | 2018-04-13 | [#22](#okapiplugin-22-segment-set-as--not-empty-in-xliff) 									| Segment set as `<EMPTY>` not empty in XLIFF 								| BUG | Open! | Okapi plugin |
-| 2017-04-17 | [#18](#set-the-state-of-the-target-to-translated-when-saving)								| Set the state of the target to 'translated' when saving					| RFE | Open! | Okapi plugin |
+| 2017-04-17 | [#18](#okapiplugin-18-set-the-state-of-the-target-to-translated-when-saving)					| Set the state of the target to 'translated' when saving					| RFE | Open! | Okapi plugin |
 
 
 ## 2022
