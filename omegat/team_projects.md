@@ -21,10 +21,12 @@ The members of your translation team must [have a Github account](https://docs.g
 Before creating the team projects, you must have:
 
 * [installed gh on the command line](https://cli.github.com/manual/installation)
-* [created an organization in Github](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/creating-a-new-organization-from-scratch) -- already done: https://github.com/capstanlqc/
-* [renamed the repository default branch from `main` to `master`](https://docs.github.com/en/organizations/managing-organization-settings/managing-the-default-branch-name-for-repositories-in-your-organization#setting-the-default-branch-name) -- done for capstanlqc
-* [added your translators as members of the organization](https://docs.github.com/en/enterprise-server@3.0/organizations/managing-membership-in-your-organization/adding-people-to-your-organization)
-* [set the organization's base permissions to give members writing privileges](https://docs.github.com/en/organizations/managing-access-to-your-organizations-repositories/setting-base-permissions-for-an-organization) -- done for capstanlqc
+* [created an organization in Github](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/creating-a-new-organization-from-scratch)
+* [renamed the repository default branch from `main` to `master`](https://docs.github.com/en/organizations/managing-organization-settings/managing-the-default-branch-name-for-repositories-in-your-organization#setting-the-default-branch-name)
+* [added your linguists as members of the organization](https://docs.github.com/en/enterprise-server@3.0/organizations/managing-membership-in-your-organization/adding-people-to-your-organization)
+* [created (at least) one team inside the organization](https://docs.github.com/en/organizations/organizing-members-into-teams/creating-a-team) to which you can add your linguists, e.g. "translators" team, "revisers" team, etc.
+* [added your linguists to the team](https://docs.github.com/en/organizations/organizing-members-into-teams/adding-organization-members-to-a-team) they belong to
+* [set the organization's base permissions to give members writing privileges](https://docs.github.com/en/organizations/managing-access-to-your-organizations-repositories/setting-base-permissions-for-an-organization)
 
 ## 2 Managing the team project
 
@@ -121,9 +123,9 @@ Example output:
    Branch 'master' set up to track remote branch 'master' from 'origin'.
 ```
 
-### 2.5 Sharing the team project with your translator(s)
+### 2.5 Sharing the team project with your linguist(s)
 
-So as to download the team project on their side, your translator(s) need to know the URL of the team project. The URL is predictable: `https://github.com/ORG/REPO.git`. 
+So as to download the team project on their side, your linguist(s) need to know the URL of the team project. The URL is predictable: `https://github.com/ORG/REPO.git`. 
 
 If you would like to confirm it and you use the HTTPS protocol, you can get the URL with the command:
 
@@ -139,7 +141,7 @@ git config --get remote.origin.url | sed -e 's/:/\//g'| sed -e 's/ssh\/\/\///g'|
 
 ### 2.6 Harvesting the translations
 
-To obtain the translated documents in the target language, you have two options: you may ask your translator to generate the target files (e.g. `Ctrl+D`) and commit them to the remote repository (i.e. **Project > Commit Target Files**).
+To obtain the translated documents in the target language, you have two options: you may ask your linguist to generate the target files (e.g. `Ctrl+D`) and commit them to the remote repository (i.e. **Project > Commit Target Files**).
 
 Alternatively, you may simply pull all translations from the repository to a local copy of the project in your machine (outside the git checkout folder) and generate the target files there. Running OmegaT on the project in console mode should do the trick:
 
@@ -157,9 +159,9 @@ If you are managing a multilingual project, where translations need to be produc
   - initialize the project
   - add source files, language assets, config files, etc.
   - add, commit and push files to the remote repository
-  - add URL to a list that you can then publish or share with your translators
+  - add URL to a list that you can then publish or share with your linguists
 
-Your translators can then start working.
+Your linguists can then start working.
 
 When the time to harvest the translations comes, you can do a similar iteration to compile and collect the target documents.
 
@@ -174,7 +176,7 @@ When the time to harvest the translations comes, you can do a similar iteration 
 
 Your project might have different levels of intervention (translation, revision, review, etc.), so that different linguists or users must work on it. You must add all those users as team members to your organization `ORG`. 
 
-If you want a reviser not to be able to start until the translator is done, in that case you must make sure that your reviser does not have access to the repository until the translator has finalize the translation task. Likewise, you might want to revoke the translator's access to the project once the reviser has started revising. 
+If you want a reviser not to be able to start until the linguist is done, in that case you must make sure that your reviser does not have access to the repository until the linguist has finalize the translation task. Likewise, you might want to revoke the linguist's access to the project once the reviser has started revising. 
 
 > @PENDING: How to grand and revoke access to the REPO or to the ORG using `gh` in the command line?
 
