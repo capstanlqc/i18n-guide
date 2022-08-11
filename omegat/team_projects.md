@@ -16,7 +16,9 @@ A number of preconditions are necessary to carry out the steps below.
 
 The members of your translation team must [have a Github account](https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account) and [a personal access token](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token#creating-a-token). It's enough to select "repo" (and all its children) when creating the token.
 
-### 1.2 For the project manager
+### 1.2 For the localization engineer / PM
+
+If you're not a technically oriented PM,  you may ask your tech team to do the following for you.
 
 Before creating the team projects, you must have:
 
