@@ -1,12 +1,12 @@
 # Team projects with Github
 
-This tutorial describes the necessary steps to create a Github repository non-interactively. 
+This tutorial describes the necessary steps to create a Github repository non-interactively.
 
-The use case is for an organization that must fully automate the whole process and needs to create team projects for one or more languages. 
+The use case is for an organization that must fully automate the whole process and needs to create team projects for one or more languages.
 
-The intended audience is localization engineers and technically oriented PMs. You have one of those two roles. 
+The intended audience is localization engineers and technically oriented PMs. You have one of those two roles.
 
-In this tutorial, "project" refers to an OmegaT project, which is a folder containing at least the `omegat.project` file. 
+In this tutorial, "project" refers to an OmegaT project, which is a folder containing at least the `omegat.project` file.
 
 ## 1 Preconditions
 
@@ -30,7 +30,7 @@ Before creating the team projects, you must have:
 * [added your linguists to the team](https://docs.github.com/en/organizations/organizing-members-into-teams/adding-organization-members-to-a-team) they belong to
 * [set the organization's base permissions to give members writing privileges](https://docs.github.com/en/organizations/managing-access-to-your-organizations-repositories/setting-base-permissions-for-an-organization)
 
-## 2 Managing the team project
+## 2 Managing team projects
 
 The following commands can be run in either git bash, Windows WSL or bash on real GNU/Linux. Upper cased names are used as placeholders for the actual repository, organization, team, etc.
 
@@ -40,16 +40,24 @@ To execute the steps below through SSH, the project manager must be authenticate
 
 ```bash
 $ eval `ssh-agent -s`
-$ ssh-add ~/.ssh/*_rsa
+$ ssh-add ~/.ssh/*_rsa # or ssh-add ~/.ssh/id_ed25519
 Enter passphrase for /home/USER/.ssh/id_rsa:
 Identity added: /home/USER/.ssh/id_rsa (/home/USER/.ssh/id_rsa)
 ```
 
+If you have no public keys in the `~/.ssh` directory or it does not exist, then you need to [generate a new SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) before you can add it to the ssh-agent.
+
 It will ask for the passphrase in the second command, and that's it. You only need to do this once per session.
+
+To get started with GitHub CLI, please run `gh auth login`. Alternatively, populate the GH_TOKEN environment variable with a GitHub API authentication token.
+
+Also, your name and email address might have been configured automatically based on your username and hostname in the server. Please check that they are accurate and edit them if they are not with command `git config --global --edit`.
+
+
 
 ### 2.2 Creating the repository
 
-Navigate to the parent folder where you would like to create the OmegaT folder that you want to push to the repository. There, run the following command: 
+Navigate to the parent folder where you would like to create the OmegaT folder that you want to push to the repository. There, run the following command:
 
 ```bash
 $ yes no | gh repo create ORG/REPO --private --clone --team TEAM
@@ -120,14 +128,14 @@ Example output:
   Total 82 (delta 28), reused 0 (delta 0)
   remote: Resolving deltas: 100% (28/28), done.
   To github.com:ORG/REPO.git
-  
+
    * [new branch]      master -> master
    Branch 'master' set up to track remote branch 'master' from 'origin'.
 ```
 
 ### 2.5 Sharing the team project with your linguist(s)
 
-So as to download the team project on their side, your linguist(s) need to know the URL of the team project. The URL is predictable: `https://github.com/ORG/REPO.git`. 
+So as to download the team project on their side, your linguist(s) need to know the URL of the team project. The URL is predictable: `https://github.com/ORG/REPO.git`.
 
 If you would like to confirm it and you use the HTTPS protocol, you can get the URL with the command:
 
@@ -152,7 +160,7 @@ git pull origin master
 java -jar /path/to/OmegaT.jar /path/to/proj --mode=console-translate
 ```
 
-### 2.7 Multilingual projects 
+### 2.7 Multilingual projects
 
 If you are managing a multilingual project, where translations need to be produced in several target languages, you may do the steps above for each of them. It's easy to automate that with a script, here's a suggestion in pseudo-code, for which you need a list of all the target language tags (and assuming the source language is constant and already defined in the template).
 
@@ -176,9 +184,9 @@ When the time to harvest the translations comes, you can do a similar iteration 
 
 ### 2.8 Different language tasks
 
-Your project might have different levels of intervention (translation, revision, review, etc.), so that different linguists or users must work on it. You must add all those users as team members to your organization `ORG`. 
+Your project might have different levels of intervention (translation, revision, review, etc.), so that different linguists or users must work on it. You must add all those users as team members to your organization `ORG`.
 
-If you want a reviser not to be able to start until the linguist is done, in that case you must make sure that your reviser does not have access to the repository until the linguist has finalize the translation task. Likewise, you might want to revoke the linguist's access to the project once the reviser has started revising. 
+If you want a reviser not to be able to start until the linguist is done, in that case you must make sure that your reviser does not have access to the repository until the linguist has finalize the translation task. Likewise, you might want to revoke the linguist's access to the project once the reviser has started revising.
 
 > @PENDING: How to grand and revoke access to the REPO or to the ORG using `gh` in the command line?
 
@@ -186,38 +194,38 @@ If you want a reviser not to be able to start until the linguist is done, in tha
 
 Instead of including all files in the OmegaT project that you commit to the repo, you can have a distributed organization of your project(s) with files stored in different locations. That has the advantage of making your commit for every language in a multilingual project much lighter.
 
-You must commit at least the project settings (i.e. `omegat.project`) file for each project, but OmegaT can fetch everything else from elsewhere, through links included in the repository mapping section of the project settings file. For example, OmegaT could fetch the source files from a common repository, language assets from another repo, etc. 
+You must commit at least the project settings (i.e. `omegat.project`) file for each project, but OmegaT can fetch everything else from elsewhere, through links included in the repository mapping section of the project settings file. For example, OmegaT could fetch the source files from a common repository, language assets from another repo, etc.
 
-If the files are hosted in a versioning repository (e.g. github, gitlab, etc.), you can either map files or folders. If your files are hosted in a normal server, only files can be mapped.
+If the files are hosted in a versioning repository (e.g. github, gitlab, etc.), you can map both files and folders. If your files are hosted in a normal server, only files can be mapped.
 
 For example, given a remote repository that contains the following files:
 
 ```sed
 .
-├── proj_conf
-│   └── segmentation.conf
-└── source
-    └── final
-        ├── file1.docx
-        └── file2.docx
+├── files
+│   ├── file1.docx
+│   └── file2.docx
+└── settings
+    └── segmentation.conf
 ```
 
-the following mapping will fetch all files from the remote folder `source/final` and put them in the `source` folder of the local project. Also, it will fetch remote file `proj_conf/segmentation.conf` and put it in the `omegat` folder of the local project.
+the following mapping will fetch all files from the remote folder `files` and put them in the `source` folder of the local project. Also, it will fetch remote file `settings/segmentation.conf` and put it in the `omegat` folder of the local project.
 
 ```xml
 <repository type="git" url="https://github.com/ORG/REPO_source.git">
-  <mapping local="source/" repository="source/final"/>
-  <mapping local="omegat/segmentation.conf" repository="proj_conf/segmentation.conf"/>
+  <mapping local="source/" repository="files"/>
+  <mapping local="omegat/segmentation.conf" repository="settings/segmentation.conf"/>
 </repository>
 ```
 
-You may also fetch a subset of the files in a remote folder by explicitly including only the ones that a certain pattern matches, e.g. matching the target language of the project. The following example fetches any existing TMX files for a project with `gl` (Galician) as target language from a remote location that contains TMs for all languages. Notice that all files need to be excluded first.
+You may also fetch a subset of the files in a remote folder by explicitly including only the ones matched by a certain pattern, e.g. matching the target language of the project. The following example fetches any existing TMX files for a project with `gl` (Galician) as target language from a remote location that contains TMs for all languages. Notice that all files need to be excluded first.
 
 ```xml
 <repository type="git" url="https://github.com/ORG/REPO_assets.git">
-  <mapping local="/tm" repository="/"/>
+  <mapping local="tm" repository="/">
     <excludes>**/*</excludes>
     <includes>*gl*.tmx</includes>
+  </mapping>
 </repository>
 ```
 
@@ -225,12 +233,14 @@ You might map several folders from the same repository, which in the case of TMs
 
 ```xml
 <repository type="git" url="https://github.com/ORG/REPO_assets.git">
-  <mapping local="/tm/auto" repository="/"/>
+  <mapping local="tm/auto" repository="/">
     <excludes>**/*</excludes>
     <includes>*2021*gl*.tmx</includes>
-  <mapping local="/tm/penalty-02" repository="/penalty-02"/>
+  </mapping>
+  <mapping local="tm/penalty-02" repository="/penalty-02">
     <excludes>**/*</excludes>
     <includes>*2019*gl*.tmx</includes>
+  </mapping>  
 </repository>
 ```
 
@@ -242,7 +252,7 @@ It is also recommended to add the map the main repository itself (where the `ome
 </repository>
 ```
 
-All the above examples would be children of the  `<repositories>` node in the project settings. The same principle would apply to other files to be added to the project (e.g. glossaries). 
+All the above examples would be children of the  `<repositories>` node in the project settings. The same principle would apply to other files to be added to the project (e.g. glossaries).
 
 > @PENDING: How to create the entire project folder structure on the command line (as the GUI does when downloading the project) from a repo that only contains the `omegat.project`?
 
