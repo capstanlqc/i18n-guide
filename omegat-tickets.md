@@ -22,7 +22,7 @@
 | 2021-09-21 | [#1592](#omegat-1592-option-to-choose-how-matches-are-sorted-asc-or-desc)					| Option to choose how matches are sorted (asc or desc) 					| RFE 		| Open~	  	| OmegaT 	 	|
 | 2021-09-21 | [#1591](#omegat-1591-option-to-export-projects-master-tms-when-pressing-ctrld) 				| Option to export project's master TMs when pressing Ctrl+D 				| RFF 		| Open 		| OmegaT 		|
 | 2021-06-25 | [#1578](#omegat-1578-do-not-propose-source-text-as-match-from-other-languages)				| Do not propose source text as match from other languages 					| RFF 		| Open 		| OmegaT 		|
-| 2021-05-10 | [#1055](#okapiplugin-1055-unable-to-set--translation-in-omegat-with-okapi-filter-openxml)	| Unable to set `<EMPTY>` translation in OmegaT with Okapi filter OpenXML 	| BUG 		| Open? 	| Okapi plugin | 
+| 2021-05-10 | [#1055](#okapiplugin-1055-unable-to-set--translation-in-omegat-with-okapi-filter-openxml)	| Unable to set `<EMPTY>` translation in OmegaT with Okapi filter OpenXML 	| BUG 		| Open? 	| Okapi plugin |
 | 2021-05-09 | [#1054](#okapiplugin-1054-error-parsing-xml-content-with-openxml-filter-in-omegat) 			| Error parsing XML content (with OpenXML filter in OmegaT) 				| BUG  		| Open!		| Okapi plugin |
 | 2021-05-09 | [#1566](#omegat-1566-replace-glossary-hits-when-inserting-fuzzy-match)						| Replace glossary hits when inserting fuzzy match 							| RFF 		| Open 		| OmegaT 		|
 | 2021-05-05 | [#1565](#omegat-1565-give-each-segment-a-unique-id)											| Give each segment a unique ID 											| RFE		| Open!!  	| OmegaT 	 	|
@@ -59,6 +59,7 @@
 | 2020-01-27 | [#977](#bug-977-character-and-tag-are-glued-together-in-arabic) 								| Character and tag are glued together in Arabic 							| Bug | Open | OmegaT |
 | 2020-01-22 | [#975](#bug-975-id-binding-context-damaged-with-olifant-edited-tmx-files) 					| ID-binding context damaged with Olifant-edited TMX files 					| Bug | Open | OmegaT |
 | - |
+| 2019-05-04 | [#1448](https://sourceforge.net/p/omegat/feature-requests/1448/) 		| #1448 Use repository mappings in a local project  			| BUG | Open | OmegaT |
 | 2018-04-13 | [#23](#okapiplugin-23-translation-registered-as-same-as-source-not-taken-into-account) 		| Translation registered as same as source not taken into account 			| BUG | Open! | Okapi plugin |
 | 2018-04-13 | [#22](#okapiplugin-22-segment-set-as--not-empty-in-xliff) 									| Segment set as `<EMPTY>` not empty in XLIFF 								| BUG | Open! | Okapi plugin |
 | 2017-04-17 | [#18](#okapiplugin-18-set-the-state-of-the-target-to-translated-when-saving)					| Set the state of the target to 'translated' when saving					| RFE | Open! | Okapi plugin |
@@ -66,11 +67,11 @@
 
 ## 2022
 
-### [OmegaT #1621](https://sourceforge.net/p/omegat/feature-requests/1621/) Add notes as `<note>` in target XLIFF file 
+### [OmegaT #1621](https://sourceforge.net/p/omegat/feature-requests/1621/) Add notes as `<note>` in target XLIFF file
 
 ### [Okapi plugin #37](https://bitbucket.org/okapiframework/omegat-plugin/issues/37/html-sub-filter-in-json-filter-not-working) HTML sub-filter in JSON filter not working in OmegaT
 
-Blocking issue for translation JSON files with embedded HTML content in OmegaT. Same as [OmegaT #1097](https://sourceforge.net/p/omegat/bugs/1097/). Fixed by Denis Konovalenko in June 2022. However, deployment issues remain because Okapi has dropped support for Java 8 while OmegaT is not shipped yet with JRE for Java 11. The patched plugin does not work with OmegaT unless OmegaT is run with Java 11, which therefore needs to be installed manually and OmegaT configured to run with that version. 
+Blocking issue for translation JSON files with embedded HTML content in OmegaT. Same as [OmegaT #1097](https://sourceforge.net/p/omegat/bugs/1097/). Fixed by Denis Konovalenko in June 2022. However, deployment issues remain because Okapi has dropped support for Java 8 while OmegaT is not shipped yet with JRE for Java 11. The patched plugin does not work with OmegaT unless OmegaT is run with Java 11, which therefore needs to be installed manually and OmegaT configured to run with that version.
 
 ### [Okapi plugin #36](https://bitbucket.org/okapiframework/omegat-plugin/issues/36/alternative-translations-do-not-work-for#comment-63775946) Alternative translations do not work for repetitions within paragraphs
 
@@ -84,7 +85,7 @@ The issue prevents ID-specific translation notes.
 
 Minor improvement to save space and see more clearly where matches come from. Hiroshi fixed it.
 
-### [OmegaT #1098](https://sourceforge.net/p/omegat/bugs/1098/) The "file names" option does not work in search results from TMs 
+### [OmegaT #1098](https://sourceforge.net/p/omegat/bugs/1098/) The "file names" option does not work in search results from TMs
 
 Hiroshi fixed it.
 
@@ -92,7 +93,7 @@ Hiroshi fixed it.
 
 Originally reported as [Okapi 1106](https://bitbucket.org/okapiframework/okapi/issues/1106/rfe-okapi-xliff-filter-for-omegat-handling).
 
-### [OmegaT #1092](https://sourceforge.net/p/omegat/bugs/1092/) Enforced ID-bound alternative translations not recognized 
+### [OmegaT #1092](https://sourceforge.net/p/omegat/bugs/1092/) Enforced ID-bound alternative translations not recognized
 
 With Aaron's tips I could find the issue and propose a fix. Fixed in 5.8.1.
 
@@ -115,7 +116,7 @@ Online discussion: https://groups.google.com/g/okapi-users/c/de5LTH7hP4g/m/PysP0
 
 ### [OmegaT #1070](https://sourceforge.net/p/omegat/bugs/1070/) Unexpected enforced translation (first match) in OmegaT 4.3
 
-### [OmegaT #1592](https://sourceforge.net/p/omegat/feature-requests/1592/) Option to choose how matches are sorted (asc or desc) 
+### [OmegaT #1592](https://sourceforge.net/p/omegat/feature-requests/1592/) Option to choose how matches are sorted (asc or desc)
 
 ### [OmegaT #1591](https://sourceforge.net/p/omegat/feature-requests/1591/) Option to export project's master TMs when pressing Ctrl+D
 
@@ -123,13 +124,13 @@ Online discussion: https://groups.google.com/g/okapi-users/c/de5LTH7hP4g/m/PysP0
 
 ### [Okapi plugin #1055](https://bitbucket.org/okapiframework/okapi/issues/1055/unable-to-set-translation-in-omegat-with) Unable to set `<EMPTY>` translation in OmegaT with Okapi filter OpenXML
 
-### [Okapi plugin #1054](https://bitbucket.org/okapiframework/okapi/issues/1054/error-parsing-xml-content-with-openxml) Error parsing XML content (with OpenXML filter in OmegaT) 
+### [Okapi plugin #1054](https://bitbucket.org/okapiframework/okapi/issues/1054/error-parsing-xml-content-with-openxml) Error parsing XML content (with OpenXML filter in OmegaT)
 
 ### [OmegaT #1566](https://sourceforge.net/p/omegat/feature-requests/1566/) Replace glossary hits when inserting fuzzy match
 
 ### [OmegaT #1565](https://sourceforge.net/p/omegat/feature-requests/1565/) Give each segment a unique ID
 
-Very important, lack of unique segment ID is a common source of support requests and we spend a great deal of time tweaking source files to allow the creation of alternative translations. The problem is mitigated whenever we can use an Okapi filter (OpenXML, HTML, etc.) but Okapi filters sometimes have other issues 
+Very important, lack of unique segment ID is a common source of support requests and we spend a great deal of time tweaking source files to allow the creation of alternative translations. The problem is mitigated whenever we can use an Okapi filter (OpenXML, HTML, etc.) but Okapi filters sometimes have other issues
 
 ### [OmegaT #1046](https://sourceforge.net/p/omegat/bugs/1046/) Glossary has wrong encoding for non-ASCII characters
 
@@ -151,9 +152,9 @@ Re-test with latest version of Okapi plugin.
 
 
 
-## 2020 and earlier 
+## 2020 and earlier
 
-### [RFF #1527](https://sourceforge.net/p/omegat/feature-requests/1527/) Do not export untranslated segments 
+### [RFF #1527](https://sourceforge.net/p/omegat/feature-requests/1527/) Do not export untranslated segments
 
 This feature request aims at preventing the problem that users might inadvertedly create bilingual target files (mixing text in the source and the target languages) if they leave some segments untranslated. OmegaT should not opinionatedly use the source text as the translation if the segment is not translated.
 
@@ -161,14 +162,14 @@ This feature request aims at preventing the problem that users might inadvertedl
 
 > Global TM - RD##?
 
-ticket, + discussion + new discussion -> new ticket??? 
+ticket, + discussion + new discussion -> new ticket???
 first wait and see, nothing happened -> then propose sponsorship
 writing: script to save
 reading: looking for developer
 
 ### [Bug #1020](https://sourceforge.net/p/omegat/bugs/1020/) Project file filters are not preserved
 
-### [Bug #558](https://sourceforge.net/p/omegat/bugs/558/) Incorrect display of RTL segments in the Fuzzy Matches pane 
+### [Bug #558](https://sourceforge.net/p/omegat/bugs/558/) Incorrect display of RTL segments in the Fuzzy Matches pane
 
 balbla
 
@@ -188,17 +189,17 @@ Update (2022_06-24): re-test in version 5.8.0.
 
 Could be fixed with diff-patch-match plugin. WIP with mock-up script.
 
-### [Bug #1002](https://sourceforge.net/p/omegat/bugs/1002/) Choice of GUI language during re-installation is ignored 
-### [Bug #987](https://sourceforge.net/p/omegat/bugs/987/ )  "Use as default translation" does not work 
-### [Bug #988](https://sourceforge.net/p/omegat/bugs/988/) RLE and LRE control characters not visible in editor 
-### [Bug #982](https://sourceforge.net/p/omegat/bugs/982/) Layout issues in target Word files in Arabic 
-### [Bug #979](https://sourceforge.net/p/omegat/bugs/979/) Arabic fuzzy matches not wrapped in FM pane 
-### [Bug #977](https://sourceforge.net/p/omegat/bugs/977/) Character and tag are glued together in Arabic 
-### [Bug #975](https://sourceforge.net/p/omegat/bugs/975/) ID-binding context damaged with Olifant-edited TMX files 
+### [Bug #1002](https://sourceforge.net/p/omegat/bugs/1002/) Choice of GUI language during re-installation is ignored
+### [Bug #987](https://sourceforge.net/p/omegat/bugs/987/ )  "Use as default translation" does not work
+### [Bug #988](https://sourceforge.net/p/omegat/bugs/988/) RLE and LRE control characters not visible in editor
+### [Bug #982](https://sourceforge.net/p/omegat/bugs/982/) Layout issues in target Word files in Arabic
+### [Bug #979](https://sourceforge.net/p/omegat/bugs/979/) Arabic fuzzy matches not wrapped in FM pane
+### [Bug #977](https://sourceforge.net/p/omegat/bugs/977/) Character and tag are glued together in Arabic
+### [Bug #975](https://sourceforge.net/p/omegat/bugs/975/) ID-binding context damaged with Olifant-edited TMX files
 ### [RFE #1471](https://sourceforge.net/p/omegat/feature-requests/1471/) RFF: "Full segment" option in search dialog  
 
 
-### ~~[Bug #1005](https://bitbucket.org/okapiframework/okapi/issues/1005/xliff-filter-for-omegat-hides-files-with): XLIFF filter (for OmegaT) hides files with DOCTYPE including URL~~ 
+### ~~[Bug #1005](https://bitbucket.org/okapiframework/okapi/issues/1005/xliff-filter-for-omegat-hides-files-with): XLIFF filter (for OmegaT) hides files with DOCTYPE including URL~~
 
 Not reproduceable.
 
@@ -206,18 +207,18 @@ Not reproduceable.
 
 ### [Bug #933](https://bitbucket.org/okapiframework/okapi/issues/933/openxml-filter-formatting-issues-in-arabic): OpenXML filter: formatting issues in Arabic translation (RTL)
 
-On hold, TBC whether Word is the formatting for coding guides in PISA25. As soon as it's confirmed, this ticket would have highest priority. 
+On hold, TBC whether Word is the formatting for coding guides in PISA25. As soon as it's confirmed, this ticket would have highest priority.
 
 ### [RFE #969](https://bitbucket.org/okapiframework/okapi/issues/969/resname-from-xliff-appears-in-the-comment): Resname (from XLIFF) appears in the comment field in OmegaT
 
 Several details could be optimized in the Comments pane vs Segment Properties pane: resname, ID, comment, etc. Test with JSON to XLIFF roundtrip.
 
 ### [RFE #947](https://bitbucket.org/okapiframework/okapi/issues/947/openxml-filter-improve-the-segmentation): OpenXML Filter: improve the segmentation quality and merge with complex script formatting
-	
+
 ### [Bug #932](https://bitbucket.org/okapiframework/okapi/issues/932/hook-for-omegat-translation-kit-not): Hook for OmegaT translation kit not working anymore
 
 Follow up with this.
-	
+
 ### [RFE #931](https://bitbucket.org/okapiframework/okapi/issues/931/openxml-filter-remove-redundant-bidi): OpenXML Filter: remove redundant BIDI properties clarification for DOCX documents with RTL target langauge
 
 ### [Okapi plugin #23](https://bitbucket.org/okapiframework/omegat-plugin/issues/23/translation-registered-as-same-as-source): Translation registered as same as source not taken into account
