@@ -56,7 +56,7 @@ for row in ws.iter_rows():
 #printable_data = [for row in tickets_data]
 #squared = list(map(lambda x: x["#"] = [x["Number"](x["url"])], tickets_data))
 
-private_keys = ['Developer', 'Cost']
+private_keys = ['Developer', 'Cost', 'Comments']
 public_data = [
     dict((key, ticket_row[key]) for key in ticket_row if key not in private_keys)
     for ticket_row in tickets_data
