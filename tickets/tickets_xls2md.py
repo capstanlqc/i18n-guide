@@ -18,10 +18,10 @@ def get_monetary_quantity(v):
     return v
 
 def make_md_links(str):
+    str = str.replace("Okapi plugin", "Okapi plugin", 1)
     pattern = r"\{'(#\d+)': '(https:.+)'\}"
     replace = r"[\1](\2)"
     return re.sub(pattern, replace, str)
-
 
 file = "tickets/OmegaT_issues_nopw.xlsx"
 
