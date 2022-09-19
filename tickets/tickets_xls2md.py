@@ -9,7 +9,7 @@ from tomark import Tomark
 
 def get_datestr_if_date(v):
     if isinstance(v, datetime):
-        return v.strftime('%Y-%b-%d')
+        return v.strftime('%Y-%m-%d')
     return v
 
 def get_monetary_quantity(v):
