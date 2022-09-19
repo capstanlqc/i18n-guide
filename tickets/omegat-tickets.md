@@ -1,7 +1,7 @@
 # OmegaT and Okapi tickets opened (or still open) since 2020
 
 | Created | # | Tool | Title | Type | Status |
-|-----|-----|-----|-----|-----|-----|
+|:----|:----|:----|:----|:----|:----|
 | 2022-Jul-15 | [#43](https://bitbucket.org/okapiframework/omegat-plugin/issues/43/tag-tooltips-do-not-show-the-locked-text) | Okapi plugin | Tag tooltips do not show the locked text | Bug | Open! |
 | 2022-Jun-28 | [#38](https://bitbucket.org/okapiframework/omegat-plugin/issues/38/openxml-filter-for-omegat-gives-error-when) | Okapi plugin | OpenXML filter for OmegaT gives error when opening Excel file with embedded HTML | Bug | Open! |
 | 2022-Jun-27 | [#1621](https://sourceforge.net/p/omegat/feature-requests/1621/) | OmegaT | Add notes as <note> in target XLIFF file | RFF | Open! |
