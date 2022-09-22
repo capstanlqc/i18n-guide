@@ -2,7 +2,7 @@
 
 | Created | # | Tool | Title | Type | Status |
 |:----|:----|:----|:----|:----|:----|
-| 2022-07-15 | [#43](https://bitbucket.org/okapiframework/omegat-plugin/issues/43/tag-tooltips-do-not-show-the-locked-text) | Okapi plugin | Tag tooltips do not show the locked text | Bug | Open! |
+| 2022-07-15 | [#43](https://bitbucket.org/okapiframework/omegat-plugin/issues/43/tag-tooltips-do-not-show-the-locked-text) | Okapi plugin | Tag tooltips do not show the locked text | Bug | Resolved |
 | 2022-06-28 | [#38](https://bitbucket.org/okapiframework/omegat-plugin/issues/38/openxml-filter-for-omegat-gives-error-when) | Okapi plugin | OpenXML filter for OmegaT gives error when opening Excel file with embedded HTML | Bug | Open! |
 | 2022-06-27 | [#1621](https://sourceforge.net/p/omegat/feature-requests/1621/) | OmegaT | Add notes as <note> in target XLIFF file | RFF | Open! |
 | 2022-05-12 | [#1616](https://sourceforge.net/p/omegat/feature-requests/1616/) | OmegaT | Non-unique IDs when segmenting text blocks extracted by Okapi OpenXML  | RFE | Open! |
