@@ -2,6 +2,7 @@
 
 | Created | # | Tool | Title | Type | Status |
 |:----|:----|:----|:----|:----|:----|
+| 2022-11-14 | [#1125](https://sourceforge.net/p/omegat/bugs/1125/) | OmegaT | OmegaT's main window is sent to unplugged monitor | Bug | Open |
 | 2022-10-21 | [#1124](https://sourceforge.net/p/omegat/bugs/1124/) | OmegaT | Local project does not update after remote masking some files | Bug | Open!! |
 | 2022-10-10 | [#1122](https://sourceforge.net/p/omegat/bugs/1122/) | OmegaT | Tag color is obfuscated if target language uses RTL script | Bug | Open! |
 | 2022-07-15 | [#43](https://bitbucket.org/okapiframework/omegat-plugin/issues/43/tag-tooltips-do-not-show-the-locked-text) | Okapi plugin | Tag tooltips do not show the locked text | Bug | Resolved |
