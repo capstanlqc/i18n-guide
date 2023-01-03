@@ -2,6 +2,7 @@
 
 | Created | # | Tool | Title | Type | Status |
 |:----|:----|:----|:----|:----|:----|
+| 2023-01-03 | {'#1132  ': 'https://sourceforge.net/p/omegat/bugs/1132'} | OmegaT | OmegaT CLI gets stuck at missing empty folders when run on team project | Bug | Open! |
 | 2022-11-14 | [#1125](https://sourceforge.net/p/omegat/bugs/1125/) | OmegaT | OmegaT's main window is sent to unplugged monitor | Bug | Open |
 | 2022-10-24 | [#1641](https://sourceforge.net/p/omegat/feature-requests/1641/) | OmegaT | Navigate between segments inserted from /tm/auto and /tm/enforce | RFE | Open |
 | 2022-10-21 | [#1124](https://sourceforge.net/p/omegat/bugs/1124/) | OmegaT | Local project does not update after remote masking some files | Bug | Open!! |
