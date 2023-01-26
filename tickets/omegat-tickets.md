@@ -2,6 +2,8 @@
 
 | Created | # | Tool | Title | Type | Status |
 |:----|:----|:----|:----|:----|:----|
+| 2023-01-23 | [#1184](https://bitbucket.org/okapiframework/okapi/issues/1184/fractions-in-word-file-are-not-extracted) | Okapi | Fractions in Word file are not extracted | BUG | Open! |
+| 2026-01-26 | [#1669](https://sourceforge.net/p/omegat/feature-requests/1669/) | OmegaT | Remove leadinga and trailing tags with Okapi filters | RFE | Open!! |
 | 2023-01-22 | [#49](https://bitbucket.org/okapiframework/omegat-plugin/issues/49/use-resname-as-segment-identifier-instead) | Okapi plugin | Use resname as segment identifier (instead of correlative number) | RFE | Open!! |
 | 2023-01-20 | [#1140](https://sourceforge.net/p/omegat/bugs/1140/) | OmegaT | Context-bound matches are ignored in /tm/auto | Bug | Open!! |
 | 2023-01-03 | [#1132](https://sourceforge.net/p/omegat/bugs/1132/) | OmegaT | OmegaT CLI gets stuck at missing empty folders when run on team project | Bug | Open! |
