@@ -2,15 +2,15 @@
 
 | Created | # | Tool | Title | Type | Status |
 |:----|:----|:----|:----|:----|:----|
+| 2023-01-26 | [#1669](https://sourceforge.net/p/omegat/feature-requests/1669/) | OmegaT | Remove leadinga and trailing tags with Okapi filters | RFE | Open!! |
 | 2023-01-23 | [#1184](https://bitbucket.org/okapiframework/okapi/issues/1184/fractions-in-word-file-are-not-extracted) | Okapi | Fractions in Word file are not extracted | BUG | Open! |
-| None | [#1670](https://sourceforge.net/p/omegat/feature-requests/1670/) | OmegaT | Reuse credentials in team projects | RFE | Resolved |
-| 2026-01-26 | [#1669](https://sourceforge.net/p/omegat/feature-requests/1669/) | OmegaT | Remove leadinga and trailing tags with Okapi filters | RFE | Open!! |
-| 2023-01-22 | [#49](https://bitbucket.org/okapiframework/omegat-plugin/issues/49/use-resname-as-segment-identifier-instead) | Okapi plugin | Use resname as segment identifier (instead of correlative number) | RFE | Open!! |
-| 2023-01-20 | [#1140](https://sourceforge.net/p/omegat/bugs/1140/) | OmegaT | Context-bound matches are ignored in /tm/auto | Bug | Open!! |
+| 2023-01-22 | [#49](https://bitbucket.org/okapiframework/omegat-plugin/issues/49/use-resname-as-segment-identifier-instead) | Okapi plugin | Use resname as segment identifier (instead of correlative number) | RFE | Resolved |
+| 2023-01-20 | [#1140](https://sourceforge.net/p/omegat/bugs/1140/) | OmegaT | Context-bound matches are ignored in /tm/auto | Bug | Resolved |
 | 2023-01-03 | [#1132](https://sourceforge.net/p/omegat/bugs/1132/) | OmegaT | OmegaT CLI gets stuck at missing empty folders when run on team project | Bug | Open! |
 | 2022-11-14 | [#1125](https://sourceforge.net/p/omegat/bugs/1125/) | OmegaT | OmegaT's main window is sent to unplugged monitor | Bug | Open |
 | 2022-10-24 | [#1641](https://sourceforge.net/p/omegat/feature-requests/1641/) | OmegaT | Navigate between segments inserted from /tm/auto and /tm/enforce | RFE | Open |
 | 2022-10-21 | [#1124](https://sourceforge.net/p/omegat/bugs/1124/) | OmegaT | Local project does not update after remote masking some files | Bug | Open!! |
+| 2022-10-17 | [#1670](https://sourceforge.net/p/omegat/feature-requests/1670/) | OmegaT | Reuse credentials in team projects | RFE | Resolved |
 | 2022-10-10 | [#1122](https://sourceforge.net/p/omegat/bugs/1122/) | OmegaT | Tag color is obfuscated if target language uses RTL script | Bug | Open? |
 | 2022-07-15 | [#43](https://bitbucket.org/okapiframework/omegat-plugin/issues/43/tag-tooltips-do-not-show-the-locked-text) | Okapi plugin | Tag tooltips do not show the locked text | Bug | Resolved |
 | 2922-07-06 | [#1622](https://sourceforge.net/p/omegat/feature-requests/1622/) | OmegaT | Option to give or revoke full writing access to team project users | RFF | Open |
