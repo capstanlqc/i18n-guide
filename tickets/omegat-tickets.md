@@ -3,6 +3,7 @@
 | Created | # | Tool | Title | Type | Status |
 |:----|:----|:----|:----|:----|:----|
 | 2023-02-07 | [#1672](https://sourceforge.net/p/omegat/feature-requests/1672/) | OmegaT | Hide tag-only segments | RFE | Open!! |
+| 2023-02-10 | [#1674](https://sourceforge.net/p/omegat/feature-requests/1674/) | OmegaT | Remove custom tags issues and flagged text from mandatory tag check | RFE | Open! |
 | 2023-01-26 | [#1669](https://sourceforge.net/p/omegat/feature-requests/1669/) | OmegaT | Remove leadinga and trailing tags with Okapi filters | RFE | Open!! |
 | 2023-01-23 | [#1184](https://bitbucket.org/okapiframework/okapi/issues/1184/fractions-in-word-file-are-not-extracted) | Okapi | Fractions in Word file are not extracted | BUG | Open! |
 | 2023-01-22 | [#49](https://bitbucket.org/okapiframework/omegat-plugin/issues/49/use-resname-as-segment-identifier-instead) | Okapi plugin | Use resname as segment identifier (instead of correlative number) | RFE | Resolved |
@@ -54,7 +55,7 @@
 | 2020-09-21 | [#1520](https://sourceforge.net/p/omegat/feature-requests/1520/) | OmegaT | Two many locations for user-added plugins | RFE | Rejected |
 | 2020-09-21 | [#1519](https://sourceforge.net/p/omegat/feature-requests/1519/) | OmegaT | OmegaT uses wrong/old version of plugin in case of conflict | RFE | Open |
 | 2020-08-14 | [#969](https://bitbucket.org/okapiframework/okapi/issues/969/resname-from-xliff-appears-in-the-comment) | Okapi | Resname (from XLIFF) appears in the comment field in OmegaT | RFE | Open~ |
-| 2020-07-16 | [#1003](https://sourceforge.net/p/omegat/bugs/1003/) | OmegaT | Matches containing non-alphabetical text are ignored in TM leverage | Bug | Open |
+| 2020-07-16 | [#1003](https://sourceforge.net/p/omegat/bugs/1003/) | OmegaT | Matches containing non-alphabetical text are ignored in TM leverage | Bug | Resolved |
 | 2020-08-21 | [#1015](https://sourceforge.net/p/omegat/bugs/1015/) | OmegaT | Matches ignored if the two locales have the same language subtag | Bug | Open |
 | 2020-07-16 | [#1002](https://sourceforge.net/p/omegat/bugs/1002/) | OmegaT | Choice of GUI language during re-installation is ignored | Bug | Resolved |
 | 2020-07-04 | [#1471](https://sourceforge.net/p/omegat/feature-requests/1471/) | OmegaT | "Full segment" option in search dialog | RFE | Open |
