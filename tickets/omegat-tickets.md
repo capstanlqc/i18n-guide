@@ -2,8 +2,10 @@
 
 | Created | # | Tool | Title | Type | Status |
 |:----|:----|:----|:----|:----|:----|
-| 2023-02-07 | [#1672](https://sourceforge.net/p/omegat/feature-requests/1672/) | OmegaT | Hide tag-only segments | RFE | Open!! |
+| 2023-02-15 | [#1142](https://sourceforge.net/p/omegat/bugs/1142/) | OmegaT | Translation displayed as source text if state="final" with Okapi XLIFF filter | BUG | Open |
+| 2023-02-13 | [#8](https://github.com/briacp/plugin-omt-package/issues/8) | plugin-omt-package | Only __DEFAULT__ project folders are packed correctly | RFE | Open |
 | 2023-02-10 | [#1674](https://sourceforge.net/p/omegat/feature-requests/1674/) | OmegaT | Remove custom tags issues and flagged text from mandatory tag check | RFE | Open! |
+| 2023-02-07 | [#1672](https://sourceforge.net/p/omegat/feature-requests/1672/) | OmegaT | Hide tag-only segments | RFE | Open!! |
 | 2023-01-26 | [#1669](https://sourceforge.net/p/omegat/feature-requests/1669/) | OmegaT | Remove leadinga and trailing tags with Okapi filters | RFE | Open!! |
 | 2023-01-23 | [#1184](https://bitbucket.org/okapiframework/okapi/issues/1184/fractions-in-word-file-are-not-extracted) | Okapi | Fractions in Word file are not extracted | BUG | Open! |
 | 2023-01-22 | [#49](https://bitbucket.org/okapiframework/omegat-plugin/issues/49/use-resname-as-segment-identifier-instead) | Okapi plugin | Use resname as segment identifier (instead of correlative number) | RFE | Resolved |
@@ -39,7 +41,7 @@
 | 2021-05-09 | [#1566](https://sourceforge.net/p/omegat/feature-requests/1566/) | OmegaT | Replace glossary hits when inserting fuzzy match | RFF | Open |
 | 2021-05-05 | [#1565](https://sourceforge.net/p/omegat/feature-requests/1565/) | OmegaT | Give each segment a unique ID | RFE | Open!! |
 | 2021-04-30 | [#1046](https://sourceforge.net/p/omegat/bugs/1046/) | OmegaT | Glossary has wrong encoding for non-ASCII characters | Bug | Rejected |
-| 2021-03-24 | [#1559](https://sourceforge.net/p/omegat/feature-requests/1559/) | OmegaT | Validate tags when leaving a segment only for that segment | RFF | Open |
+| 2021-03-24 | [#1559](https://sourceforge.net/p/omegat/feature-requests/1559/) | OmegaT | Validate tags when leaving a segment only for that segment | RFF | Open! |
 | 2021-03-02 | [#1038](https://sourceforge.net/p/omegat/bugs/1038/) | OmegaT | "Remove leading/trailing tags" removes tags that are not a tag pair | Bug | Open |
 | 2021-02-16 | [#1037](https://sourceforge.net/p/omegat/bugs/1037/) | OmegaT | Next Unique Segment shortcut conflicts with Log Out on Mac | Bug | Open |
 | 2021-02-04 | [#1020](https://bitbucket.org/okapiframework/okapi/issues/1020/openxml-filter-for-omegat-gives-error-when) | OmegaT | OpenXML filter for OmegaT gives error when opening Excel file with embedded HTML | Bug | Transfered |
