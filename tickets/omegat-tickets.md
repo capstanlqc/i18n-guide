@@ -2,6 +2,7 @@
 
 | Created | # | Tool | Title | Type | Status |
 |:----|:----|:----|:----|:----|:----|
+| 2023-03-06 | [#1200](https://bitbucket.org/okapiframework/okapi/issues/1200) | Okapi | XML filter adds tags arounb nnbsp by default | BUG | Open+ |
 | 2023-02-24 | [#1681](https://sourceforge.net/p/omegat/feature-requests/1681/) | OmegaT | Straight quotes match curly quotes | RFE | Open |
 | 2023-02-15 | [#1142](https://sourceforge.net/p/omegat/bugs/1142/) | OmegaT | Translation displayed as source text if state="final" with Okapi XLIFF filter | BUG | Open |
 | 2023-02-13 | [#8](https://github.com/briacp/plugin-omt-package/issues/8) | plugin-omt-package | Only __DEFAULT__ project folders are packed correctly | RFE | Open |
