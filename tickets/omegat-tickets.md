@@ -2,6 +2,8 @@
 
 | Created | # | Tool | Title | Type | Status |
 |:----|:----|:----|:----|:----|:----|
+| 2023-03-08 | [#1150](https://sourceforge.net/p/omegat/bugs/1150/) | OmegaT | Tags cannot be deleted in RTL languages | BUG | Open!! |
+| 2023-03-08 | [#1151](https://sourceforge.net/p/omegat/bugs/1151/) | OmegaT | Tag drag-and-drop duplicates tag in RTL text | BUG | Open!! |
 | 2023-03-06 | [#1200](https://bitbucket.org/okapiframework/okapi/issues/1200) | Okapi | XML filter adds tags arounb nnbsp by default | BUG | Open+ |
 | 2023-02-24 | [#1681](https://sourceforge.net/p/omegat/feature-requests/1681/) | OmegaT | Straight quotes match curly quotes | RFE | Open |
 | 2023-02-15 | [#1142](https://sourceforge.net/p/omegat/bugs/1142/) | OmegaT | Translation displayed as source text if state="final" with Okapi XLIFF filter | BUG | Open |
