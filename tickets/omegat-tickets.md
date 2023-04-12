@@ -2,6 +2,7 @@
 
 | Created | # | Tool | Title | Type | Status |
 |:----|:----|:----|:----|:----|:----|
+| 2023-04-12 | [#1690](https://sourceforge.net/p/omegat/feature-requests/1690/) | OmegaT | "Commit target files" also commits stats file to repo | RFE | Open!! |
 | 2023-03-22 | [#1155](https://sourceforge.net/p/omegat/bugs/1155/) | OmegaT | Option "Insert the source text" enabled on its own | BUG | Open |
 | 2023-03-08 | [#1150](https://sourceforge.net/p/omegat/bugs/1150/) | OmegaT | Tags cannot be deleted in RTL languages | BUG | Open!! |
 | 2023-03-08 | [#1151](https://sourceforge.net/p/omegat/bugs/1151/) | OmegaT | Tag drag-and-drop duplicates tag in RTL text | BUG | Open!! |
