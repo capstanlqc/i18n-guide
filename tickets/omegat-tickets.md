@@ -2,6 +2,7 @@
 
 | Created | # | Tool | Title | Type | Status |
 |:----|:----|:----|:----|:----|:----|
+| 2023-05-03 | [#1164](https://sourceforge.net/p/omegat/bugs/1164/) | OmegaT | Auto-populated translations disappear when a segment gets activated | BUG | Open!!! |
 | 2023-05-03 | [#9](https://github.com/briacp/plugin-omt-package/issues/9) | plugin-omt-package | Add property in config to remove mappings (to pack as offline project) | RFE | Open |
 | 2023-04-28 | [#1163](https://sourceforge.net/p/omegat/bugs/1163/) | OmegaT | Project not loaded if it contains DTD internal entities | BUG | Open!! |
 | 2023-04-24 | [#1161](https://sourceforge.net/p/omegat/bugs/1161/) | OmegaT | "Set empty translation" does not work in XML file | BUG | Open |
