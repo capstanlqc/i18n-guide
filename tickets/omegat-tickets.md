@@ -2,8 +2,10 @@
 
 | Created | # | Tool | Title | Type | Status |
 |:----|:----|:----|:----|:----|:----|
+| 2023-05-03 | [#9](https://github.com/briacp/plugin-omt-package/issues/9) | plugin-omt-package | Add property in config to remove mappings (to pack as offline project) | RFE | Open |
+| 2023-04-28 | [#1163](https://sourceforge.net/p/omegat/bugs/1163/) | OmegaT | Project not loaded if it contains DTD internal entities | BUG | Open!! |
 | 2023-04-24 | [#1161](https://sourceforge.net/p/omegat/bugs/1161/) | OmegaT | "Set empty translation" does not work in XML file | BUG | Open |
-| 2023-04-12 | [#1690](https://sourceforge.net/p/omegat/feature-requests/1690/) | OmegaT | "Commit target files" also commits stats file to repo | RFE | Open!! |
+| 2023-04-12 | [#1690](https://sourceforge.net/p/omegat/feature-requests/1690/) | OmegaT | "Commit target files" also commits stats file to repo | RFE | Solved |
 | 2023-03-22 | [#1155](https://sourceforge.net/p/omegat/bugs/1155/) | OmegaT | Option "Insert the source text" enabled on its own | BUG | Open |
 | 2023-03-08 | [#1150](https://sourceforge.net/p/omegat/bugs/1150/) | OmegaT | Tags cannot be deleted in RTL languages | BUG | Open!! |
 | 2023-03-08 | [#1151](https://sourceforge.net/p/omegat/bugs/1151/) | OmegaT | Tag drag-and-drop duplicates tag in RTL text | BUG | Open!! |
