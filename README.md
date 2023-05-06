@@ -1,2 +1,2 @@
 # Internationalization guide
-Hello world.
+Hello world!
