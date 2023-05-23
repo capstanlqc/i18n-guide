@@ -3,7 +3,7 @@
 | Created | # | Tool | Title | Type | Status |
 |:----|:----|:----|:----|:----|:----|
 | 2023-05-23 | [#1309](https://bitbucket.org/okapiframework/okapi/issues/1309) | Okapi | XML filter does not extract resname if unit contains HTML block-level tags | BUG | Open!! |
-| 2023-05-23 | [#1176](https://sourceforge.net/p/omegat/bugs/1176/) | OmegaT | The COMPILE event is fired *after* the target commit | BUG | Open!! |
+| 2023-05-23 | [#1176](https://sourceforge.net/p/omegat/bugs/1176/) | OmegaT | The COMPILE event is fired *after* the target commit | BUG | Solved |
 | 2023-05-18 | [#1171](https://sourceforge.net/p/omegat/bugs/1171) | OmegaT | Enforced translations lose background color | BUG | Open |
 | 2023-05-03 | [#1164](https://sourceforge.net/p/omegat/bugs/1164/) | OmegaT | Auto-populated translations disappear when a segment gets activated | BUG | Open!!! |
 | 2023-05-03 | [#9](https://github.com/briacp/plugin-omt-package/issues/9) | plugin-omt-package | Add property in config to remove mappings (to pack as offline project) | RFE | Open |
