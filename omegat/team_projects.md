@@ -22,9 +22,8 @@ If you're not a technically oriented PM,  you may ask your tech team to do the f
 
 Before creating the team projects, you must have:
 
-* [installed gh on the command line](https://cli.github.com/manual/installation)
+* [installed `gh` on the command line](https://cli.github.com/manual/installation)
 * [created an organization in Github](https://docs.github.com/en/organizations/collaborating-with-groups-in-organizations/creating-a-new-organization-from-scratch)
-<!-- * [renamed the repository default branch from `main` to `master`](https://docs.github.com/en/organizations/managing-organization-settings/managing-the-default-branch-name-for-repositories-in-your-organization#setting-the-default-branch-name) -->
 * [added your linguists as members of the organization](https://docs.github.com/en/enterprise-server@3.0/organizations/managing-membership-in-your-organization/adding-people-to-your-organization)
 * [created (at least) one team inside the organization](https://docs.github.com/en/organizations/organizing-members-into-teams/creating-a-team) to which you can add your linguists, e.g. "translators" team, "revisers" team, etc.
 * [added your linguists to the team](https://docs.github.com/en/organizations/organizing-members-into-teams/adding-organization-members-to-a-team) they belong to
