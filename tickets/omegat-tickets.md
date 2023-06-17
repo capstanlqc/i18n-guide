@@ -2,6 +2,7 @@
 
 | Created | # | Tool | Title | Type | Status |
 |:----|:----|:----|:----|:----|:----|
+| 2023-06-17 | [#11](https://github.com/briacp/plugin-omt-package/issues/11) | plugin-omt-package | NoClassDefFoundError when packing project in OmegaT 6.1.0 | BUG | Open!! |
 | 2023-05-23 | [#1309](https://bitbucket.org/okapiframework/okapi/issues/1309) | Okapi | XML filter does not extract resname if unit contains HTML block-level tags | BUG | Open!! |
 | 2023-05-23 | [#1176](https://sourceforge.net/p/omegat/bugs/1176/) | OmegaT | The COMPILE event is fired *after* the target commit | BUG | Solved |
 | 2023-05-18 | [#1171](https://sourceforge.net/p/omegat/bugs/1171) | OmegaT | Enforced translations lose background color | BUG | Open |
