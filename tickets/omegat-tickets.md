@@ -2,6 +2,7 @@
 
 | Created | # | Tool | Title | Type | Status |
 |:----|:----|:----|:----|:----|:----|
+| 2023-07-03 | [#1708](https://sourceforge.net/p/omegat/feature-requests/1708/) | OmegaT | Improve colors in the list of project files | RFE | Open |
 | 2023-06-27 | [#1185](https://sourceforge.net/p/omegat/bugs/1185/) | OmegaT | Saving does not register pre-translation in new projects | BUG | Open!! |
 | 2023-06-17 | [#11](https://github.com/briacp/plugin-omt-package/issues/11) | plugin-omt-package | NoClassDefFoundError when packing project in OmegaT 6.1.0 | BUG | Solved |
 | 2023-05-23 | [#1309](https://bitbucket.org/okapiframework/okapi/issues/1309) | Okapi | XML filter does not extract resname if unit contains HTML block-level tags | BUG | Open!! |
