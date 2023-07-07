@@ -4,15 +4,15 @@
 |:----|:----|:----|:----|:----|:----|
 | 2023-07-03 | [#1708](https://sourceforge.net/p/omegat/feature-requests/1708/) | OmegaT | Improve colors in the list of project files | RFE | Open |
 | 2023-06-27 | [#1185](https://sourceforge.net/p/omegat/bugs/1185/) | OmegaT | Saving does not register pre-translation in new projects | BUG | Open!! |
-| 2023-06-17 | [#11](https://github.com/briacp/plugin-omt-package/issues/11) | plugin-omt-package | NoClassDefFoundError when packing project in OmegaT 6.1.0 | BUG | Solved |
+| 2023-06-17 | [#11](https://github.com/briacp/plugin-omt-package/issues/11) | plugin-omt-package | NoClassDefFoundError when packing project in OmegaT 6.1.0 | BUG | Resolved |
 | 2023-05-23 | [#1309](https://bitbucket.org/okapiframework/okapi/issues/1309) | Okapi | XML filter does not extract resname if unit contains HTML block-level tags | BUG | Open!! |
-| 2023-05-23 | [#1176](https://sourceforge.net/p/omegat/bugs/1176/) | OmegaT | The COMPILE event is fired *after* the target commit | BUG | Solved |
+| 2023-05-23 | [#1176](https://sourceforge.net/p/omegat/bugs/1176/) | OmegaT | The COMPILE event is fired *after* the target commit | BUG | Resolved |
 | 2023-05-18 | [#1171](https://sourceforge.net/p/omegat/bugs/1171) | OmegaT | Enforced translations lose background color | BUG | Open |
 | 2023-05-03 | [#1164](https://sourceforge.net/p/omegat/bugs/1164/) | OmegaT | Auto-populated translations disappear when a segment gets activated | BUG | Open!!! |
-| 2023-05-03 | [#9](https://github.com/briacp/plugin-omt-package/issues/9) | plugin-omt-package | Add property in config to remove mappings (to pack as offline project) | RFE | Solved |
-| 2023-04-28 | [#1163](https://sourceforge.net/p/omegat/bugs/1163/) | OmegaT | Project not loaded if it contains DTD internal entities | BUG | Solved |
+| 2023-05-03 | [#9](https://github.com/briacp/plugin-omt-package/issues/9) | plugin-omt-package | Add property in config to remove mappings (to pack as offline project) | RFE | Resolved |
+| 2023-04-28 | [#1163](https://sourceforge.net/p/omegat/bugs/1163/) | OmegaT | Project not loaded if it contains DTD internal entities | BUG | Resolved |
 | 2023-04-24 | [#1161](https://sourceforge.net/p/omegat/bugs/1161/) | OmegaT | "Set empty translation" does not work in XML file | BUG | Open |
-| 2023-04-12 | [#1690](https://sourceforge.net/p/omegat/feature-requests/1690/) | OmegaT | "Commit target files" also commits stats file to repo | RFE | Solved |
+| 2023-04-12 | [#1690](https://sourceforge.net/p/omegat/feature-requests/1690/) | OmegaT | "Commit target files" also commits stats file to repo | RFE | Open!!! |
 | 2023-03-22 | [#1155](https://sourceforge.net/p/omegat/bugs/1155/) | OmegaT | Option "Insert the source text" enabled on its own | BUG | Open |
 | 2023-03-08 | [#1150](https://sourceforge.net/p/omegat/bugs/1150/) | OmegaT | Tags cannot be deleted in RTL languages | BUG | Open!! |
 | 2023-03-08 | [#1151](https://sourceforge.net/p/omegat/bugs/1151/) | OmegaT | Tag drag-and-drop duplicates tag in RTL text | BUG | Open!! |
