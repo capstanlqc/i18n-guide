@@ -71,7 +71,7 @@
 | 2020-10-28 | [#1020](https://sourceforge.net/p/omegat/bugs/1020/) | OmegaT | Project file filters are not preserved | Bug | Open |
 | 2020-09-29 | [#993](https://bitbucket.org/okapiframework/okapi/issues/993/okapi-xliff-filter-for-omegat-registers) | Okapi | Okapi XLIFF filter for OmegaT registers/expects segment IDs that break ID-bound matches | Bug | Open |
 | 2020-09-21 | [#1520](https://sourceforge.net/p/omegat/feature-requests/1520/) | OmegaT | Two many locations for user-added plugins | RFE | Rejected |
-| 2020-09-21 | [#1519](https://sourceforge.net/p/omegat/feature-requests/1519/) | OmegaT | OmegaT uses wrong/old version of plugin in case of conflict | RFE | Open |
+| 2020-09-21 | [#1519](https://sourceforge.net/p/omegat/feature-requests/1519/) | OmegaT | OmegaT uses wrong/old version of plugin in case of conflict | RFE | Resolved |
 | 2020-08-14 | [#969](https://bitbucket.org/okapiframework/okapi/issues/969/resname-from-xliff-appears-in-the-comment) | Okapi | Resname (from XLIFF) appears in the comment field in OmegaT | RFE | Open~ |
 | 2020-07-16 | [#1003](https://sourceforge.net/p/omegat/bugs/1003/) | OmegaT | Matches containing non-alphabetical text are ignored in TM leverage | Bug | Resolved |
 | 2020-08-21 | [#1015](https://sourceforge.net/p/omegat/bugs/1015/) | OmegaT | Matches ignored if the two locales have the same language subtag | Bug | Open |
