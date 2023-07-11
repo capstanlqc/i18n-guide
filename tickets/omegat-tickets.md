@@ -2,6 +2,8 @@
 
 | Created | # | Tool | Title | Type | Status |
 |:----|:----|:----|:----|:----|:----|
+| 2023-07-12 | {'#27': 'http://captsan.mantis.silvestris-lab.org/view.php?id=27'} | TmxCommentsProvider | T&A notes: T&A note is "null" if the target language doesn't match | RFE | Open! |
+| 2023-07-12 | {'#26': 'http://captsan.mantis.silvestris-lab.org/view.php?id=26'} | TmxCommentsProvider | T&A notes: source text in notes/notes.tmx used as the note | RFE | Open! |
 | 2023-07-11 | [#1201](https://sourceforge.net/p/omegat/bugs/1201/) | OmegaT | -1 instead of repo name in repository credentials | BUG | Open! |
 | 2023-07-11 | [#1200](https://sourceforge.net/p/omegat/bugs/1200/) | OmegaT | Closing a new project does not register pre-populated translations | BUG | Open! |
 | 2023-07-03 | [#1708](https://sourceforge.net/p/omegat/feature-requests/1708/) | OmegaT | Improve colors in the list of project files | RFE | Open |
