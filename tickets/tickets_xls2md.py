@@ -23,7 +23,7 @@ def make_md_links(str):
     # align titles to left
     str = str.replace("|-----", "|:----")
     # convert dict to md link
-    pattern = r"\{'(#\d+)': '(https:.+)'\}"
+    pattern = r"\{'(#\d+)': '(http:.+)'\}"
     replace = r"[\1](\2)"
     return re.sub(pattern, replace, str)
 
