@@ -2,6 +2,8 @@
 
 | Created | # | Tool | Title | Type | Status |
 |:----|:----|:----|:----|:----|:----|
+| 2023-08-07 | [#1213](https://sourceforge.net/p/omegat/bugs/1213/) | OmegaT | Selection of match for pre-translation varies through different OS's | BUG | Open!!! |
+| 2023-08-07 | [#1212](https://sourceforge.net/p/omegat/bugs/1212/) | OmegaT | Random selection of match for pre-translation depending on TMX file paths | BUG | Open!!! |
 | 2023-07-17 | [#1202](https://sourceforge.net/p/omegat/bugs/1202/) | OmegaT | Error 403 when accessing different repo with different creds in same domain | BUG | Open! |
 | 2023-07-12 | [#27](http://captsan.mantis.silvestris-lab.org/view.php?id=27) | TmxCommentsProvider | T&A notes: T&A note is "null" if the target language doesn't match | RFE | Open! |
 | 2023-07-12 | [#26](http://captsan.mantis.silvestris-lab.org/view.php?id=26) | TmxCommentsProvider | T&A notes: source text in notes/notes.tmx used as the note | RFE | Open! |
