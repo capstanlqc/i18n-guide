@@ -2,6 +2,7 @@
 
 | Created | # | Tool | Title | Type | Status |
 |:----|:----|:----|:----|:----|:----|
+| 2023-08-07 | [#1214](https://sourceforge.net/p/omegat/bugs/1214/) | OmegaT | Extraneous tags which are not escaped in XML target file | BUG | Open! |
 | 2023-08-07 | [#1213](https://sourceforge.net/p/omegat/bugs/1213/) | OmegaT | Selection of match for pre-translation varies through different OS's | BUG | Open!!! |
 | 2023-08-07 | [#1212](https://sourceforge.net/p/omegat/bugs/1212/) | OmegaT | Random selection of match for pre-translation depending on TMX file paths | BUG | Open!!! |
 | 2023-07-17 | [#1202](https://sourceforge.net/p/omegat/bugs/1202/) | OmegaT | Error 403 when accessing different repo with different creds in same domain | BUG | Open! |
