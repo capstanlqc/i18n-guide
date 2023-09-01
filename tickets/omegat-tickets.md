@@ -2,6 +2,8 @@
 
 | Created | # | Tool | Title | Type | Status |
 |:----|:----|:----|:----|:----|:----|
+| 2023-08-31 | [#1712](https://sourceforge.net/p/omegat/feature-requests/1712/) | OmegaT | Remove old buggy "Resolve conflicts" dialog (and keep the new "Merge" one) | RFE | Open |
+| 2023-08-31 | [#1215](https://sourceforge.net/p/omegat/bugs/1215/) | OmegaT | Protected entries in XLIFF show translation as source text | BUG | Open |
 | 2023-08-07 | [#1214](https://sourceforge.net/p/omegat/bugs/1214/) | OmegaT | Extraneous tags which are not escaped in XML target file | BUG | Open! |
 | 2023-08-07 | [#1213](https://sourceforge.net/p/omegat/bugs/1213/) | OmegaT | Selection of match for pre-translation varies through different OS's | BUG | Open!!! |
 | 2023-08-07 | [#1212](https://sourceforge.net/p/omegat/bugs/1212/) | OmegaT | Random selection of match for pre-translation depending on TMX file paths | BUG | Open!!! |
