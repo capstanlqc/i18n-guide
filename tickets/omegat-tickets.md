@@ -2,6 +2,8 @@
 
 | Created | # | Tool | Title | Type | Status |
 |:----|:----|:----|:----|:----|:----|
+| 2023-11-06 | [#1226](https://sourceforge.net/p/omegat/bugs/1226/) | OmegaT | Target files include recent edits in enforced translations | BUG | Open! |
+| 2023-11-03 | [#1225](https://sourceforge.net/p/omegat/bugs/1225/) | OmegaT | List of issues stays hidden in the background | BUG | Open! |
 | 2023-10-14 | [#1720](https://sourceforge.net/p/omegat/feature-requests/1720/) | OmegaT | Download team project with shallow history | RFE | Open |
 | 2023-09-30 | [#1323](https://bitbucket.org/okapiframework/okapi/issues/1323/protected-entries-in-xliff-show) | Okapi | Protected entries in XLIFF show translation as source text | BUG | Open |
 | 2023-09-01 | [#30](http://captsan.mantis.silvestris-lab.org/view.php?id=30) | OmegaT | Protect segment based on XLIFF status | RFE | Open |
@@ -16,7 +18,7 @@
 | 2023-07-11 | [#1201](https://sourceforge.net/p/omegat/bugs/1201/) | OmegaT | -1 instead of repo name in repository credentials | BUG | Open! |
 | 2023-07-11 | [#1200](https://sourceforge.net/p/omegat/bugs/1200/) | OmegaT | Closing a new project does not register pre-populated translations | BUG | Open! |
 | 2023-07-03 | [#1708](https://sourceforge.net/p/omegat/feature-requests/1708/) | OmegaT | Improve colors in the list of project files | RFE | Open |
-| 2023-06-27 | [#1185](https://sourceforge.net/p/omegat/bugs/1185/) | OmegaT | Saving does not register pre-translation in new projects | BUG | Open!! |
+| 2023-06-27 | [#1185](https://sourceforge.net/p/omegat/bugs/1185/) | OmegaT | #1226 | BUG | Open!! |
 | 2023-06-17 | [#11](https://github.com/briacp/plugin-omt-package/issues/11) | plugin-omt-package | NoClassDefFoundError when packing project in OmegaT 6.1.0 | BUG | Resolved |
 | 2023-05-23 | [#1309](https://bitbucket.org/okapiframework/okapi/issues/1309) | Okapi | XML filter does not extract resname if unit contains HTML block-level tags | BUG | Resolved |
 | 2023-05-23 | [#1176](https://sourceforge.net/p/omegat/bugs/1176/) | OmegaT | The COMPILE event is fired *after* the target commit | BUG | Resolved |
