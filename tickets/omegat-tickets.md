@@ -2,7 +2,10 @@
 
 | Created | # | Tool | Title | Type | Status |
 |:----|:----|:----|:----|:----|:----|
-| 2023-11-06 | [#1226](https://sourceforge.net/p/omegat/bugs/1226/) | OmegaT | Target files include recent edits in enforced translations | BUG | Open! |
+| 2023-11-08 | [#1725](https://sourceforge.net/p/omegat/feature-requests/1725/) | OmegaT | Trim authentication details in team projects | RFE | Open! |
+| 2023-10-31 | [#1724](https://sourceforge.net/p/omegat/feature-requests/1724/) | OmegaT | Block creation of target files only if the SELECTED issues are found | RFE | Open! |
+| 2023-10-24 | [#1722](https://sourceforge.net/p/omegat/feature-requests/1722/) | OmegaT | console-translate mode (CLI) to download mapped files | RFE | Open |
+| 2023-11-06 | [#1226](https://sourceforge.net/p/omegat/bugs/1226/) | OmegaT | Target files include recent edits in enforced translations | BUG | Open!!! |
 | 2023-11-03 | [#1225](https://sourceforge.net/p/omegat/bugs/1225/) | OmegaT | List of issues stays hidden in the background | BUG | Open! |
 | 2023-10-14 | [#1720](https://sourceforge.net/p/omegat/feature-requests/1720/) | OmegaT | Download team project with shallow history | RFE | Open |
 | 2023-09-30 | [#1323](https://bitbucket.org/okapiframework/okapi/issues/1323/protected-entries-in-xliff-show) | Okapi | Protected entries in XLIFF show translation as source text | BUG | Open |
