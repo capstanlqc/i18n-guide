@@ -2,6 +2,7 @@
 
 | Created | # | Tool | Title | Type | Status |
 |:----|:----|:----|:----|:----|:----|
+| 2023-12-14 | [#1732](https://sourceforge.net/p/omegat/feature-requests/1732/) | OmegaT | "Commit target files" also commits exported master TM to repo | RFE | Open! |
 | 2023-12-11 | [#1731](https://sourceforge.net/p/omegat/feature-requests/1731/) | OmegaT | Change label "Project translation" to "Committed target files" | RFE | Open |
 | 2023-11-08 | [#1725](https://sourceforge.net/p/omegat/feature-requests/1725/) | OmegaT | Trim authentication details in team projects | RFE | Open! |
 | 2023-10-31 | [#1724](https://sourceforge.net/p/omegat/feature-requests/1724/) | OmegaT | Block creation of target files only if the SELECTED issues are found | RFE | Open! |
