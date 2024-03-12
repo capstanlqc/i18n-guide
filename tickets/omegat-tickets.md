@@ -2,6 +2,7 @@
 
 | Created | # | Tool | Title | Type | Status |
 |:----|:----|:----|:----|:----|:----|
+| 2023-01-09 | [#1735](https://sourceforge.net/p/omegat/feature-requests/1735/) | OmegaT | Implement accurate and clear fuzzy matching logic | RFE | Open |
 | 2023-11-08 | [#1725](https://sourceforge.net/p/omegat/feature-requests/1725/) | OmegaT | Trim authentication details in team projects | RFE | Open! |
 | 2023-10-31 | [#1724](https://sourceforge.net/p/omegat/feature-requests/1724/) | OmegaT | Block creation of target files only if the SELECTED issues are found | RFE | Open! |
 | 2023-10-24 | [#1722](https://sourceforge.net/p/omegat/feature-requests/1722/) | OmegaT | console-translate mode (CLI) to download mapped files | RFE | Open |
@@ -23,7 +24,7 @@
 | 2023-07-03 | [#1708](https://sourceforge.net/p/omegat/feature-requests/1708/) | OmegaT | Improve colors in the list of project files | RFE | Open |
 | 2023-06-27 | [#1185](https://sourceforge.net/p/omegat/bugs/1185/) | OmegaT | #1226 | BUG | Open!! |
 | 2023-06-17 | [#11](https://github.com/briacp/plugin-omt-package/issues/11) | plugin-omt-package | NoClassDefFoundError when packing project in OmegaT 6.1.0 | BUG | Resolved |
-| 2023-05-23 | [#1309](https://bitbucket.org/okapiframework/okapi/issues/1309) | Okapi | XML filter does not extract resname if unit contains HTML block-level tags | BUG | Resolved |
+| 2023-05-23 | [#1309](https://bitbucket.org/okapiframework/okapi/issues/1309) | Okapi | XML filter does not extract resname if unit contains HTML block-level tags | BUG | Resolved? |
 | 2023-05-23 | [#1176](https://sourceforge.net/p/omegat/bugs/1176/) | OmegaT | The COMPILE event is fired *after* the target commit | BUG | Resolved |
 | 2023-05-18 | [#1171](https://sourceforge.net/p/omegat/bugs/1171) | OmegaT | Enforced translations lose background color | BUG | Open |
 | 2023-05-03 | [#1164](https://sourceforge.net/p/omegat/bugs/1164/) | OmegaT | Auto-populated translations disappear when a segment gets activated | BUG | Open!!! |

@@ -1,0 +1,2 @@
+# Internationalization guide
+Hello world!
